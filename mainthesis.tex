@@ -30,7 +30,7 @@
 \usepackage{supertabular}
 \usepackage{subeqn}
 \usepackage{subfigure}
-\usepackage[pdftex, bookmarks, colorlinks=true, plainpages=false, pdfpagelabels, citecolor=blue, urlcolor=blue, filecolor=blue, linkcolor=blue]{hyperref}
+\usepackage[bookmarks, colorlinks=true, plainpages=false, pdfpagelabels, citecolor=blue, urlcolor=blue, filecolor=blue, linkcolor=blue]{hyperref}
 
 
 \newcommand{\tbsp}{\rule{0pt}{18pt}} %used to get a vertical distance after \hline
@@ -86,11 +86,10 @@
 \include{Chapter1}
 \include{Chapter2}
 \include{Chapter3}
-\include{supertabular}
-\titleformat{\chapter}
-      {\normalfont\large}{Appendix \thechapter:}{1em}{}
 
 \appendix
+\titleformat{\chapter}
+      {\normalfont\large}{Appendix \thechapter:}{1em}{}
 \include{AppendixA}
 \include{AppendixB}
 
