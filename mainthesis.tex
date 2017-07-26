@@ -8,11 +8,7 @@
 %The YourInformation file was created by Freja Nordsiek, 2014.
 %Code for linking the TOC titles to the text in the pdf file was created by Freja Nordsiek, 2014.
 
-
-\newcommand{\mydriver}{pdftex} %Making a PDF directly using pdflatex.
-
-
-\documentclass[12pt,\mydriver]{thesis}  %12pt is larger than 11pt
+\documentclass[12pt]{thesis}  %12pt is larger than 11pt
 
 \usepackage{titlesec}
    \titleformat{\chapter}
@@ -28,10 +24,11 @@
 \usepackage{wrapfig}
 \usepackage{longtable}
 \usepackage{supertabular}
-\usepackage{subeqn}
+%\usepackage{subeqn} %removed to fix error with glossaries package
 \usepackage{subfigure}
+\usepackage{microtype}
 \usepackage[bookmarks, colorlinks=true, plainpages=false, pdfpagelabels, citecolor=blue, urlcolor=blue, filecolor=blue, linkcolor=blue]{hyperref}
-
+\usepackage[toc, nonumberlist]{glossaries} %needs to be after hyperref
 
 \newcommand{\tbsp}{\rule{0pt}{18pt}} %used to get a vertical distance after \hline
 \renewcommand{\baselinestretch}{2}
@@ -41,6 +38,14 @@
 \setlength{\oddsidemargin}{.55in}
 \setlength{\parindent}{.4in}
 \pagestyle{empty}
+
+
+\setacronymstyle{long-short} %first use of acronym gives full name
+\glsdisablehyper %turns off hyperlinking
+\loadglsentries{definitions} %defines file with all entries
+\renewcommand{\glossarysection}[2][]{} %Hides glossary title so it can be named manually
+\makeglossaries
+
 
 \begin{document}
 \hypersetup{pageanchor=false} %Fixes hyperref error with unnumbered title pages
@@ -72,8 +77,19 @@
 \listoffigures %(if present, lower-case Roman)
 
 \newpage
-\addcontentsline{toc}{chapter}{List of Abbreviations}
-\include{Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations and Symbols} %Manually put in ToC
+\renewcommand{\baselinestretch}{1}
+\small\normalsize
+\hbox{\ }
+
+\begin{center}
+\large{List of Abbreviations and Symbols} %Manually create centered title
+\end{center}
+
+\vspace{3pt}
+
+\printglossary
+
 
 \newpage
 \setlength{\parskip}{0em}
