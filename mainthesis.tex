@@ -24,6 +24,8 @@
 \usepackage{multirow}
 \usepackage{tabls}
 \usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{color}
 \usepackage{longtable}
 \usepackage{supertabular}
 %\usepackage{subeqn} %removed to fix error with glossaries package
@@ -48,6 +50,32 @@
 \renewcommand{\glossarysection}[2][]{} %Hides glossary title so it can be named manually
 \makeglossaries
 
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 \begin{document}
 \hypersetup{pageanchor=false} %Fixes hyperref error with unnumbered title pages
