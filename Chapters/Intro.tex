@@ -1,4 +1,4 @@
-% !TEX root = mainthesis.tex
+% !TEX root = ../mainthesis.tex
 
 %Chapter 1
 
@@ -8,7 +8,109 @@
 
 \section{Solid-Oxide Fuel Cells}
 
-This piece will talk about \glspl{sofc}.
-This is mostly because I work on \glspl{sofc}.
-This is to show Mimi git.
-\lipsum\cite{Wang2006a}
+The world depends on fossil fuels for its daily energy needs.
+This is a fact that is going to stay with us for the foreseeable future.
+By 2040, it is estimated that fossil fuels will still supply  78\% of total energy demand.\cite{U.S.EnergyInformationAdministration2016}
+Traditionally, the annual increase in demand is met by an increase in supply of fuel.
+This increase is supplied by advances in mining and drilling operations, although recent advances have been found to be controversial, such as hydraulic fracturing.\cite{Osborn2011,Vengosh2014}
+These concerns do not even account for the increased emissions caused from combustion of fossil fuels and their effect on the global environment.\cite{Solomon2009,Hansen1981,U.S.EnvironmentalProtectionAgency2017}
+
+An alternative to increasing the supply and usage of fossil fuels is to increase our efficiency of turning the fuel into useful work.
+Solid-oxide fuel cells (SOFCs) have the ability to solve this for applications where electrical power is desired.
+SOFCs allow for the direct conversion of chemical energy to electrical energy, where devices such as combustion generators must convert chemical energy to thermal energy, to mechanical energy, and finally to electrical energy.
+Each energy conversion has intrinsic losses, limiting efficiency.
+Power generation plants have efficiencies around 30\%, while a stand-alone SOFC generator can convert fuel to electricity at 45 to 65\% efficiency.\cite{Wachsman2011a,Lasseter2004}
+SOFCs are able to run on a variety of fuel sources, such as hydrogen, methane or even biogas.\cite{Park2000,Minh2004}
+This fuel flexibility and higher efficiency helps position SOFCs to bridge the gap in the energy economy as it transitions from fossil fuels to renewable sources.
+
+Fuel cells operate by placing a fuel and an oxidizer (usually air) on separate sides of the cell.
+Ions are shuttled through the cell to react with the other species, while electrons are transported through an external circuit performing work.
+In the case of SOFCs, the transported ions are oxygen ions which move from the cathode to the anode though the electrolyte.
+Figure\ref{image:sofc} demonstrates how an SOFC works for a hydrogen fueled SOFC\@.
+The cathode and anode materials must facilitate the incorporation of oxygen into the cell and the reaction between the oxygen and the fuel.
+The cell operates at temperatures ranging from \SI{600}{\celsius} to \SI{1000}{\celsius} depending on the technology used in order to increase the ionic conductivity and performance.
+It is critical that the fuel and air remain separated by the cell.
+If there is a leak either through the cell or around it, then the electric potential across the cell will decrease, harming the performance.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{sofc.png}
+  \caption[Diagram showing flow of materials in the operation of a SOFC.]{Diagram showing flow of materials in the operation of a SOFC.\cite{Sakurambo}}\label{image:sofc}
+\end{figure}
+
+\setchemformula{kroeger-vink}
+SOFC materials rely on ionic conduction to transport oxygen from one side of the cell to the other.
+In ionic conduction, oxygen ions hop from site to site via oxygen vacancies, locations where an oxygen atom is missing from the lattice.
+Because conduction depends on vacancies, the more vacancies in the lattice, the more available sites for oxygen to move between, and the greater the conductance.
+The relationship between oxygen vacancy concentration and oxygen conductance is given by Equation\ref{conductivity}, where \(\sigma\subscript{i}\) is the ionic conductivity, \(\lbrack\ch{V_O^{**}}\rbrack \) is the concentration of oxygen vacancies in the lattice, \(\mu \) is the ionic mobility of the oxygen, and Ze is the charge of the conducting species.\cite{Mogensen2000}
+\begin{equation} \label{conductivity}
+  \sigma\subscript{i} = \lbrack\ch{V_O^{**}}\rbrack Ze\mu
+\end{equation}
+Thus by adding more oxygen vacancies to the system, the ionic conductivity increases, but changes in point defect concentrations can have other effects on the materials.
+
+During operation, oxygen vacancies are created by exposing the anode to an environment with a low partial pressure of oxygen (pO\subscript{2}), as shown in Equation\ref{vacancyformation}.
+\begin{equation} \label{vacancyformation}
+\ch{O_O^x  <-> 1/2 O2 + V_O^{**} + 2 e'}
+\end{equation}
+The oxygen on the surface of the anode side reacts with the fuel to prevent the oxygen from reincorporating into the material.
+The final concentration of oxygen defects will depend on the exact environmental and material conditions and location in the cell, but some steady state value will eventually be reached.
+With one side of the cell exposed to low pO\subscript{2}, and the other side exposed to air, a chemical potential gradient is established across the cell.
+This gradient drives the motion of oxygen through the cell, the oxidation of the fuel, and generates the electric current.
+The electrical potential at open circuit conditions is expressed by the Nernst equation, given in Equation\ref{nernst} for the reaction given in Equation\ref{rxn}, where \(f_A\) is the fugacity of species A, E\superscript{o} is the standard potential for the reaction, and n is the number of charges involved in the reaction.\cite{Larminie2001}
+\begin{equation}
+  \label{rxn}
+\ch{aA + bB  <-> cC + dD}
+\end{equation}
+\begin{equation}
+  \label{nernst}
+E = E^o - \frac{RT}{nF}\ln\left(\frac{f_C^c f_D^d}{f_A^a f_B^b}\right)
+\end{equation}
+For the case of a hydrogen fueled SOFC, Equation\ref{nernst} can be simplified to Equation\ref{nernsth2}.\cite{Pilatowsky2008}
+\begin{equation}
+  \label{nernsth2}
+E = E^o + \frac{RT}{2F}\ln\left(\frac{pH_2 {(pO_2)}^{1/2}}{pH_2 O}\right)
+\end{equation}
+From these equations it can be seen that the partial pressures of the involved species have a large role to play in the performance of the cell.
+
+Each component of a SOFC is fabricated from a single material or from combinations of materials designed to optimize that parts function.
+For example, a cell can be comprised of a nickel metal-gadolinium doped ceria (GDC) anode, a GDC electrolyte, and then a  lanthanum strontium manganite cathode.\cite{Liu2002,Haile2003}
+These individual components are tape cast from bulk powders, with additives such as pore formers where appropriate, into thin flexible sheets that are then laminated together and fired to create a single cell.
+As a result, a completed cell has distinct layers in it where the materials and its overall properties abruptly change.
+This composite structure can then have inter-diffusion between layers, smoothing out the abrupt changes, but creating new structures and compositions that were not present upon lamination.\cite{Yokokawa2008a}
+
+Nickel has traditionally been used as an anode material in SOFCs, due to its high catalytic properties. %citation would be good
+A challenge with nickel is that at ambient conditions it oxidizes into nickel oxide, but at operating conditions it reduces to the desired nickel metal.
+There is a large lattice parameter change between nickel and nickel oxide, so that as it reduces, it decreases volume by over 15\%.
+This means that the overall porosity of the anode layer increases as the SOFC is put into service.\cite{Gutierrez-Mora2002,Yu2007}
+This increased porosity can greatly decrease the flexural strength and modulus of the anode and of the overall cell.\cite{Callister2014,Barsoum2003}
+The effect on flexural strength follows an exponential decay as shown in Equation\ref{eq:pore1}, where P is the porosity, and n and \(\sigma\subscript{o}\) are experimentally determined.
+What was once a cell that could withstand the stresses of being sealed, can weaken to the point of fracture after reduction.
+\begin{equation} \label{eq:pore1}
+\sigma\subscript{f} = \sigma\subscript{o}\exp{(-nP)}
+\end{equation}
+
+Porosity is not a completely undesirable trait of SOFCs.
+For the SOFC to efficiently function, gas must be able reach the active sites in the cell.
+These active sites, or triple phase boundaries (TPB), are the points where gas, electronic conductor, and ionic conductor meet, as demonstrated in Figure\ref{tpb}.
+For example, on the anode side of a Ni-GDC cell, this would be a point where nickel meets GDC and the gas.
+The more TPB that are present, the more exchange can occur between the gas and the cell.
+To maximize TPBs, pores can be added, greatly increasing the available surface area of the anode.
+Again, this becomes a trade off between added porosity for performance and a reduction in strength.\cite{Pihlatie2009,Laurencin2010}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{tpb.png}
+  \caption[Diagram showing the triple phase boundary and the importance as being the site where incorporation and reactions occur.]{Diagram showing the triple phase boundary and the importance as being the site where incorporation and reactions occur.\cite{Wachsman2011a}}\label{tpb}
+\end{figure}
+
+Ideally, a SOFC is as thin as possible to minimize diffusion path lengths and resistances in the cell.\cite{Chan2001}
+Realistically, the cell must be able to withstand the stresses of being manufactured, sealed, heating, and use.
+This means that a compromise must be met as to how the cell is supported and which components do the supporting.
+Traditionally, electrolyte supported cells were used with yittra-stabilized zirconia electrolytes, but recently anode supported cells have been able to provide lower resistances while adequately supporting the cell.\cite{Fleischhauer2014a,Laurencin2008}
+Now the anode layer, which is needed to the porous for gas diffusion, must support the majority of the stresses the cell is subjected to.
+
+Many of the materials used in SOFC have a fluorite crystal structure, because of the crystal structure's high mobility for oxygen ions.
+As oxygen vacancies are produced, the interatomic bonding of the structure changes, which can change bulk properties of the crystal.\cite{Bishop2014,Duncan2006}
+If the strength of the atomic bonds weakens on average, due to added vacancies, it then follows that the modulus and strength of the crystal would also decrease.
+This relationship has been shown to fit for single grains of GDC, but this does not necessarily hold true for an actual cell.\cite{Wang2007}
+Grain boundaries can play a large role in the mechanical properties of a bulk sample.
+For this reason microstructure combined with environmental conditions can play a large role on the overall mechanical properties of a fuel cell.
