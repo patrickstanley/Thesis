@@ -27,10 +27,12 @@
 \usepackage{wrapfig}
 \usepackage{listings}
 \usepackage{color}
+\usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
+\usepackage{textgreek}
 %\usepackage{longtable}
 %\usepackage{supertabular}
 \usepackage{siunitx}
-\usepackage{chemformula}[2014/04/08] %adds chemical formulas and kroger vink notation
+\usepackage{chemformula}%adds chemical formulas and kroger vink notation
 %\usepackage{subeqn} %removed to fix error with glossaries package
 %\usepackage{subfigure}
 \usepackage{microtype}
@@ -39,6 +41,9 @@
 
 \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}
 \newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+\renewcommand{\temp}[1]{\SI{#1}{\celsius}}
+\newcommand{\po}[2]{p\textsubscript{O\textsubscript{2}}}
+\setchemformula{kroeger-vink}
 
 \newcommand{\tbsp}{\rule{0pt}{18pt}} %used to get a vertical distance after \hline
 \renewcommand{\baselinestretch}{2}
@@ -136,8 +141,8 @@
 \include{Chapters/Intro}
 \include{Chapters/Background}
 \include{Chapters/Paper1}
-\include{Chapters/Paper2}
-\include{Chapters/Paper3}
+\include{Chapters/SFCMDefect}
+\include{Chapters/SFCMMech}
 \include{Chapters/Conclusions}
 
 \appendix
