@@ -3,54 +3,27 @@
 \chapter{{Defect chemistry and oxygen non-stoichiometry of double perovskite \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}}}}
 
 \section{Introduction}
-    Solid-oxide fuel cells (SOFCs) are in important new technology for stationary and mobile electricity generation with no moving parts and high efficiency.
-    SOFCs are currently limited in their application due to high operating temperatures, performance degradation due to fuel contamination, and inability to tolerate thermal and redox cycling.
-    Creation of new materials for use in SOFCs is a main means to overcome the these limitations.
+    Solid-state electrochemical devices that perform energy conversion and storage rely on a material's abilities to transport charged carriers through the material.
+    Devices such as solid-oxide fuel cells (SOFCs), oxygen separation membranes, and gas sensors can utilize materials which conduct both oxygen and electronic conductors, known as mixed ionic electronic conductors (MIEC), in the electrodes where both conductions need to occur simultaneously.\cite{Huang2006}
+    SOFCs, in particular, are limited in their application due to high operating temperatures, performance degradation due to fuel contamination, and inability to tolerate thermal and redox cycling.
     To improve the performance and reliability of SOFCs the operating temperature needs to be lowered from the intermediate temperature (IT) range (\SI{650}{\celsius} to \SI{800}{\celsius}) to the low temperature range (\textless\SI{650}{\celsius}).\cite{Wachsman2011a}
-    Additionally, the use of an all-ceramic anode, as apposed to the traditional nickel metal anode, would improve long term performance, resistance to poisoning or coking, and better match the thermal expansion of the rest of the cell.
+    Additionally, the use of an all-ceramic anode, as opposed to the traditional nickel metal anode, would improve long term performance, resistance to poisoning or coking, and better match the thermal expansion of the rest of the cell.\cite{Goodenough2007}
 
-    Perovskite structures have yielded number of mixed ionic electronic conductor (MIEC) with potential uses as SOFC anode and cathode materials.
-    Perovskites have the structure of \ce{ABO_3}, where A and B are different cation sites.
-    This structure allows for the stable formation of anion vacancies, allowing for oxygen conduction.\cite{Bernuy-Lopez2007}
-    If multivalent metal species are used as cations, then electronic conduction can be promoted from the reduced and mixed states of the ions.\cite{Huang2006}\cite{Goodenough2007}
-    Additionally, perovskite structures show good resistance to coking or poisoning agents and the \cite{Song2014}
-    \ce{SrMgMoO_3} and its related family of materials (\ce{SrMMoO_3}, where M is a transition metal dopant) yield good conductivities and catalytic actives.
-    A new composition, \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}}, is of particular interest because of its high conductivity (\SI{\sim 35}{S\per\centi\meter}) and stability.\cite{Hussaina,Pan,Hussain}
-    Possible application of MIEC materials, and thus SFCM, include electrodes for SOFC and other devices, chemical sensors or catalysts.\cite{Mizusaki1985}
+    Perovskite structures have yielded number of MIEC with potential uses as electrode materials. \cite{Yamamoto1987,Anderson1992,Ishihara2009}
+    \ce{Sr_2MgMoO_6} (SMM) and its related family of materials (\ce{Sr_2MMoO_6}, where M is a transition metal dopant) yield good conductivities and catalytic actives.\cite{Huang2009}
+    The mixed valence state of Mo(VI)/Mo(V) provides high electronic conduction while supporting oxygen vacancy formation.\cite{Huang2006a}
+    If a dopant is used which has an overlapping redox couple band, such as Fe, electronic conduction can be further improved.
+    Mo(VI) and Mo(V) are stable in both octahedral and tetrahedral coordination, further adding stability to oxygen vacancy formation.\cite{Bernuy-Lopez2007}
 
-    Conduction can occur though the material in either ionic or electronic species.
-    The total conductivity, $\sigma_t$ is the sum of all conducting species.
-    In the case of Equation \ref{eq:totalconduct} it is the sum of the electronic conductivity, $\sigma_e$, and ionic conductivity, $\sigma_i$.
-    Electronic conductivity in turn is the sum of the conductivity due to the electrons or holes and is given by Equation \ref{eq:electronicconduct}, where $e$ is the fundamental charge of an electron, $\mu$ is the mobility of a species, and $n$ is the concentration of electrons while $p$ is the concentration of holes.
-    Ionic conductivity occurs in this case by transportation of oxygen through vacancy sites and is given by Equation \ref{eq:ionicconduct}, where $Z$ is the number of charges for the species, and $\lbrack\ch{V_O^{**}}\rbrack$ is the concentration of oxygen vacancies using Kr\"oger–Vink notation.
-    Oxygen vacancies and electronic species are affected by the partial pressure of oxygen in the environment.
-    The material can respond by either electronic compensation, Equation \ref{eq:electroniccomp}, generating electrons and vacancies as oxygen leaves the material, or ionic compensation, Equation \ref{eq:ioniccomp}, where a metal cation, $M$, reduces with the creation of a vacancy.
-    The balance between ionic and electronic compensation depends on the free energies of reactions for all possible reactions and the environmental conditions, but plays a direct role in the conductivity and non-stoichiometry of the material.
-    \begin{equation}
-        \sigma_t=\sigma_e + \sigma_i
-        \label{eq:totalconduct}
-    \end{equation}
-    \begin{equation}
-        \sigma_e = e\mu_n{}n + e\mu_p{}p
-        \label{eq:electronicconduct}
-    \end{equation}
-    \begin{equation}
-        \sigma_i = Ze\mu_i\lbrack\ch{V_O^{**}}\rbrack
-        \label{eq:ionicconduct}
-    \end{equation}
-    \begin{equation}
-        \ch{O_O^x  <-> 1/2 O2 + V_O^{**} + 2 e'}
-        \label{eq:electroniccomp}
-    \end{equation}
-    \begin{equation}
-        \ch{O_O^x  <-> 1/2 O2 + V_O^{**} + 2 M'}
-        \label{eq:ioniccomp}
-    \end{equation}
+    A new material, \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}} (SFCM), is of particular interest because of its high conductivity (previously measured to be \SI{35}{S\per\centi\meter} at \temp{600}) and stability.\cite{Pan}
+    SFCM takes advantage of the perovskite structure and a choice of cations similar to SMM, but the combination of both cobalt and iron further increase the performance of the material.
+    It has been shown that a SOFC using SFCM as an anode support material is redox stable up to 30 cycles at \temp{600} and that it infiltration with nanoparticles of nickel-gadolinium doped ceria provided long term catalytic activity without detriment to performance.\cite{Hussaina,Hussain}
 
-    In this work the oxygen non-stoichiometry and conductivity of SFCM has been measured to better understand the defect structure of the material.
-    The non-stoichiometry of SFCM was measured under oxidizing and reducing environments similar to LT-SOFCs using thermogravimetry.
-    Temperature programmed desorption spectroscopy characterized at what temperatures the maximum oxygen loss is observed.
-    A defect equilibrium model and diagram is proposed from non-stoichiometry and conductivity data and results are compared to other perovskite materials.
+    This work expands upon the fundamental knowledge of SFCM and to understand the defect chemistry and electronic structure which leads to its high conductivity.
+    The non-stoichiometry of SFCM was measured under oxidizing and reducing environments, similar to what would be found in a LT-SOFCs, using thermogravimetry.
+    X-ray diffraction supports the phase stability of SFCM though these conditions and the change in lattice parameters was determined after oxidation and reduction.
+    Temperature programmed desorption spectroscopy was used to characterize at what temperatures the oxygen loss is observed.
+    A defect equilibrium model and diagram is proposed from non-stoichiometry and conductivity data and results are compared to SMM and other perovskite materials.
 
 \section{Experimental}
     \subsection{Sample Preparation}
@@ -58,40 +31,43 @@
         The constituents were ball milled for 24 hours in ethanol and dried using a \SI{100}{\celsius} oven.
         Afterwards the powder was calcined at \SI{1100}{\celsius} for four hours.
 
-        Dense SFCM bars were used to maximize the total mass and mass changes during testing.
+        Dense SFCM bars were used to maximize the total mass and mass changes during thermogravimetric testing.
         Samples were made by combining SFCM powder with 0.6 wt\% polyethylene glycol 600, 1.8 wt\% ethylene glycol, and 0.6 wt\% glycerol in isopropyl alcohol and ball milling overnight.
-        After drying at \SI{100}{\celsius}, the powder was ground by mortar and pestle, then pressed uniaxially into rectangular bars at 1 metric ton and isostatically pressed at 6 metric tons.
+        After drying at \SI{100}{\celsius}, the powder was ground by mortar and pestle, then pressed uniaxially into rectangular bars at \SI{30}{\mega\pascal}, then isostatically pressed at \SI{30}{\mega\pascal}.
         Bars were sintered by heating to \SI{400}{\celsius} for one hour and then \SI{1340}{\celsius} for four hours, using a \SI{3}{\celsius\per\minute} heating and cooling rate.
-        This produced bars with 97\% theoretical dewsity.
+        This produced bars with 97\% theoretical density by Archimedes' technique.
 
     \subsection{X-ray Diffraction}
         X-ray diffraction (XRD) was used confirm phase purity of the SFCM after synthesis and during the testing process.
         A Bruker D8 Advance with LynxEye was used with a Cu K\textsubscript{\textalpha{}} source.
         A step size of \SI{0.02}{\degree} was used with a dwell of \SI{0.8}{\second} was used.
+        Rietveld refinement was performed on samples as synthesized, after oxidation in pure \ce{O_2} and after reduction in pure \ce{H_2} at \temp{600} for both.
+        GSAS-II was used to perform the refinement calculations and VESTA was used to visualize the unit cell.\cite{Toby2013,Momma2011}
 
     \subsection{Conductivity}
         Total conductivity was measured using the four-wire technique and a Stanford SR 830 lock-in amplifier.
         A bar shape sample was used with dimensions of \SI{6.46x3.3x1.3}{\milli\meter}.
-        Gold paste was used as a current collector.
-        The current range was between 0.005 to 0.05 A.
-        A YSZ oxygen sensor was used to monitor the changes in oxygen partial pressures.
+        Gold paste was used as a current collector, and the current range was between \SI{0.005} to \SI{0.05}{A}.
+        A yttria-stabilized zirconia (YSZ) oxygen sensor operating at \temp{800} was used to monitor the changes in oxygen partial pressures.
+        Intermediate \po2{} ranges were not tested due to the fact that SFCM reacts with the amounts of \ce{CO} and \ce{CO_2} required to obtain those \po2{}.
 
     \subsection{Thermogravimetric Analysis (TGA)}
         Changes in mass of SFCM were measured by a Cahn D200 microbalance with the sample suspended down a quartz tube into a furnace.
-        The furnace used to heat the sample was located outside the quartz tube and was controlled by a PID controller with a K-type thermocouple placed immediately below the sample inside the quartz tube.
-        Gas flow was controlled at consistent \SI{50}{sccm} by mass flow controllers, which mixed dry nitrogen, oxygen, humidified nitrogen and hydrogen to obtain the \po2{} desired.
-        Measurements of the \po2{} were taken by a calibrated yttria-stabilized zirconia (YSZ) oxygen sensor located before the sample.
+        The furnace used to heat the sample and quartz tube was controlled by a PID controller with a K-type thermocouple placed immediately below the sample inside the quartz tube.
+        Gas flow was controlled at consistent \SI{50}{sccm} by mass flow controllers, which mixed dry nitrogen, oxygen, hydrogen, and humidified nitrogen to obtain the \po2{} desired.
+        Measurements of the \po2{} were taken by a calibrated YSZ oxygen sensor at \temp{800} located before the sample.
+        Again, intermediate \po2{} ranges were not able to be tested due to SFCM's incompatibility with the species required to create that environment.
 
-        To prepare the sample it was pre-weighed, wrapped in platinum wire and suspended from the balance, placed in the furnace with simulated air (21\% O\textsubscript{2}, 79\% N\textsubscript{2}) flowing.
+        To prepare the sample, it was pre-weighed, wrapped in platinum wire and suspended from the balance, placed in the furnace with simulated air (21\% O\textsubscript{2}, 79\% N\textsubscript{2}) flowing.
         Once the mass had stabilized, the furnace was heated to \SI{800}{\celsius} to allow for any organic contamination to burn off.
-        After the mass stabilized at this elevated temperature the sample could be introduced to various environments.
-        The mass of the sample would be noted only after steady state had been reached.
-        After testing a sample, a bar of alumina was cut to the same dimensions as the sample and the process was repeated to obtain a blank which could be subtracted from the measurements to remove any buoyancy effects.
+        After the mass stabilized at this elevated temperature the sample was introduced to various environments.
+        The mass of the sample would be noted only after steady state had been reached for a condition.
+        After testing a sample, a bar of alumina was cut to the same dimensions as the sample and the process was repeated to obtain a blank which could be subtracted from the measurements to remove buoyancy effects.
 
         Oxygen non-stoichiometry was calculated using Equation \ref{eq:TGA}, where $\Delta\delta$ is the change in oxygen stoichiometry, $MW_{SFCM}$ is the molecular weight of SFCM (\SI{208.74}{\gram\per\mol}), $MW_O$ is the molecular weight of oxygen (\SI{16.0}{\gram\per\mol}), $w_{sample}$ is the weight of the sample, and $\Delta{}w$ is the weight change as recorded by the TGA.
-        The oxygen vacancy concentration is calculated using Equation \ref{eq:TGAtoV}, where $V_{unit cell}$ is the volume of a SFCM unit cell and $N_A$ is Avogadro's number.
-        To calculate the absolute oxygen vacancy concentration, the non-stoichometry of SFCM at a point needs to be known.
-        For this work, it is assumed that in a pure oxygen environment all oxygen vacancies are filled with no oxygen interstitial or surface species, thus $\delta = 0$.
+        The oxygen vacancy concentration ($\lbrack\ch{V_O^{**}}\rbrack$) is calculated using Equation \ref{eq:TGAtoV}, where $\rho$ is the density of SFCM.
+        To calculate the oxygen vacancy concentration, the non-stoichiometry of SFCM at a point needs to be established.
+        For this work, based on the plateau present in the data at oxidizing conditions, it is assumed that in a pure oxygen environment ($log(\po2{})=0$) all oxygen vacancies are filled with no oxygen interstitial or surface species, thus $\delta=0$.
         \begin{equation}
             \Delta\delta = \frac{MW_{SFCM}}{MW_O\ w_{sample}}\Delta{}w
             \label{eq:TGA}
@@ -103,34 +79,68 @@
 
     \subsection{Temperature Programed Desorption}
         The effluent from the TGA was used as the inlet to a mass spectrometer (MS) to perform temperature programmed desorption.
-        The sample was prepared as before and heat treated to remove any carbon contaminants, but was allowed to cool under simulated air.
-        It was then heated to \SI{800}{\celsius} at \SI{5}{\celsius\per\minute} under a flow of nitrogen as the MS measured the \SI{32}{m/z} signal which corresponded to O\textsubscript{2} desorption.
+        The sample was prepared as before and heat treated to remove any carbon contaminants but was allowed to cool under simulated air.
+        It was then heated to \SI{800}{\celsius} at \SI{5}{\celsius\per\minute} under a \SI{50}{sccm} flow of nitrogen as the MS measured the \SI{32}{m/z} signal which corresponded to O\textsubscript{2} desorption.
         Additional m/z signals were monitored to observed for other species.
 
 \section{Results and Discussion}
-    Throughout the reduction and oxidation treatments performed on SFCM, the material remained pure phase.
-    A theoretical XRD pattern was obtained by calculating a pattern from the ordered double perovskite structure of SMMO and doping Fe to all B-sites randomly.
-    Figure \ref{fig:structure}a has the XRD patterns of SFCM after synthesis and after reduction and oxidation treatments.
-    The ordered double perovskite unit cell is presented next to it, which was used to create the theoretical XRD pattern in Figure \ref{fig:structure}b.\cite{Momma2011}
-    Within the tested environment range (up to \SI{650}{\celsius} and \po2{} from \SI{1} to \SI{e-24}{atm})
-
-    Small changes can be seen to occur in the XRD pattern after different treatments.
-    These are accounted for by the differences in oxidation state, vacancy concentration, and thus lattice parameter left in the sample after reduction or oxidation.
+    The XRD patterns obtained after reduction and oxidation in addition to the fresh, as synthesized powder and the pattern obtained from Rietvelt refinement are presented in Figure \ref{fig:structure}a.
+    An ordered tetragonal, perovskite structure was used as a starting point for Rietveld refinement based on the structures of \ce{Sr_2CoMoO_6}, \ce{Sr_2NiMoO_6} and \ce{Sr_2Fe_{0.75}Co_{0.25}MoO_6}.\cite{Huang2009,Ritter2004}
+    Results from the Rietvelt refinement calculations are given in Table \ref{tab:xrdrefine}.
+    The ordered double perovskite unit cell from the refinement is presented in Figure \ref{fig:structure}b and was used to create the theoretical XRD pattern for visual comparison.
 
     \begin{figure}
       \includegraphics[width=3in]{XRD.jpg}
       \includegraphics[width=3in]{Structure.png}
-      \caption{a) Powder XRD patterns of SFCM samples taken after synthesis, reduction, and oxidation compared to a theoretical SFCM diffraction pattern. b) Crystal structure of theoretical, ordered double perovskite SFCM. }
+      \caption{a) Powder XRD patterns of SFCM samples taken after synthesis, reduction, and oxidation compared to pure phase SFCM diffraction pattern. b) Crystal structure of ordered double perovskite SFCM. }
       \label{fig:structure}
     \end{figure}
 
-    SFCM has a conductivity typical of other MIEC conductors, as shown in Figure \ref{fig:conductivity}.
-    At high \po2 ranges (\SI{e-1.5}{atm} to \SI{1}{atm}) shows p-type conductivity, increasing conductivity with \po2.
+    \begin{table}
+        \centering
+        \caption{Refinement results of SFCM before and after exposure to reducing and oxidizing environments}
+        \label{tab:xrdrefine}
+        \begin{tabular}{llll}
+        Condition & Oxidized & Fresh   & Reduced  \\
+        \hline
+        Space Group                & I 4$\overline{\text{m}}$    & I 4$\overline{\text{m}}$   & I 4$\overline{\text{m}}$    \\
+        a (\si{\angstrom})        & 5.6327   & 5.5529  & 5.5583   \\
+        c (\si{\angstrom})        & 7.89728  & 7.9080 & 7.9063   \\
+        Volume (\si{\angstrom\cubed})    & 250.559  & 243.842 & 244.262  \\
+        Sr-O1 (\si{\angstrom})    & 2.78256  & 2.78561 & 2.78633  \\
+        Sr-O2 (\si{\angstrom})    & 2.69370  & 2.70315 & 2.69425  \\
+        M1-O1 (\si{\angstrom})    & 1.9927   & 1.99488 & 1.99094  \\
+        M1-O2 (\si{\angstrom})    & 1.90246  & 1.91309 & 1.77694  \\
+        M2-O1 (\si{\angstrom})    & 1.95032  & 1.95245 & 1.94859  \\
+        M2-O2 (\si{\angstrom})    & 2.04619  & 2.05763 & 2.17621  \\
+        Phase Purity (\% SFCM)    & Evans     & Evans    & Evans     \\
+        R                         & Evans     & Evans    & Evans
+        \end{tabular}
+        \end{table}
+
+    %review once xrd calcs completed
+    (\emph{Note}: The following 2 paragraphs will be updated once XRD refinement is finished.)
+    While SFCM is considered to be stable under various redox conditions, a small amount of impurity phases do form, especially under oxidizing conditions. %details from refinement
+    \ce{SrMoO_4} is a common impurity in SMM materials and can be seen in small concentrations in the oxidized sample.
+    These secondary phases are minor and disappear under reducing conditions.
+    Overall phase purity remains at greater than XX\% as synthesized, XX\% under oxidizing conditions and XX\% after reduction.
+    Ruddlesden-Popper phase was found to form, causing a broadening of the peak shoulders.
+
+    Small shifts in peak locations and shapes can be seen to occur in the XRD pattern attributed to SFCM after different treatments.
+    These are attributed to the changes in oxidation state, defect concentrations, and thus lattice parameter of the sample after reduction or oxidation.
+    The changes to the lattice were calculated from Rietveld refinements of the XRD data and summarized in Table \ref{tab:xrdrefine}.
+    Reduction of SFCM from an as synthesized state causes a small increase in $a$ and the volume of the unit cell and a small decrease in $c$.
+    Oxidizing the SFCM results in a larger increase $a$ and a small decrease in $c$ resulting an increase in cell volume.
+    Perovskite structures have been shown to have anisotropic chemical expansion, with $a$ increasing upon reduction while $c$ decreases for SFM.\cite{Tsvetkov2016}
+    Due to the presence of the Ruddlesden-Popper phase, the attribution of causes to the changes in lattice parameters is difficult as the rock-salt portion of the phase can behave differently than the rest of the perovskite phase.\cite{Bishop2014}
+    Overall the increases in unit cell parameters for reduction can be attributed to the increase in ionic radii of B-site metals upon reduction and the generation of oxygen vacancies causing lengthening of metal oxygen bonds, while oxidation also causes an increase in cell parameters due to the Ruddlesden-Popper phase present.
+
+    SFCM has a conductivity dependence typical of MIEC conductors, as shown in Figure \ref{fig:conductivity}.
+    At high \po2{} ranges (\SI{e-1.5}{atm} to \SI{1}{atm}) shows p-type conductivity, increasing conductivity with \po2.
     Down to \SI{e-1}{atm} the change in conductivity is linear with a slope of \SI{0.089} (log-log scale).
     Below \SI{e-1}{atm} the slope changes away from the previous trend.
-    At low \po2 ranges (\SI{e-24}{atm} to \SI{e-19}{atm}) the conductivity behaves linearly with n-type conductivity, increasing at lower \po2s with a slope of \SI{-0.11} (log-log scale).
-
-    %Add Discussion
+    At low \po2{} ranges (\SI{e-24}{atm} to \SI{e-19}{atm}) the conductivity behaves linearly with n-type conductivity, increasing at lower \po2s with a slope of \SI{-0.11} (log-log scale).
+    Due to the inability to measure the intermediate \po2{} we were unable to determine in this work at what point the \po2{} dependence changes from n-type to p-type and if there is an ionic regime in between.
 
     \begin{figure}
       \includegraphics[width=6in]{conductivity.jpg}
@@ -138,41 +148,57 @@
       \label{fig:conductivity}
     \end{figure}
 
-    To confirm that oxygen desorption occurs to SFCM when heated under reducing conditions, TPD was performed in conjunction with TGA.
-    Figure \ref{fig:TPD} presents the data from the TGA on top with the mass and rate of mass change while the \SI{16}{m\per z} signal from oxygen in the mass spectrometer is on bottom.
-    Both mass and MS signals contain noise from the PID control on the furnace.
-    The rate of mass loss matches the oxygen signal from the MS, confirming that oxygen is generated from SFCM when heated under reducing conditions and is the cause for mass loss in the sample.
+    Based on the slopes in the high \po2{} region, at least two defect regimes exist in that area changing near \SI{e-1}{atm}.
+    Both high and low \po2{} regions have slopes much lower than +1/4 or -1/4 respectively, which indicates that the relationship between electronic charge caries is not independent of the other defect species in the material.
+    In fact, the lower than 1/4 slope suggest that the electronic charge carries are taken up by the other species, decreasing the expected number based on \po2{} change.
+    The different slopes between high and low \po2{} are the result of different defect species interacting with the electronic carriers at different points in the reduction.
+
+    To confirm that oxygen desorption readily occurs in SFCM, what temperatures it occurs at, and by what mechanisms, TPD was performed in conjunction with TGA.
+    Figure \ref{fig:TPD} presents the data from the TGA on top with the mass and rate of mass change, while the \SI{16}{m\per z} signal from oxygen in the mass spectrometer is on bottom.
+    The cyclic noise present in both mass and MS signals is due to an ill tuned PID controller on the TGA furnace.
+    The rate of mass loss matches the oxygen signal from the MS, confirming that oxygen is generated from SFCM when heated under mild reducing conditions and is the cause for mass loss in the sample.
     SFCM shows two maxima for the rate of oxygen loss during heating.
     The first, \textalpha, occurs at \temp{405} with the second peak, \textbeta, occurring near \temp{800}.
-
-    %add Discussion \cite{Vasala2010}
+    The MS monitored for other species, such as carbon and water, but no significant amounts were observed.
 
     \begin{figure}
-      \includegraphics[width=5in]{TPD.jpg}
+      \includegraphics[width=4in]{TPD.jpg}
       \caption{Temperature programmed desorption of oxygen in SFCM with mass loss from TGA(top) and oxygen desorption from MS (bottom) as it is heated to \SI{800}{\celsius} in N\textsubscript{2}.}
       \label{fig:TPD}
     \end{figure}
 
-    Oxygen non-stoichometry and oxygen vacancy concentrations are shown in Figure \ref{fig:TGA600} at \temp{600} for high and low \po2 regions.
-    At high \po2, SFCM has two linear regions, changing between them near \SI{e-0.75}{atm}.
-    The transition between regions in oxygen stoichiometry occurs at a similar \po2  to where the conductivity changes in Figure \ref{fig:conductivity}.
-    In the high \po2 region, a linear trend occurs down until \SI{e-21}{atm} where the non-stoichiometry increases.
+    Perovskite materials have oxygen desorption classified based on the temperature which it occurs.
+    Low temperature desorption (referred to as \textalpha), occurs due to the reduction of metals and desorption of oxygen near the surface.
+    High temperature desorption (referred to as \textbeta), takes place when oxygen is able to diffuse though through the bulk and be released.\cite{Levasseur2009}
+    SFCM shows both \textalpha{} and \textbeta{} desorption, indicating that both the surface and lattice can generate oxygen vacancies due to the reduction of the different B-site cations and that those vacancies are mobile to move from the bulk to the surface.
+    SMM shows only \textbeta{} desorption above \temp{800} and while \ce{Sr_2Fe_{1.5}Mo_{0.5}O_6} (SFM) has \textalpha{} desorption from \temp{400} to \temp{800} and \ce{Sr_2CoMoO_6} (SCM) desorbs starting below \temp{400}.\cite{Liu2011, Vasala2010}
+    In the case of SFM and SCM, the use of the multivalent iron or cobalt allows for reduction at a lower temperature than SMM.
+    For SFCM, the same effect is seen through the combined use of cobalt and iron.
+    This demonstrates SFCM's ability to begin to create oxygen vacancies at \temp{400} and exchange oxygen with the bulk lattice starting as low as \temp{450} and peaking near \temp{800}.
+
+    Oxygen non-stoichiometry and oxygen vacancy concentrations are shown in Figure \ref{fig:TGA600} at \temp{600} for high and low \po2{} regions.
+    At high \po2{}, SFCM has two linear regions, changing between them near \SI{e-0.75}{atm}.
+    The transition between regions in oxygen stoichiometry occurs at a similar \po2{} to where the conductivity changes in Figure \ref{fig:conductivity}.
+    In the high \po2{} region, a linear trend occurs down until \SI{e-21}{atm} where the non-stoichiometry rate increases.
 
     \begin{figure}
-      \includegraphics[width=5in]{TGA600.jpg}
+      \includegraphics[width=4in]{TGA600.jpg}
       \caption{Non-stoichiometry (top) and corresponding oxygen vacancy concentration (bottom) of SFCM under oxidizing conditions (right) and reducing conditions (left) at \SI{600}{\celsius}.}
       \label{fig:TGA600}
     \end{figure}
 
-    \begin{figure}
-      \includegraphics[width=6in]{defect.jpg}
-      \caption{Oxygen vacancy and electronic defects in SFCM based on conductivity and TGA non-stoichiometry.}
-      \label{fig:defects}
-    \end{figure}
+    SFCM shows similar trends in non-stoichiometry to SMM and SFM, but with the added complexity expected from the additional B-site species.
+    SMM approaches a plateau in oxygen content as it reached \SI{1}{atm} of oxygen the same as SFCM, but possesses a constant slope of -1/6 when plotted on a log-log scale.\cite{Marrero-lopez2010}
+    In comparison, SFCM has multiple slopes associated with the degree of vacancy formation, as shown in Figures \ref{fig:TGA600}c and \ref{fig:TGA600}d.
+    These different slopes can be attributed to the reduction of the three different B-site cations at different \po2{}.
+    As an oxygen vacancy forms, the electrons required to maintain charge balance can be accommodated by the reduction of Mo, Fe, or Co, each with an independent equilibrium constant, whereas SMM only has Mo reduction to accommodate electrons from oxygen vacancy generation.
+    The high slopes of Figure \ref{fig:TGA600}d show how SFCM can generate more oxygen vacancies at lower \po2{} because of the Fe and Co cations.
+    SFM and SMM show similar amounts of non-stoichiometry at the same \po2{} but at \temp{1000}.\cite{Kircheisen2012}
+    SFCM shows almost twice the non-stoichiometry at a much lower temperature of \temp{600}.
+    SFCM's ability to create vacancies at higher \po2{} results in a larger accumulated vacancy concentration at low \po2{}.
 
     TGA non-stoichiometry measurements were also performed at \temp{400} and \temp{500} which are temperatures in the LT-SOFC range.
-    Figure \ref{fig:TGAtemps} shows the non-stoichometry measurements for the sample sample tested at three temperatures in the low \po2{} (a) and high \po2{} (b) regions.
-    As expected lowering the temperature reduces the non-stoichiometry at a given \po2{} and decreases the \po2{} at which transitions occur between regimes.
+    Figure \ref{fig:TGAtemps} shows the non-stoichiometry measurements for the sample  tested at three temperatures in the low \po2{} (a) and high \po2{} (b) regions.
 
     \begin{figure}
       \includegraphics[width=6in]{TGAtemps.jpg}
@@ -180,9 +206,74 @@
       \label{fig:TGAtemps}
     \end{figure}
 
-    Using the collected data with Equations \ref{eq:totalconduct}{--}\ref{eq:ioniccomp}, a general defect diagram can be made.
-    While the exact concentrations of defects is not presented, the general trend and relative concentrations hold true.
+    As expected lowering the temperature reduces the non-stoichiometry at a given \po2{} and decreases the \po2{} at which transitions between regimes occur.
+    At \temp{400} oxygen vacancy formation decreases considerably compared to \temp{500} and \temp{600}
+    This aligns with the results of the TPD (Figure \ref{fig:TPD}) where SFCM does not start desorbing oxygen until \temp{350} to \temp{400}.
+
+    To best understand what is occurring in SFCM a defect equilibrium diagram and model need to be created to relate the changes in conductivity and non-stoichiometry to the concentration of the various defects present in the material.
+    Defect reactions with their corresponding equilibrium equations are given in Equations \ref{rxn:intrinsic}{--}\ref{rxn:metalox}, which use Kr\"oger–Vink notation.
+    Equations \ref{rxn:metalred} and \ref{rxn:metalox} represents the reduction or oxidation of any B-site cation (Co, Fe, or Mo).
+    \begin{align}
+        \label{rxn:intrinsic}
+        \emptyset& \ch{<-> e' + h^{*}}&   K_i&  = np\\
+        \label{rxn:schottky}
+        \emptyset& \ch{<->  3 V_O^{**} + V_A^{''} + V_B^{''''}}& K_s& = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_A^{''}}\rbrack \lbrack\ch{V_B^{''''}}\rbrack = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_B^{''''}}\rbrack ^{\beta + 1}\\
+        \label{rxn:external}
+        \ch{O_O^x}& \ch{<-> 1/2 O2 + V_O^{**} + 2 e'}& K_r& = p_{O_2}^{1/2} \lbrack\ch{V_O^{**}}\rbrack n^2\\
+        \label{rxn:metalred}
+        \ch{B_B^x + e^'}& \ch{<-> B_B^'}& K_{B^{'}}& = \lbrack\ch{B_B^{'}}\rbrack n^{-1}\\
+        \label{rxn:metalox}
+        \ch{B_B^x + h^*}& \ch{<-> B_B^*}& K_{B^*}& = \lbrack\ch{B_B^{*}}\rbrack p^{-1}
+    \end{align}
+
+    Using a Brouwer approach for the different regions of defect dominance established by conductivity and TGA measurements, Equations \ref{rxn:intrinsic}{--}\ref{rxn:metalox} can be rearranged and simplified to give approximations of the defect concentrations within various \po2{} ranges.
+    Table \ref{tab:defectequ} summarize the result of using the Brouwer approach to determine the defect concentrations at different \po2{} regions, starting with Region I at low \po2{} up to Region III at high \po2{}.
+    The Region IIb is the mid-\po2{} for which currently there is no data on the behavior of the material.
+    It is possible that this region consists of multiple regions, but within the scope of this work, that is unknown.
+    (\emph{Note: A few details of this part are still being finalized. Once finalized the values for equilibrium constants can be reported in addition and Figure \ref{fig:defects} will be updated with the correct locations for data and fits.})
+
+    \begin{table}
+    \centering
+    \caption{Equations for Defect Equilibrium Diagram}
+    \label{tab:defectequ}
+    \begin{adjustbox}{width=1.2\textwidth,center=\textwidth}
+
+    \begin{tabular}{c|c|c|c|c|c}
+    \multicolumn{1}{l}{} & \multicolumn{5}{c}{Region}\\
+    Species & I          & IIa                 & IIb & IIc          & III                  \\
+    \hline
+    n  & $(2K_r)^{\frac{1}{3}}p_{O_2}^{-\frac{1}{6}}$ & $\left(\frac{2K_r}{K_B}\right)^{\frac{1}{3}}p_{O_2}^{-\frac{1}{6}}$  & - & $\lbrack\ch{B_B^{*}}\rbrack$  & $\frac{K_i}{\left(\frac{K_i^6K_B}{K_r^3}(4+2\beta)^{1+\beta}\right)^{\frac{1}{7+\beta}}p_{O_2}^{\frac{3}{14+2\beta}}}$  \\
+
+    p  & $\frac{K_i}{(2K_r)^{\frac{1}{3}}}p_{O_2}^{\frac{1}{6}}$ & $K_i\left(\frac{2K_r}{K_B}\right)^{-\frac{1}{3}}p_{O_2}^{\frac{1}{6}}$ & - & $K_i\lbrack\ch{B_B^{*}}\rbrack$  & $\left(\frac{K_i^6K_B}{K_r^3}\left(4+2\beta\right)^{1+\beta}\right)^{\frac{1}{7+\beta}}p_{O_2}^{\frac{3}{14+2\beta}}$  \\
+
+    $\lbrack\ch{V_O^{**}}\rbrack$   & $\left(\frac{K_r}{4}\right)^{\frac{1}{3}}p_{O_2}^{-\frac{1}{6}}$ & $\lbrack\ch{B_B^{'}}\rbrack$ & -  & $\frac{K_r}{\lbrack\ch{B_B^{*}}\rbrack^2}p_{O_2}^{-\frac{1}{2}}$ & $\frac{K_r}{K_i^2}\left(\frac{K_i^6K_B}{K_r^3}(4+2\beta)^{1+\beta}\right)^{\frac{2}{7+\beta}}p_{O_2}^{\frac{-1+\beta}{14+2\beta}}$  \\
+
+    $\lbrack\ch{V_A^{''}}\rbrack$   & $\frac{1}{\beta}\left(\frac{4K_s}{K_r}\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{1}{2(1+\beta)}}$ & $\frac{1}{\beta}\left(\frac{K_B}{\lbrack\ch{B_B^{'}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$ & -  & $\frac{1}{\beta}\left(\frac{K_B}{K_r^3}\lbrack\ch{B_B^{*}}\rbrack^6\right)^\frac{1}{1+\beta}p_{O_2}^{\frac{3}{2(1+\beta)}}$  & $\frac{1}{\beta}\left(\frac{K_B}{\lbrack\ch{V_O^{**}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$  \\
+
+    $\lbrack\ch{V_B^{''''}}\rbrack$ & $\left(\frac{4K_s}{K_r}\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{1}{2(1+\beta)}}$ & $\left(\frac{K_B}{\lbrack\ch{B_B^{'}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$ & -  & $\left(\frac{K_B}{K_r^3}\lbrack\ch{B_B^{*}}\rbrack^6\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{3}{2(1+\beta)}}$  & $\left(\frac{K_B}{\lbrack\ch{V_O^{**}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$
+    \end{tabular}
+    \end{adjustbox}
+    \end{table}
+
+    Using the TGA and conductivity data with the equations given in Table \ref{tab:defectequ} the reaction equilibrium constants can be fitted to obtain a general defect equilibrium diagram as shown in Figure \ref{fig:defects}.
+    To calculate the carrier density from the electronic conductivity, a value of \SI{0.04}{\centi\meter\squared\per\volt\per\second} was used based on literature values for small polaron defects in similar materials.\cite{Marrero-lopez2010}
+    Additionally, the equilibrium constants can be plotted to fit the Arrhenius equation and obtain activation energies for the different reactions.
+
+    \begin{figure}
+      \includegraphics[width=6in]{defect.jpg}
+      \caption{Oxygen vacancy and electronic defects in SFCM based on conductivity and TGA non-stoichiometry.}
+      \label{fig:defects}
+    \end{figure}
+
+    From Figure \ref{fig:defects}, it can be seen that at high \po2{} the predominant charge carriers are holes, until the \SI{e-2.5}{atm} range, where oxygen vacancy concentration meets that of holes.
+    At low \po2{} both electrons and oxygen vacancies are on the same order of magnitude though the entire region, leading to a truly mixed conduction mechanism.
+    This large concentration of electronic and ionic carriers leads to SFCM's high performance.%addcite
 
 
 \section{Conclusions}
-    Aenean consequat turpis eu nunc luctus sollicitudin. Mauris ut est nisl, nec ullamcorper metus. Vivamus vel nisi dolor. Curabitur urna felis, interdum ut adipiscing laoreet, convallis sit amet justo. Sed eleifend, erat ac tincidunt blandit, ipsum quam vestibulum erat, ut mollis neque est varius dui. Vestibulum eu eros risus. Pellentesque in purus at odio dictum condimentum.
+    SFCM has potential as an electrode material in a number of electrochemical device applications due to its high conductivity and redox stability.
+    SFCM is an improvement over previous double perovskite materials because of the improved conductivity at low temperatures.
+    This is in part because SFCM supports the formation of oxygen vacancies at both surface and lattice positions shown by overlapping \textalpha{} and \textbeta{} oxygen desorption, starting as low at \temp{350} and continuing up until above \temp{800}.
+    Oxygen vacancies form more rapidly than other MIEC materials with decreasing \po2{} as combination of B-site cations enables reduction though a large range of \po2{}.
+    A proposed defect diagram was given supported by thermogravimetric and conductivity measurements for the complex system.
+    Thermogravimetry at lower temperatures demonstrated SFCM's activity until \temp{400} at which the amount of oxygen vacancy formation slows dramatically.
