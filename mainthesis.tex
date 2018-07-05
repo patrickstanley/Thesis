@@ -25,6 +25,7 @@
 %\usepackage{multirow}
 %\usepackage{tabls}
 \usepackage{wrapfig}
+\usepackage[margin=1.0cm]{caption} %indents captions by an additional amount
 \usepackage{listings}
 \usepackage{color}
 \usepackage[version=3]{mhchem} % Formula subscripts using \ce{}
@@ -55,6 +56,9 @@
 \setlength{\parindent}{.4in}
 \pagestyle{empty}
 
+\makeatletter %makes all float boxes centered
+\g@addto@macro\@floatboxreset\centering
+\makeatother
 
 \setacronymstyle{long-short} %first use of acronym gives full name
 \glsdisablehyper%turns off hyperlinking
@@ -140,11 +144,11 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 \include{Chapters/Intro}
-\include{Chapters/Background}
-\include{Chapters/NiGDCMech}
-\include{Chapters/SFCMDefect}
-\include{Chapters/SFCMMech}
-\include{Chapters/Conclusions}
+\include{Chapters/Experimental}
+%\include{Chapters/NiGDCMech}
+%\include{Chapters/SFCMDefect}
+%\include{Chapters/SFCMMech}
+%\include{Chapters/Conclusions}
 
 \appendix
 \titleformat{\chapter}

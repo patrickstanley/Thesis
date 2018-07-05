@@ -1,11 +1,10 @@
 % !TEX root = ../mainthesis.tex
 
-\chapter{{Defect chemistry and oxygen non-stoichiometry of double perovskite \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}}}}
+\chapter[Defect chemistry and oxygen non-stoichiometry of \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}}]{Defect chemistry and oxygen non-stoichiometry of double perovskite \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}}}
 
 \section{Introduction}
     Solid-state electrochemical devices that perform energy conversion and storage rely on a material's abilities to transport charged carriers through the material.
     Devices such as solid-oxide fuel cells (SOFCs), oxygen separation membranes, and gas sensors can utilize materials which conduct both oxygen and electronic conductors, known as mixed ionic electronic conductors (MIEC), in the electrodes where both conductions need to occur simultaneously.\cite{Huang2006}
-    SOFCs, in particular, are limited in their application due to high operating temperatures, performance degradation due to fuel contamination, and inability to tolerate thermal and redox cycling.
     To improve the performance and reliability of SOFCs the operating temperature needs to be lowered from the intermediate temperature (IT) range (\SI{650}{\celsius} to \SI{800}{\celsius}) to the low temperature range (\textless\SI{650}{\celsius}).\cite{Wachsman2011a}
     Additionally, the use of an all-ceramic anode, as opposed to the traditional nickel metal anode, would improve long term performance, resistance to poisoning or coking, and better match the thermal expansion of the rest of the cell.\cite{Goodenough2007}
 
@@ -90,8 +89,8 @@
     The ordered double perovskite unit cell from the refinement is presented in Figure \ref{fig:structure}b and was used to create the theoretical XRD pattern for visual comparison.
 
     \begin{figure}
-      \includegraphics[width=3in]{XRD.jpg}
-      \includegraphics[width=3in]{Structure.png}
+      \includegraphics[width=0.45\textwidth]{XRD.jpg}
+      \includegraphics[width=0.45\textwidth]{Structure.png}
       \caption{a) Powder XRD patterns of SFCM samples taken after synthesis, reduction, and oxidation compared to pure phase SFCM diffraction pattern. b) Crystal structure of ordered double perovskite SFCM. }
       \label{fig:structure}
     \end{figure}
@@ -143,7 +142,7 @@
     Due to the inability to measure the intermediate \po2{} we were unable to determine in this work at what point the \po2{} dependence changes from n-type to p-type and if there is an ionic regime in between.
 
     \begin{figure}
-      \includegraphics[width=6in]{conductivity.jpg}
+      \includegraphics[width=\textwidth]{conductivity.jpg}
       \caption{Total conductivity as the environment changes oxygen content at \SI{600}{\celsius}.}
       \label{fig:conductivity}
     \end{figure}
@@ -162,7 +161,7 @@
     The MS monitored for other species, such as carbon and water, but no significant amounts were observed.
 
     \begin{figure}
-      \includegraphics[width=4in]{TPD.jpg}
+      \includegraphics[width=0.8\textwidth]{TPD.jpg}
       \caption{Temperature programmed desorption of oxygen in SFCM with mass loss from TGA(top) and oxygen desorption from MS (bottom) as it is heated to \SI{800}{\celsius} in N\textsubscript{2}.}
       \label{fig:TPD}
     \end{figure}
@@ -182,7 +181,7 @@
     In the high \po2{} region, a linear trend occurs down until \SI{e-21}{atm} where the non-stoichiometry rate increases.
 
     \begin{figure}
-      \includegraphics[width=4in]{TGA600.jpg}
+      \includegraphics[width=0.8\textwidth]{TGA600.jpg}
       \caption{Non-stoichiometry (top) and corresponding oxygen vacancy concentration (bottom) of SFCM under oxidizing conditions (right) and reducing conditions (left) at \SI{600}{\celsius}.}
       \label{fig:TGA600}
     \end{figure}
@@ -201,7 +200,7 @@
     Figure \ref{fig:TGAtemps} shows the non-stoichiometry measurements for the sample  tested at three temperatures in the low \po2{} (a) and high \po2{} (b) regions.
 
     \begin{figure}
-      \includegraphics[width=6in]{TGAtemps.jpg}
+      \includegraphics[width=\textwidth]{TGAtemps.jpg}
       \caption{Non-stoichiometry of SFCM as \po2{} changes at \SI{400}{\celsius}, \SI{500}{\celsius}, and \SI{600}{\celsius}.}
       \label{fig:TGAtemps}
     \end{figure}
@@ -236,11 +235,12 @@
     \centering
     \caption{Equations for Defect Equilibrium Diagram}
     \label{tab:defectequ}
-    \begin{adjustbox}{width=1.2\textwidth,center=\textwidth}
+    \begin{adjustbox}{width=1.1\textwidth,center=\textwidth}
 
     \begin{tabular}{c|c|c|c|c|c}
-    \multicolumn{1}{l}{} & \multicolumn{5}{c}{Region}\\
-    Species & I          & IIa                 & IIb & IIc          & III                  \\
+    Region & I          & IIa                 & IIb & IIc          & III                  \\
+    \po2{} (atm) & Up to $10^{-23}$ & $10^{-23}$ and up & - & below $10^{-1}$ & Above $10^{-1}$\\
+    Main Defect & $n = 2\lbrack\ch{V_O^{**}}\rbrack$ & $\lbrack\ch{B_B^'}\rbrack = 2\lbrack\ch{V_O^{**}}\rbrack$ & - & $\lbrack\ch{B_B^*}\rbrack = 2 \lbrack\ch{V_A^{''}}\rbrack + 4 \lbrack\ch{V_B^{''''}}\rbrack$ & $p=2\lbrack\ch{V_A^{''}}\rbrack + 4 \lbrack\ch{V_B^{''''}}\rbrack$\\
     \hline
     n  & $(2K_r)^{\frac{1}{3}}p_{O_2}^{-\frac{1}{6}}$ & $\left(\frac{2K_r}{K_B}\right)^{\frac{1}{3}}p_{O_2}^{-\frac{1}{6}}$  & - & $\lbrack\ch{B_B^{*}}\rbrack$  & $\frac{K_i}{\left(\frac{K_i^6K_B}{K_r^3}(4+2\beta)^{1+\beta}\right)^{\frac{1}{7+\beta}}p_{O_2}^{\frac{3}{14+2\beta}}}$  \\
 
@@ -250,7 +250,11 @@
 
     $\lbrack\ch{V_A^{''}}\rbrack$   & $\frac{1}{\beta}\left(\frac{4K_s}{K_r}\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{1}{2(1+\beta)}}$ & $\frac{1}{\beta}\left(\frac{K_B}{\lbrack\ch{B_B^{'}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$ & -  & $\frac{1}{\beta}\left(\frac{K_B}{K_r^3}\lbrack\ch{B_B^{*}}\rbrack^6\right)^\frac{1}{1+\beta}p_{O_2}^{\frac{3}{2(1+\beta)}}$  & $\frac{1}{\beta}\left(\frac{K_B}{\lbrack\ch{V_O^{**}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$  \\
 
-    $\lbrack\ch{V_B^{''''}}\rbrack$ & $\left(\frac{4K_s}{K_r}\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{1}{2(1+\beta)}}$ & $\left(\frac{K_B}{\lbrack\ch{B_B^{'}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$ & -  & $\left(\frac{K_B}{K_r^3}\lbrack\ch{B_B^{*}}\rbrack^6\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{3}{2(1+\beta)}}$  & $\left(\frac{K_B}{\lbrack\ch{V_O^{**}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$
+    $\lbrack\ch{V_B^{''''}}\rbrack$ & $\left(\frac{4K_s}{K_r}\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{1}{2(1+\beta)}}$ & $\left(\frac{K_B}{\lbrack\ch{B_B^{'}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$ & -  & $\left(\frac{K_B}{K_r^3}\lbrack\ch{B_B^{*}}\rbrack^6\right)^{\frac{1}{1+\beta}}p_{O_2}^{\frac{3}{2(1+\beta)}}$  & $\left(\frac{K_B}{\lbrack\ch{V_O^{**}}\rbrack^3}\right)^{\frac{1}{1+\beta}}$\\
+
+    $\lbrack\ch{B_B^'}\rbrack$ & Constant & $K_{B^{'}} \left(\frac{2K_r}{K_{B^{'}}}\right)^{\frac{1}{3}}p_{O_2}^{\frac{-1}{6}}$ & - & 1324  &1234\\
+
+    $\lbrack\ch{O_i^{''}}\rbrack$ & Constant & $K_{B^{'}} \left(\frac{2K_r}{K_{B^{'}}}\right)^{\frac{1}{3}}p_{O_2}^{\frac{-1}{6}}$ & - & 1324  &1234\\
     \end{tabular}
     \end{adjustbox}
     \end{table}
@@ -260,7 +264,7 @@
     Additionally, the equilibrium constants can be plotted to fit the Arrhenius equation and obtain activation energies for the different reactions.
 
     \begin{figure}
-      \includegraphics[width=6in]{defect.jpg}
+      \includegraphics[width=\textwidth]{defect.jpg}
       \caption{Oxygen vacancy and electronic defects in SFCM based on conductivity and TGA non-stoichiometry.}
       \label{fig:defects}
     \end{figure}

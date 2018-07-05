@@ -7,9 +7,6 @@
 \chapter{High Temperature Mechanical Behavior of Porous Ceria and Ceria-Based SOFCs}
 
 \section{Introduction}
-Solid oxide fuel cells (SOFCs) are a highly efficient energy conversion technology entering the market.
-Commercialization of these devices requires the development of effective manufacturing methods that involves solving a number of problems that are not present in the scientific research environment.
-The most immediate challenge is how to provide adequate sealing for full size SOFCs in a multi-cell stack.
 For planar SOFCs, a standard stack design consists of a number of square cells separated by metal interconnects.\cite{Ki2010}
 These interconnects act as current collectors, gas channels, and separators to prevent fuel and air from mixing.
 Sealing of these stacks is accomplished by compressing the layered structure which includes sealing material.
@@ -67,7 +64,7 @@ Three squares were stacked and hot pressed at \temp{49} and 2 tons for 30 minute
 Following this lamination, the tape was cut into rectangular coupons measuring 25mm by 10mm.
 The coupons were fired at \temp{1400} for 4 hours.
 Final bar dimensions were 8.16 by 24.15 by 2.98 mm on average.
-For half-cell coupons GDC electrolyte slurry was prepared and tape cast with a 40 micron blade height.
+For half-cell coupons GDC electrolyte slurry was prepared and tape cast with a \SI{40}{micron} blade height.
 After the lamination of the three ASL layers, a single layer of electrolyte tape was laminated to the ASL using the same pressure for 2 hours.
 The sintering procedure for half-cell coupons was identical to the ASL coupons.
 Samples were polished with 600 grit sandpaper on edges before testing.
@@ -77,23 +74,21 @@ Samples were polished with 600 grit sandpaper on edges before testing.
 To understand the degree of reduction in test coupons, thermogravimetric analysis (TGA) was used to measure the mass loss as a function of time,
 temperature, and gas environment.
 A Cahn D200 microbalance was used to measure the weight changes as the sample was heated in a furnace with controlled atmosphere.
-A small section of test coupon was placed in a crucible suspended from the balance and heated to \temp{650} at \temp{10}/min, the environment was switched from 50 sccm of 21\% O\textsubscript{2} in
-N\textsubscript{2} to 50 sccm of 3\% H\textsubscript{2}, 3\%
+A small section of test coupon was placed in a crucible suspended from the balance and heated to \temp{650} at \SI{10}{\celsius\per\minute}, the environment was switched from \SI{50}{sccm} of 21\% O\textsubscript{2} in
+N\textsubscript{2} to \SI{50}{sccm} of 3\% H\textsubscript{2}, 3\%
 H\textsubscript{2}O in N\textsubscript{2}.
 Mass, temperature, and
 \po2{} measurements were taken at 30 second intervals.
-\po2{} measurements were taken using a calibrated YSZ
-sensor placed immediately before the sample.
-Samples were cooled at
-\temp{10}/min in the desired atmosphere.
+\po2{} measurements were taken using a calibrated YSZ sensor placed immediately before the sample.
+Samples were cooled at \SI{10}{\celsius\per\minute} in the desired atmosphere.
 
 \subsection{Development of Mechanical Test Apparatus}
 
 To develop a testing apparatus capable of simulating the various conditions experienced by operating SOFCs, appropriate materials were chosen based on thermal and chemical stability criteria.
 Alumina was chosen to build the bend fixture due to its chemical stability and high hardness.
-The sample rests crossways on two stationary 6.35mm diameter rods which are placed in troughs separated by 20mm.
-The upper half of the fixture consists of a 6.35mm rod used to apply stress to the sample from the UTM crosshead.
-Both pieces are attached using silica-based cement to 300 mm rods attached at the anchor points of the UTM.
+The sample rests crossways on two stationary \SI{6.35}{\milli\meter} diameter rods which are placed in troughs separated by \SI{20}{\milli\meter}.
+The upper half of the fixture consists of a \SI{6.35}{\milli\meter} rod used to apply stress to the sample from the UTM crosshead.
+Both pieces are attached using silica-based cement to \SI{300}{\milli\meter} rods attached at the anchor points of the UTM.
 Assembly and alignment is assisted with the use of a 3D printed jig to ensure repeatability.
 The complete alumina, 3-point bend fixture is seen in Figure \ref{fig:3ptbend} with the two bottom rollers, a sample, and the top roller making contact, applying flexural stresses to the sample.
 
@@ -128,7 +123,7 @@ The design was compared and qualified to a regular steel 3-point bend apparatus 
 \subsection{Bend Testing}
 
 All tests conducted in the UTM (Tinius Olsen 10ST with 250 N load cell)
-were done at a rate of 0.2 mm/min with a 20 mm lower span.
+were done at a rate of \SI{0.2}{\milli\meter\per\minute} with a \SI{20}{\milli\meter} lower span.
 After measuring the force at fracture, stress was calculated using Equation \ref{eq:3ptstrength}
 for 3-point flexural of rectangular samples, where \(\sigma_{f}\) is the stress at failure, F is the load at failure, L is the span of the fixture, b is the width of the sample and d is the thickness of the sample.
 At room temperature, the coupons or bars were loaded into the fixture and tested in batches of 5 per condition.
@@ -153,7 +148,7 @@ inter-granular, or mixed nature of crack propagation, and to find any anomalous 
 \subsection{Atmospheric Treatment}
 
 To test individual coupons under reducing environments, samples were loaded into the test chamber at \temp{400}, after previous pre-heating in the staging area.
-After 20 minutes, the temperature would be increased to the desired set-point of \temp{650} at a ramp rate of \temp{10}/min and the gas would be switched first to N\textsubscript{2} to flush the chamber, then to humidified argon containing 3\% H\textsubscript{2}.
+After 20 minutes, the temperature would be increased to the desired set-point of \temp{650} at a ramp rate of \SI{10}{\celsius\per\minute} and the gas would be switched first to N\textsubscript{2} to flush the chamber, then to humidified argon containing 3\% H\textsubscript{2}.
 It would then be allowed to sit for 18 hours before testing to allow reduction.
 After testing, the chamber would be flushed again with N\textsubscript{2} and cooled to \temp{400} before opening to change samples and repeat the process.
 
@@ -189,14 +184,15 @@ The data was fit using this equation and both a fixed geometric constant, $\eta$
     \label{fig:gdcporsity}
 \end{figure}
 
-Chi-squared values, indicating the divergence of the fit from the measured data for each sample set, were calculated for the two fitting methods and are displayed in Table 1.
+Chi-squared values, indicating the divergence of the fit from the measured data for each sample set, were calculated for the two fitting methods and are displayed in Table \ref{tab:porousgdcfit}.
 
 \begin{table}
 \centering
 \caption{Chi-squared values for fixed $\eta$ and variable $\eta$ fits of porous GDC strength data (Figure \ref{fig:gdcporsity}}
 \label{tab:porousgdcfit}
 \begin{tabular}{lcc}
-Sample Set & $\chi^2$ (Fixed $\eta$) & $\chi^2$ (Variable $\eta$)  \\
+Sample Set & $\chi^2$  & $\chi^2$   \\
+& (Fixed $\eta$) & (Variable $\eta$) \\
 \hline
 GDC PMMA \temp{650}                 & 3.406       & 0.062           \\
 GDC Graphite \temp{650}             & 0.668       & 0.008           \\
@@ -204,14 +200,13 @@ GDC Graphite \temp{25}              & 3.575       & 5.063
 \end{tabular}
 \end{table}
 
-The deviance from the fit curve for the fixed η method is quite large relative to the variable η fit for both sample sets tested at \temp{650}.
+The deviance from the fit curve for the fixed \texteta{} method is quite large relative to the variable \texteta{} fit for both sample sets tested at \temp{650}.
 Both fitting methods are fairly poor in the case of the room temperature graphite set.
 The poor fitting results in this case is due to the
 \textgreater{}60\% porosity samples.
 The flatter pore geometry caused by the graphite likely leads to comparatively greater strength loss at high porosity due to likely greater pore connectivity.
 The comparison between the high temperature data sets is the most useful, given this, and the fact that SOFCs operate at this temperature.
-The poor fit of fixed η
-models suggests that a material-specific η value may be an oversimplification of the porosity-stress relationship in ceramics.
+The poor fit of fixed \texteta{} models suggests that a material-specific \texteta{} value may be an oversimplification of the porosity-stress relationship in ceramics.
 
 Samples tested at higher temperatures displayed a slightly higher flexural strength.
 Generally, it is expected that increasing temperature lowers strength of dense ceramics once plastic deformation processes become activated at high temperatures.\cite{Davidge1970}
@@ -226,7 +221,7 @@ Cross-sectional SEM of the fracture surfaces of the porous GDC samples,
 both PMMA and graphite, is shown in Figure \ref{fig:GDCPoreSEM}.
 Figure \ref{fig:GDCPoreSEM}a shows individual spherical pores left by the PMMA while Figure \ref{fig:GDCPoreSEM}b has an inter-connected network of long pores left by the graphite flakes.
 \begin{figure}
-    \includegraphics{GDCPoreSEM.jpg}
+    \includegraphics[width=\textwidth]{GDCPoreSEM.jpg}
     \caption{SEM micrographs of porous GDC bars made using: a) PMMA pore former; b) graphite flake pore former}
     \label{fig:GDCPoreSEM}
 \end{figure}
@@ -252,7 +247,7 @@ Anode support coupons were tested along with half-cells consisting of anode supp
 The highest temperature test was repeated with coupons under reducing conditions (3\% H\textsubscript{2}, balance Ar).
 \begin{figure}
     \includegraphics[width=0.8\textwidth]{NiGDCStrengthTemp.jpg}
-    \caption{Temperature dependent strength of Ni-GDC anode supports and half-cells in both air (black data points), and reducing atmosphere (3\% H2, balance Ar, red data points), tested in both "electrolyte-up" and "electrolyte-down" orientations resulting in the electrolyte layer experiencing tension and compression, respectively}
+    \caption{Temperature dependent strength of Ni-GDC anode supports and half-cells in both air (filled data points), and reducing atmosphere (3\% H\textsubscript{2}, balance Ar, hollow data points), tested in both "electrolyte-up" and "electrolyte-down" orientations resulting in the electrolyte layer experiencing tension and compression, respectively}
     \label{fig:NiGDCHalfCells}
 \end{figure}
 
@@ -300,13 +295,13 @@ This will affect the mechanical properties of the cells as it changes both the p
 
 \begin{figure}
     \includegraphics[width=0.8\textwidth]{NiGDCReduction.jpg}
-    \caption{Thermogravimetric analysis curves for Ni-GDC/GDC half-cells showing mass loss over time at temperatures ranging from \temp{550} to \temp{750} in 3\% H\textsubscript{2} 3\% H\textsubscript{2}O balance N\textsubscript{2}, 50sccm flow.}
+    \caption{Thermogravimetric analysis curves for Ni-GDC/GDC half-cells showing mass loss over time at temperatures ranging from \temp{550} to \temp{750} in 3\% H\textsubscript{2} 3\% H\textsubscript{2}O balance N\textsubscript{2}, \SI{50}{sccm} flow.}
     \label{fig:NiGDCReduction}
 \end{figure}
 
 \begin{table}
 \centering
-\caption{Summary of fit parameters for reduction of NiO-GDC/GDC half-cell coupons under 3\% H2, 3\% H2O, 94\% N2 at different temperatures.}
+\caption{Summary of fit parameters for reduction of NiO-GDC/GDC half-cell coupons under 3\% H\textsubscript{2}, 3\% H\textsubscript{2}O, 94\% N\textsubscript{2} at different temperatures.}
 \label{tab:NiGDCRedFit}
 \begin{tabular}{ccc}
 Temperature (\temp{}) & Exponential Rate (\SI{}{\per\hour}) & Asymptote (Mass \%)  \\
@@ -324,8 +319,7 @@ Re-oxidation causes fracture of cells due to the large volume difference between
 Based on the results from the TGA, the reaction rates below \temp{300} are sufficiently slow to allow for the exposure of a reduced cell to oxygen without detrimental results.\cite{Richardson2003}
 To confirm this a sample was measured by TGA to ensure no mass gain during oxygen exposure and the strength of samples were tested to ensure there was no discernible difference between reduction methods.
 
-For TGA analysis, a piece of a half cell was heated to \temp{650} with a
-\temp{10}/min ramp rate and reduced.
+For TGA analysis, a piece of a half cell was heated to \temp{650} with a \SI{10}{\celsius\per\minute} ramp rate and reduced.
 It was then cooled while still under reducing atmospheres.
 Once below \temp{100}, it was exposed to simulated air
 (21\% O\textsubscript{2}) for 18 hours, placed back into reducing atmosphere, and heated back up to \temp{650}.
@@ -334,7 +328,7 @@ Following this treatment, the cell showed no mass gain during the oxygen exposur
 This shows that cells which are cooled appropriately do not re-oxidize and could be handled in between a batch reduction of cells, and their assembly into a stack configuration.
 
 \begin{figure}
-    \includegraphics[width=0.6\textwidth]{Rereduction.jpg}
+    \includegraphics[width=0.8\textwidth]{Rereduction.jpg}
     \caption{Thermogravimetric analysis of Ni-GDC/GDC half-cell showing no mass gain after reduction and exposure to room temperature and simulated air: a) Mass loss of interrupted reduction with exposure to ambient condition; b) Temperature of sample during cycle c) Oxygen partial pressure measured at the sample during cycle}
     \label{fig:rereduction}
 \end{figure}
@@ -346,7 +340,7 @@ The decrease in strength and modulus is due to the increase in porosity and conv
 The decrease in variation between measurements in reduced cells is likely due to the increased number of large voids that form during NiO reduction.
 
 \begin{figure}
-    \includegraphics[width=0.6\textwidth]{ReductionMethod.jpg}
+    \includegraphics[width=0.8\textwidth]{ReductionMethod.jpg}
     \caption{Flexural properties, a) strength and b) modulus, of Ni-GDC/GDC half-cell coupons after reduction via two different methods, compared to unreduced cells. Strength and modulus show decrease upon reduction but no significant difference between methods.}
     \label{fig:reductionmethod}
 \end{figure}
