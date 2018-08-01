@@ -7,11 +7,11 @@
 \chapter{Experimental Procedures}
 
 \section{Sample Preparation}
-    SFCM was created from stoichiometric amounts of strontium carbonate (\ce{SrCO_3}, Sigma-Aldrich), iron oxide (\ce{Fe_2O_3}, Sigma-Aldrich), cobalt oxide (\ce{Co_2O_3}, Inframat Advanced Materials), and molybdenum oxide (\ce{MoO_3}, Alfa-Aesar) using conventional solid-state methods.
-    The constituents were ball milled for 24 hours in ethanol and dried using a \SI{100}{\celsius} oven.
-    Afterwards the powder was calcined at \SI{1100}{\celsius} for four hours.
 
-    SFCM powder was synthesized with conventional solid-state methods using stoichiometric amounts of strontium carbonate (\ce{SrCO_3}, Sigma-Aldrich), iron oxide (\ce{Fe_2O_3}, Sigma-Aldrich), cobalt oxide (\ce{Co_2O_3}, Inframat Advanced Materials), and molybdenum oxide (\ce{MoO_3}, Alfa-Aesar). The components were ball milled in ethanol for 24 hours, dried at \SI{100}{\celsius}, and heated to \SI{1100}{\celsius} for four hours.
+    \subsection{\ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}} Powder}
+        \ce{SrFe_{0.2}Co_{0.4}Mo_{0.4}O_{3-\delta}} (SFCM) was created from stoichiometric amounts of strontium carbonate (\ce{SrCO_3}, Sigma-Aldrich), iron oxide (\ce{Fe_2O_3}, Sigma-Aldrich), cobalt oxide (\ce{Co_2O_3}, Inframat Advanced Materials), and molybdenum oxide (\ce{MoO_3}, Alfa-Aesar) using conventional solid-state methods.
+        The constituents were ball milled for 24 hours in ethanol and dried using a \SI{100}{\celsius} oven.
+        Afterwards the powder was calcined at \SI{1100}{\celsius} for four hours.
 
     \subsection{Bars}
         GDC bars of varying porosity were fabricated using uniaxial pressing in a rectangular die.
@@ -34,7 +34,7 @@
         Bars were then cut and sanded to final dimensions of \SI{3}{mm} x \SI{4}{mm} x \SI{25}{mm}.
         The chevron notch was cut using the jig described by Jenkins, Chang and Okura following the ASTM procedure.\cite{Jenkins1988, ASTM2016a}
 
-    \subsection{Tape Cast}
+    \subsection{Test Coupons}
         The ASL and half-cell coupons used in the flexural testing were made using tape casting.
         NiO and GDC powders in a 6:4 weight ratio were mixed with ethanol, toluene, and fish oil.
         The mixture was ball milled on a rotary mill for 24 hours.
@@ -50,7 +50,7 @@
         The sintering procedure for half-cell coupons was identical to the ASL coupons.
         Samples were polished with 600 grit sandpaper on edges before testing.
 
-        Tape casting was used to create test coupons of porous SFCM-GDC ASL and half-cells.
+        Tape casting was used to create test coupons of porous SFCM-GDC ASL and SFCM-GDC/GDC half-cells.
         Using ethanol as a solvent, SFCM-GDC was ball milled with polyvinyl butyral, benzyl butyl phthalate, \SI{12}{\micro\meter} poly(methyl methacrylate) (16 wt\% with respect to SFCM-GDC), and Menhaden fish oil.
         The tape was cast to a thickness of \SI{110}{\micro\meter} on Mylar then laminated using a hot press to a final thickness of \SI{660}{\micro\meter}.
         Dense GDC was casted to \SI{30}{\micro\meter} and laminated to the top of the SFCM-GDC to create half-cells.
@@ -65,6 +65,8 @@
     A step size of \SI{0.02}{\degree} was used with a dwell of \SI{0.8}{\second} was used.
     Rietveld refinement was performed on samples as synthesized, after oxidation in pure \ce{O_2} and after reduction in pure \ce{H_2} at \temp{600} for both.
     GSAS-II was used to perform the refinement calculations and VESTA was used to visualize the unit cell.\cite{Toby2013,Momma2011}
+
+\section{Archimedes Density Measurements}
 
 \section{Thermogravimetric Analysis}
     Mass of samples during oxidation and reduction cycling was measured using a Cahn D200 microbalance.
@@ -90,6 +92,8 @@
     Measurements of the \po2{} were taken by a calibrated YSZ oxygen sensor at \temp{800} located before the sample.
     Again, intermediate \po2{} ranges were not able to be tested due to SFCM's incompatibility with the species required to create that environment.
 
+    Further details of the operation of the TGA and its various components are given in Appendix \ref{app:TGA}.
+
     To prepare the sample, it was pre-weighed, wrapped in platinum wire and suspended from the balance, placed in the furnace with simulated air (21\% O\textsubscript{2}, 79\% N\textsubscript{2}) flowing.
     Once the mass had stabilized, the furnace was heated to \SI{800}{\celsius} to allow for any organic contamination to burn off.
     After the mass stabilized at this elevated temperature the sample was introduced to various environments.
@@ -97,7 +101,7 @@
     After testing a sample, a bar of alumina was cut to the same dimensions as the sample and the process was repeated to obtain a blank which could be subtracted from the measurements to remove buoyancy effects.
 
     Oxygen non-stoichiometry was calculated using Equation \ref{eq:TGA}, where $\Delta\delta$ is the change in oxygen stoichiometry, $MW_{SFCM}$ is the molecular weight of SFCM (\SI{208.74}{\gram\per\mol}), $MW_O$ is the molecular weight of oxygen (\SI{16.0}{\gram\per\mol}), $w_{sample}$ is the weight of the sample, and $\Delta{}w$ is the weight change as recorded by the TGA.
-    The oxygen vacancy concentration ($\lbrack\ch{V_O^{**}}\rbrack$) is calculated using Equation \ref{eq:TGAtoV}, where $\rho$ is the density of SFCM.
+    The oxygen vacancy concentration ($\lbrack\ch{V_O^{**}}\rbrack$) is calculated using Equation \ref{eq:TGAtoV}, where $\rho$ is the density of SFCM and $N_A$ is Avogadro's number.
     To calculate the oxygen vacancy concentration, the non-stoichiometry of SFCM at a point needs to be established.
     For this work, based on the plateau present in the data at oxidizing conditions, it is assumed that in a pure oxygen environment ($log(\po2{})=0$) all oxygen vacancies are filled with no oxygen interstitial or surface species, thus $\delta=0$.
     \begin{equation}
@@ -105,24 +109,24 @@
         \label{eq:TGA}
     \end{equation}
     \begin{equation}
-        \lbrack\ch{V_O^{**}}\rbrack =\frac{\delta\rho}{MW_{SFCM}}
+        \lbrack\ch{V_O^{**}}\rbrack =\frac{\delta\rho N_A}{MW_{SFCM}}
         \label{eq:TGAtoV}
     \end{equation}
 
 \subsection{Temperature Programed Desorption}
-The effluent from the TGA was used as the inlet to a mass spectrometer (MS) to perform temperature programmed desorption.
-The sample was prepared as before and heat treated to remove any carbon contaminants but was allowed to cool under simulated air.
-It was then heated to \SI{800}{\celsius} at \SI{5}{\celsius\per\minute} under a \SI{50}{sccm} flow of nitrogen as the MS measured the \SI{32}{m/z} signal which corresponded to O\textsubscript{2} desorption.
-Additional m/z signals were monitored to observed for other species.
+    The effluent from the TGA was used as the inlet to a mass spectrometer (MS) to perform temperature programmed desorption.
+    The sample was prepared as before and heat treated to remove any carbon contaminants but was allowed to cool under simulated air.
+    It was then heated to \SI{800}{\celsius} at \SI{5}{\celsius\per\minute} under a \SI{50}{sccm} flow of nitrogen as the MS measured the \SI{32}{m/z} signal which corresponded to O\textsubscript{2} desorption.
+    Additional m/z signals were monitored to observed for other species.
 
 \section{Conductivity}
-    Total conductivity was measured using the four-wire technique and a Stanford SR 830 lock-in amplifier.
+    Electric conductivity across \po2{} was measured using the four-wire technique and a Stanford SR 830 lock-in amplifier.
     A bar shape sample was used with dimensions of \SI{6.46x3.3x1.3}{\milli\meter}.
     Gold paste was used as a current collector, and the current range was between \SI{0.005} to \SI{0.05}{A}.
     A yttria-stabilized zirconia (YSZ) oxygen sensor operating at \temp{800} was used to monitor the changes in oxygen partial pressures.
-    Intermediate \po2{} ranges were not tested due to the fact that SFCM reacts with the amounts of \ce{CO} and \ce{CO_2} required to obtain those \po2{}.
+    Intermediate \po2{} ranges were not tested due to an incompatibility between SFCM and the \ce{CO} and \ce{CO_2} required to obtain those \po2{}.
 
-    Direct current conductivity was measured using rectangular bars of SFCM and SFCM-GDC (2:1) composite.
+    Conductivity during redox cycling was measured using rectangular bars of SFCM and SFCM-GDC (2:1) composite.
     The samples were connected to a Keithley 2400 source meter by silver paste and wire.
     Using an in-house built reactor, the sample could be heated and the gas environment could be controlled.
     An initial measurement was taken after heating and 50 hours of exposure to 10\% H\textsubscript{2} in N\textsubscript{2}, then the sample exposed cycled between air and reducing conditions over a period of 14 days.
@@ -135,8 +139,7 @@ Additional m/z signals were monitored to observed for other species.
     For samples tested at elevated temperatures the sample was heated in the test chamber at \SI{10}{\celsius\per\minute}, allowed to equilibrate for 20 minutes, then tested.
     Samples to be reduced were placed in the chamber, heated and exposed to reducing gas for 18 hours before being tested.
 
-    All tests conducted in the UTM (Tinius Olsen 10ST with 250 N load cell)
-    were done at a rate of \SI{0.2}{\milli\meter\per\minute} with a \SI{20}{\milli\meter} lower span.
+    All tests conducted in the UTM (Tinius Olsen 10ST with 250 N load cell) were done at a rate of \SI{0.2}{\milli\meter\per\minute} with a \SI{20}{\milli\meter} lower span.
     After measuring the force at fracture, stress was calculated using Equation \ref{eq:3ptstrength}
     for 3-point flexural of rectangular samples, where \(\sigma_{f}\) is the stress at failure, F is the load at failure, L is the span of the fixture, b is the width of the sample and d is the thickness of the sample.
     At room temperature, the coupons or bars were loaded into the fixture and tested in batches of 5 per condition.
@@ -236,3 +239,5 @@ Additional m/z signals were monitored to observed for other species.
             Y^{*}_{min} = \frac{0.38742-3.0919(a_0/W)+4.2017(a_1/W)-2.3127(a_1/W)^2+0.6379(a_1/W)^3}{1.0000-2.9686(a_0/W)+3.5056(a_0/W)^2-2.1374(a_0/W)^3+0.0130(a_1/W)}
             \label{eq:shapefactor}
         \end{equation}
+
+    \section{Scanning Electron Microscopy}
