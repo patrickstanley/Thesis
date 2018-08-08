@@ -20,7 +20,7 @@
     \Glspl{sofc} have the ability to solve this for applications where electrical power is desired.
     \glspl{sofc} allow for side stepping of these losses by allowing for the direct conversion of chemical energy to electrical energy.
     Power generation plants have efficiencies around 30\%, while a stand-alone \gls{sofc} generator can convert fuel to electricity at 45 to 65\% efficiency.\cite{Wachsman2011a,Lasseter2004}
-    \glspl{sofc} are able to run on a variety of fuel sources, such as hydrogen, methane or even biogas.\cite{Park2000,Minh2004}
+    \glspl{sofc} are able to run on a variety of fuel sources, such as hydrogen, methane or even biogas.\cite{Park2000}
     This fuel flexibility and higher efficiency positions \glspl{sofc} to bridge the gap in the energy economy as it transitions from fossil fuels to renewable sources.
     However, many technical hurdles still remain which currently limit \glspl{sofc}' viability and must be addressed.
 
@@ -44,7 +44,7 @@
     \end{figure}
 
     The driving force for the movement of oxygen ions and electrons comes from the chemical potential gradient across the cell.
-    When the anode is exposed to fuel, it creates a low partial pressure of oxygen (pO\subscript{2}) in comparison to the cathode, which is exposed to air.
+    When the anode is exposed to fuel, it creates a low \gls{po2} in comparison to the cathode, which is exposed to air.
     This gradient drives the motion of oxygen through the cell from the high \po2{} of the cathode to the low \po2{} of the anode, and generates electric current in the opposite direction to maintain a charge balance.
     The electrical potential at open circuit conditions (voltage with no current draw) is expressed by the Nernst equation, given in Equation \ref{eq:nernst} for the reaction given in Equation \ref{eq:rxn}, where \(f_A\) is the fugacity of species A, \(E^o\) is the standard potential for the reaction, and $n$ is the number of charges involved in the reaction, \(R\) is the ideal gas constant and \(F\) is Faraday's constant.\cite{Larminie2001}
     Commonly, the fugacity is replaced by the partial pressure of the species.
@@ -106,41 +106,58 @@
     Additionally, the cells are subjected to less thermal expansion, reducing the stresses on the cell.
 
 \section{Solid-Oxide Fuel Cell Materials}
-    Each structure of an \gls{sofc} is fabricated from a combinations of materials designed to optimize that part's function then laminated with the other structures to create the cell.
+    Each structure of an \gls{sofc} is fabricated from combinations of materials designed to optimize that part's function then laminated with the other structures to create the cell.
     For example, a cell can be comprised of a nickel metal-\gls{gdc} anode, a \gls{gdc} electrolyte, and then a \gls{lsm} cathode.\cite{Liu2002,Haile2003}
     The individual parts are cast into thin flexible sheets (tapes) from bulk powders, with additives such as pore formers where appropriate, and then laminated together and co-fired to create a single cell.
     As a result, a completed cell has distinct layers in it where the material and properties abruptly change.
     This composite structure can then have inter-diffusion between layers, smoothing out the abrupt changes, but creating new structures and compositions that were not present upon lamination.\cite{Yokokawa2008}
 
-    Nickel has traditionally been used as an anode material in \glspl{sofc}, due to its high conductivity and catalytic properties in combination with an ionic conductor such as \gls{gdc}. %citation would be good
+    The traditional material used for electrolytes in \glspl{sofc} has been \gls{ysz}.
+    \Gls{ysz} is very stable, has a ratio of ionic conductivity to total conductivity (transference number) of approximately 1, and good conductivity at temperatures in excess of \temp{800} and up to very low \po2{}s.
+    A high transference number minimizes leakage current due to electronic conduction in the electrolyte, maintaining cell performance.
+    As mentioned previously, \gls{gdc} is another choice for an electrolyte.
+    Other rare-earth doped cerias have been used as electrolytes, but \gls{gdc} tends to outperform them under a variety of conditions.
+    At \temp{600}, \gls{gdc} exhibits an order of magnitude higher conductivity than \gls{ysz}, but has a smaller electrolytic domain where the transference number is near 1.\cite{Inaba1996}
+    Under conditions of high temperature or very low \po2{}, \gls{gdc} will start to leak electrons through the electrolyte, reducing cell performance.
+    As \gls{sofc} operating temperatures are reduced for improved efficiency, \gls{gdc} is favored for the electrolyte material.
+
+    The anode usually consists of a mixture of the electrolyte material, which provides good ionic conductivity, with an electronic conductor that can facilitate fuel oxidation reactions on the surface.
+    In combination with an ionic conductor it creates a cermet which functions as the anode.
+    Nickel has commonly been used in the anode due to its high conductivity and catalytic properties.%citation would be good
     A challenge with nickel is that at ambient conditions it oxidizes into nickel oxide, but at operating conditions it reduces to the desired nickel metal.
-    There is a large lattice parameter change between nickel and nickel oxide, so that as it reduces, it decreases volume by over 15\%.
-    This means that the overall porosity of the anode layer increases as the \gls{sofc} is put into service.\cite{Gutierrez-Mora2002,Yu2007}
+    There is a large lattice parameter change between nickel and nickel oxide, such that, upon reduction it decreases volume by over 15\%.
+    As a result, the overall porosity of the anode layer increases as the \gls{sofc} is put into service and the anode is exposed to reducing conditions.\cite{Gutierrez-Mora2002,Yu2007}
     This increased porosity can greatly decrease the flexural strength and modulus of the anode and of the overall cell.\cite{Callister2014,Barsoum2003}
     Additionally, nickel is prone to poisoning from sulfur contaminants in the fuel, so alternative anodes are of interest for use in \glspl{sofc}.
 
-    A first approach has been to develop other metal-ceramic systems to serve the function of the anode.
+    As an alternative, other metal-ceramic systems have been researched to serve the function of the anode.
     These have included copper, cobalt, and platinum systems, but each suffer from a significant drawback such as coking, long-term performance degradation or cost.
     A different approach is to use an all-ceramic anode, made of a \gls{miec}.
     Perovskite materials have easily been developed into \glspl{miec} with the use of a transition metal occupying the octahedral B-site.
-    Examples of \gls{miec} ceramics are \ce{La_{\hbox{1--x}}Sr_{x}Cr_{\hbox{1--y}}Mn_{y}O_{3}}, \ce{Sr_{0.94}Ti_{0.9}Nb_{0.1}O_{3-\delta}}, \ce{Ba_{0.98}La_{0.02}SnO_3}, or \ce{Sr_{2}MgMoO_{6}}.\cite{Goodenough2007,Zha2005,Primdahl2001,Hussain2013,MohammedHussain2012,Hussain2016,Huang2006}.
+    \gls{sfcm} is a recently developed double perovskite \gls{miec} with multiple dopants on the B-site with a high conductivity of \SI{30}{S\per\centi\meter}.\cite{Pan,Hussaina,Hussain}
     Due to the all-ceramic nature of these anodes, their thermal expansion coefficients better match that of the other ceramic components of the cell, reducing sintering stresses and improving redox cycling durability.
     Conversely, all-ceramic anodes tend to have lower conductivity and catalytic performance.
 
-    As mentioned previously, \gls{gdc} is one of two common choices for electrolyte materials.
-    The other, more traditionally used material is \gls{ysz}.
-    \Gls{ysz} is very stable, has a ratio of ionic conductivity to total conductivity (transference number) near 1, and good conductivity at temperatures in excess of \temp{800}.
-    A transference number of 1 is desired for the electrolyte as to permit only ionic conductivity with no electronic conductivity.
-    A lower transference number, as low as 0.9, allows a leakage current of electrons though the electrolyte, decreasing the current available though the external circuit.%check this number
-    At lower temperatures \gls{gdc} exhibits conductivity, but does suffer from a lower transference number compared to \gls{ysz}, especially under extremely reducing conditions.
-    Other rare-earth doped cerias have been used as electrolytes, but \gls{gdc} tends to outperform them under a variety of conditions.
-    As \gls{sofc} operating temperatures are reduced for improved efficiency, \gls{gdc} is favored for the electrolyte and anode composite material.
+    This work focuses on the structures in the cell which give mechanical support, the anode and electrolyte.
+    Specifically, Ni-\gls{gdc} and \gls{sfcm}-\gls{gdc} anodes with \gls{gdc} electrolytes will be investigated..
+    While \gls{ysz} systems have been studied extensively, the mechanical properties of \gls{gdc} systems have not been throughly explored.
+    As \glspl{sofc} are developed which operate at lower temperatures, \gls{gdc} is the preferred choice for an electrolyte material due to its high conductivity.
+    Ni-\gls{gdc} serves as a reliable starting place to characterize the mechanical properties of the anode, focusing on the changes which occur during reduction as NiO reduces to Ni metal.
+    \gls{sfcm} being a new material has no available data on the mechanical properties, let alone the non-stoichiometry which occurs in the material under reducing conditions.
 
     Various cathode materials exist which assist in the incorporation of oxygen into the lattice.
-    \Gls{lsm} is one of the most common.
+    The cathode must have many similar properties to that of the anode, but be stable in oxidizing environments instead of reducing.
+    As a result, perovskite structures again are found in many of the materials.
+    \Gls{lsm} is one of the most commonly used materials, but others include doped \ce{SrCoO_3}, \ce{La_{0.6}Sr_{0.4}Co_{0.2}Fe_{0.8}O_3}, \ce{Ba_xSr_{1-x}Ti_{1-y}Fe_yO_{3-y/2+\textdelta}}. \cite{Minh2004, Cascos2016, Chen2015, Kuhn2013}
     The cathode does not tend to play a structural role in the fabrication of a cell, and thus is not investigated or developed in this work.
 
-    %Other materials, interconnects and seals
+    Outside the of the cell itself, several materials are needed to create a functioning stack.
+    Metal interconnects support individual cells, holding them together, creating connections for the current to flow though current collectors and gas to flow though channels to the the cell.
+    In intermediate and high temperature stacks, expensive metal alloys such as Inconel must be used to survive the extreme heat.
+    As temperatures are lowered to below \temp{600} more common metals can be used for interconnects, such as steel.
+    Sealing materials are another critical component to assembly of an \gls{sofc} stack.
+    Glasses with transition temperatures near the operating range are used at high temperatures as they can soften and flow into place creating gas tight seals.
+    At lower temperatures new options are available, such as \gls{ysz}, vermiculite or graphite felts.%addcite
 
 \section{Mechanical Properties}
     Ideally, an \gls{sofc} is as thin as possible to minimize diffusion path lengths and ionic resistances in the cell.\cite{Chan2001}
