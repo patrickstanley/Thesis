@@ -14,6 +14,7 @@
         Afterwards the powder was calcined at \SI{1100}{\celsius} for four hours.
 
     \subsection{Bars}
+        %copied
         GDC bars of varying porosity were fabricated using uniaxial pressing in a rectangular die.
         GDC10 (\ce{Ce_{0.9}Gd_{0.1}O_{2}}) powder was mixed with the desired volume of poly(methyl methacrylate) (PMMA) microspheres (\SI{5}{\micro\meter} diameter) or graphite flake to create the green body, with 0.1wt\% of polyvinyl butyral added to aid in pressing and a drop of fish oil to act as a dispersant during milling.
         The two different pore formers were used to create differing pore geometry.
@@ -35,6 +36,7 @@
         The chevron notch was cut using the jig described by Jenkins, Chang and Okura following the ASTM procedure.\cite{Jenkins1988, ASTM2016a}
 
     \subsection{Test Coupons}
+        %copied
         The ASL and half-cell coupons used in the flexural testing were made using tape casting.
         NiO and GDC powders in a 6:4 weight ratio were mixed with ethanol, toluene, and fish oil.
         The mixture was ball milled on a rotary mill for 24 hours.
@@ -66,7 +68,13 @@
     Rietveld refinement was performed on samples as synthesized, after oxidation in pure \ce{O_2} and after reduction in pure \ce{H_2} at \temp{600} for both.
     GSAS-II was used to perform the refinement calculations and VESTA was used to visualize the unit cell.\cite{Toby2013,Momma2011}
 
-\section{Archimedes Density Measurements}
+\section{Density Measurements}
+    Density of test bars was determined using the Archimedes method following Equation \ref{eq:arch}, where $\rho$ is the density of the sample, $\rho_{liq}$ is the density of the liquid used, $w_{dry}$ is the weight of the sample before submersion and $w_{sub}$ is the apparent weight after submersion.
+    Isopropyl alcohol was used as the liquid for measurements and samples were placed in a vacuum chamber while submerged to ensure all open porosity was filled before measuring the submerged weight.
+    \begin{equation}
+    \rho = \frac{w_{dry}}{w_{dry}-w_{sub}}\rho_{liq}
+    \label{eq:arch}
+    \end{equation}
 
 \section{Thermogravimetric Analysis}
     Mass of samples during oxidation and reduction cycling was measured using a Cahn D200 microbalance.
@@ -132,7 +140,8 @@
     An initial measurement was taken after heating and 50 hours of exposure to 10\% H\textsubscript{2} in N\textsubscript{2}, then the sample exposed cycled between air and reducing conditions over a period of 14 days.
 
 \section{Mechanical Testing}
-    Measurements of mechanical properties were collected using a Tinius Olsen 10ST Universal Testing Machine equipped with a \SI{250}{N} load cell.
+    %review and copied
+    Measurements of mechanical properties were collected using a Tinius Olsen 10ST Universal Testing Machine (UTM) equipped with a \SI{250}{N} load cell.
     Experiments where any samples would be tested at elevated temperatures or under reducing environments were conducted using a custom built three point flexural test fixture placed inside a gas-tight chamber and furnace.
     Otherwise, a fully-articulating four point flexural test fixture was used.
     Samples tested at ambient conditions were placed on the appropriate testing fixture and loaded until failure.
@@ -157,11 +166,8 @@
     Half-cell coupons were tested in two orientations, "electrolyte-up" and "electrolyte-down." These orientations cause the dense electrolyte layer to experience compressive or tensile stress.
     The "electrolyte-up" orientation subjects the electrolyte to compressive stress and vice-versa.
 
-    Following the destructive tests, SEM analyses of the fracture surfaces were performed.
-    The purpose of this was to observe the trans-granular,
-    inter-granular, or mixed nature of crack propagation, and to find any anomalous features on the fracture surface, as well as to observe pore geometry.
-
     \subsection{Development of Mechanical Test Apparatus}
+        %all copied
         To develop a testing apparatus capable of simulating the various conditions experienced by operating SOFCs, appropriate materials were chosen based on thermal and chemical stability criteria.
         Alumina was chosen to build the bend fixture due to its chemical stability and high hardness.
         The sample rests crossways on two stationary \SI{6.35}{\milli\meter} diameter rods which are placed in troughs separated by \SI{20}{\milli\meter}.
@@ -171,7 +177,7 @@
         The complete alumina, 3-point bend fixture is seen in Figure \ref{fig:3ptbend} with the two bottom rollers, a sample, and the top roller making contact, applying flexural stresses to the sample.
 
         \begin{figure}
-            \includegraphics{3ptbend.jpg}
+            \includegraphics{3ptbend.png}
             \caption{Assembled Alumina 3-Point Bend Fixture}
             \label{fig:3ptbend}
         \end{figure}
@@ -226,7 +232,7 @@
         $Y^{*}_{min}$ is the shape factor as calculated by Equation \ref{eq:shapefactor}, $S_o$ and $S_i$ are the outer and inner spans, \textit{B} is the width of the sample, \textit{W} is the height of the sample, $a_0$ is the distance from the tip of the chevron notch to the bottom of the sample, and $a_1$ is the average distance from the side of the chevron notch to the bottom of the sample.
         Each sample was measured after failure, but in this study the approximate values were $S_o = 40 mm$, $S_i = 20 mm$, $B = 3.0 mm$, $W = 4.0 mm$, $a_0 = 0.80 mm$, $a_1 = 3.8 mm$.
         Fracture toughness was measured only under air at room temperature and up to \SI{600}{\celsius}.
-        Under reduction the fracture toughness bars would spontaneously fracture, preventing measurements under that condition.
+        Under reduction the fracture toughness bars of \gls{sfcm} would spontaneously fracture, preventing measurements under that condition.
         \begin{equation}
             K_{Ivb} = Y^{*}_{min}  \left [\frac{P[S_o-S_i]}{BW^{3/2}}\right ]10^{-6}
             \label{eq:4ptkivb}
@@ -240,4 +246,9 @@
             \label{eq:shapefactor}
         \end{equation}
 
-    \section{Scanning Electron Microscopy}
+    \section{Scanning Electron Microscopy (SEM)}
+        After fracture, SEM images were taken of the fracture surfaces.
+        This was to observe the nature of the crack as it propagated, determining if it was transgranular or intergranular fracture, to find any flaws on the fracture which would lead to failure, and to observe pore geometry.
+        Images were captured on an Hitachi SU-70 Schottky field emission SEM.
+        Fracture surface images were mounted vertically and \gls{gdc} samples were sputter coated with gold.
+        Observations of porosity were taken using epoxy infiltrated samples and polished using down to a \SI{0.25}{\micro\meter} diamond solution.

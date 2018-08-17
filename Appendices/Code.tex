@@ -6,59 +6,133 @@
 %\renewcommand{\chaptername}{Appendix}
 
 \chapter{Code}
+    The programs referenced in this appendix are published as open-source software and are in the public domain.
+    The code and latest versions of all parts are available on GitHub at \href{https://github.com/patrickstanley}{https://github.com/patrickstanley/} with the provided repository names and contributions are welcome.
+    This work builds upon provided libraries and previous users experiences.
 
-\section{Arduino PID Relay Furnace Controller with Serial
-Connectivity}\label{arduino-pid-relay-furnace-controller-with-serial-connectivity}
-\label{app:PID}
+\section{Arduino PID Relay Furnace Controller with Serial Connectivity}
+    \label{app:PID}
 
-The purpose of this Arduino sketch is to power a heating furnace
-(controlled by a relay), with PID controls. In addition serial
-communications are added to monitor, log, and interact with the
-controller.
+    The purpose of this Arduino sketch is to power a heating furnace
+    (controlled by a solid-state relay) with PID controls.
+    In addition, serial communications are used to monitor, log, and interact with the controller.
+    A running average is used to reduce thermocouple measurement noise for the derivate component of the controls.
+    This sketch is available at \href{https://github.com/patrickstanley/arduino-pid}{https://github.com/patrickstanley/arduino-pid}.
 
-\subsection{Hardware and other
-libraries}\label{hardware-and-other-libraries}
+    \subsection{Hardware and other libraries}
+        This was built to be used on a Arduino Uno R3, but should be easily run on a variety of different boards.
+        For temperature sensing, an \href{https://www.adafruit.com/product/3263}{Adafruit MAX31856} is used with the provided \href{https://github.com/adafruit/Adafruit_MAX31856}{library}.
+        Also used is the PID controller \href{https://github.com/br3ttb/Arduino-PID-Library}{library by br3ttb}.
+        This sketch pieces the two libraries together and adds serial communications functionality.
 
-This was built to be used on a Arduino Uno R3, but should be easily run
-on a variety of different boards. For temperature sensing, an
-\href{https://www.adafruit.com/product/3263}{Adafruit MAX31856} is used
-with the \href{https://github.com/adafruit/Adafruit_MAX31856}{library}
-from them. Also used is the PID controller
-\href{https://github.com/br3ttb/Arduino-PID-Library}{library by br3ttb}.
-All I have really done is put the two together with the ability to
-communicate over serial.
+    \subsection{Variables}
+        The following is a list of control variables which may be changed per setup.
 
-\subsection{Variables}\label{variables}
+        \begin{itemize}
+        \item
+          RelayPin: The physical pin the relay is connected to.
+        \item
+          Adafruit\_MAX31856(CS, DI, DO, CLK): Pins for the MAX31856
+        \item
+          WindowSize: Length of on/off cycle, needed to account for AC power
+        \item
+          printdelay: Delay time in milliseconds for printout on serial
+        \item
+          MaxOP: Maximum operating power, used to extend life of elements
+        \item
+          myPID(\&Input, \&Output, \&workingSet,P,I,D, DIRECT): PID values need to be adjusted for the particular setup.
+          If inverse behavior is experienced (e.g. heats when it should cool) switch DIRECT.
+        \item
+          workingSet and Setpoint: Initial setpoint for power on
+        \item
+          ramprate: Sets a ramp rate for the working setpoint. Measured in
+          milliseconds for 1C change.
+        \end{itemize}
 
-Here are a list of variables for things you may want to change based on
-your setup.
+    \subsection{Serial communications}
+        Baud rate is set to 9600.
+        Output is tab delimitated of Setpoint, Working
+        Setpoint, Thermocouple Temperature, and Output Power.
+        To change Setpoint, send a new number over serial and press return.
+        The endline character of the serial monitor may have to changed send \textbackslash n as end of line.
 
-\begin{itemize}
-\item
-  RelayPin: The physical pin your relay is connected to.
-\item
-  Adafruit\_MAX31856(CS, DI, DO, CLK): Pins for your MAX31856
-\item
-  WindowSize: Length of on/off cycle, needed to account for AC power
-\item
-  printdelay: Delay time in milliseconds for printout on serial
-\item
-  MaxOP: Maximum operating power, used to extend life of elements
-\item
-  myPID(\&Input, \&Output, \&workingSet,P,I,D, DIRECT): PID need to be adjusted for your setup.
-  If inverse behavior is experienced (e.g. heats when it should cool) switch DIRECT.
-\item
-  workingSet and Setpoint: Inital setpoint for power on
-\item
-  ramprate: Sets a ramp rate for the working setpoint. Measured in
-  milliseconds for 1C change.
-\end{itemize}
+    \subsection{Arduino Sketch}
+        \lstinputlisting[language=C++,breaklines=true,postbreak=\mbox{\textcolor{red}{\(\hookrightarrow\)}\space}]{../../../Arduino/thermo_pid_serial/thermo_pid_serial.ino}
 
-\subsection{Serial communications}\label{serial-communications}
+\section{MKS Gas Controller and Scheduler}
+    \label{app:gasvi}
+    The purpose of this Labview Program is...
+    The VI gas controller and gas scheduler VI's, along with a sample gas schedule, are available under the repository "mks-mfc."
 
-Baud rate is set to 9600. Output is tab deliminated of Setpoint, Working
-Setpoint, Thermocouple Temperature, and Output Power. To change set
-point, send a new number over serial and press return. You may have to
-adjust your serial monitor to send \textbackslash n as end of line.
+    \subsection{Hardware and VI's}
 
-\lstinputlisting[language=C++,breaklines=true,postbreak=\mbox{\textcolor{red}{\(\hookrightarrow\)}\space}]{../../../Arduino/thermo_pid_serial/thermo_pid_serial.ino}
+    \subsection{Program Overview}
+    \begin{landscape}
+        \begin{figure}
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=0 0 1052 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption{MFC Controller program}
+        \end{figure}
+
+        \begin{figure}\ContinuedFloat
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=1052 0 2104 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption[]{MFC Controller program (cont.)}
+        \end{figure}
+
+        \begin{figure}\ContinuedFloat
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=2104 0 3156 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption[]{MFC Controller program (cont.)}
+        \end{figure}
+
+        \begin{figure}\ContinuedFloat
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=3156 0 4208 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption[]{MFC Controller program (cont.)}
+        \end{figure}
+
+        \begin{figure}\ContinuedFloat
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=4208 0 5260 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption[]{MFC Controller program (cont.)}
+        \end{figure}
+
+        \begin{figure}\ContinuedFloat
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio,viewport=5260 0 6312 506]{Gas_Controllerd.png}
+            \end{center}
+            \caption[]{MFC Controller program (cont.)}
+        \end{figure}%MFC Controller VI Images
+    \end{landscape}
+
+    \begin{landscape}%MFC Scheduler images
+        \begin{figure}
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio]{Gas_Schedulerd.png}
+            \end{center}
+            \caption{Gas Scheduler program}
+        \end{figure}
+    \end{landscape}
+
+\section{Temperature and \po2{} Measurements}
+    \label{app:tgavi}
+    The purpose of this Labview Program is...
+    The VI is available at on GitHub under the repository "eurotherm-keithely-measure."
+
+    \subsection{Hardware and VI's}
+
+    \subsection{Program Overview}
+    \begin{landscape}%Temp and o2 measure program images
+        \begin{figure}
+            \begin{center}
+            \includegraphics*[width=1.5\textwidth,keepaspectratio]{Temp_&_pO2_Measurementsd.png}
+            \end{center}
+            \caption{Temperature and \po2{} measurement program}
+        \end{figure}
+    \end{landscape}
