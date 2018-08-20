@@ -63,7 +63,7 @@
     The purpose of these LabVIEW programs is communicate and control \glspl{mfc} for remote and automated operation of the \gls{tga}.
     Individual \glspl{mfc} can be turned on or off and have their set point changed.
     After basic controls are developed a new VI, a scheduling program is provided which reads a text file automatically changing flow rates are predetermined times.
-    The VI gas controller and gas scheduler VIs, along with a sample gas schedule, are available under the GitHub repository "mks-mfc."
+    The VI gas controller and gas scheduler VIs, along with a sample gas schedule, are available under the GitHub repository ``mks-mfc''
     The VIs are saved for LabVIEW version 2013 and later.
     This work is the continuation and development of programs previously written by others.
 
@@ -170,7 +170,7 @@
 \section{Temperature and \po2{} Measurements}
     \label{app:tgavi}
     The purpose of this LabVIEW program is to periodically measure the temperature from a Eurotherm process controller and calculate \po2{} based on voltage from a Keithley multimeter for the \gls{tga} system.
-    The VI is available on GitHub under the repository "eurotherm-keithley-measure" and is saved for LabVIEW 2013 and later.
+    The VI is available on GitHub under the repository ``eurotherm-keithley-measure'' and is saved for LabVIEW 2013 and later.
     This work is the continuation and development of programs previously written by others.
 
     \subsection{Hardware and other libraries}
@@ -187,7 +187,7 @@
     When started, the program asks for the location to save the measurements.
     The program then creates the csv file time in seconds, the voltage read, the calculated log \po2{}, and the temperature from the controller.
     Communications variables, such as baud rate and channels, are sent the appropriate sub-VIs to begin communications to the device and a timer is started.
-    The program backs up the Keithely's current settings, resets the device and prepares it to measure voltage on one channel, while displaying "Running" on the front panel display.
+    The program backs up the Keithely's current settings, resets the device and prepares it to measure voltage on one channel, while displaying ``Running'' on the front panel display.
     After the program is complete, the Keithely is reset once again and its original setting are restored before communications are closed to it and the Eurotherm.
 
     The rest of the program occurs in a while loop.

@@ -9,18 +9,237 @@
 \label{app:TGA}
 \section{Theory of Operation}
 Thermogravimetry works on the principle of measuring small changes in mass as the environment changes.
-Changes in environment can come from
+Changes in environment can come from changing temperature or gas composition.
+This system uses a Cahn microbalance to measure mass, a furnace to heat the sample up to \temp{1100} and \glspl{mfc} to control the gaseous environment.
+
 \section{Mass Measurement}
-The TGA uses a Cahn D200 microbalance for the mass sensing capability.
+    The TGA uses a Cahn D200 microbalance for the mass sensing capability.
+    The microbalance works by measuring the current required to maintain balance between the sample and a counter balance.
+    The sample can be hung at two different points on the arm of the balance, Loop A or Loop B.
+    The choice of loops determines the capacity and sensitivity of the measurements, as show in in Table \ref{tab:tga}.
+    Full specifications are given in the microbalance manual.
+    Loop A is used most commonly for its increased sensitivity.
+
+    \begin{table}
+    \centering
+    \caption{Cahn D200 Microbalance Specifications}
+    \label{tab:tga}
+    \begin{tabular}{lll}
+                               & Loop A & Loop B                                   \\
+    \cline{2-3}
+    Capacity (g)               & 1.5    & 3.5                                      \\
+    Maximum Weight Change (mg) & 150    & 750                                      \\
+    Sensitivity (ug)           & 0.1    & 1                                        \\
+    Repeatability              & \multicolumn{2}{l}{10\% total load on both pans}
+    \end{tabular}
+    \end{table}
+
+    The microbalance has an independent flow of nitrogen gas to it to maintain an consistent atmosphere.
+    Only a small amount of flow is required (\SI{5} to \SI{10}{sccm}) to keep positive pressure, but if the protective cover is removed additional time will be required to purge the balance.
+
+    \subsection{Setup and Operation}
+        Alignment of the balance is key to producing a low noise signal.
+        Ideally, the hang-down wire should run through the center of the tubes and at minimum it must not touch anywhere or allow the sample pan to touch the walls of the furnace.
+        The hang-down wire is made from platinum or a platinum-rhodium mixture and is in two pieces, to facilitate the changing out of the bottom portion incase of contamination and degradation.
+        To successful methods of straightening the wire are to lay it flat on a surface and roll it out from the center, similar to working dough, or to hang it with a weight and soften it using heat allowing it to stretch straight.
+        Hooks on the ends are created using tweezers and a razor blade for a sharp bend.
+
+        With the hang-down wire straight and in place, the furnace tube can be adjusted to place the sample pan in the middle, equidistance from all walls.
+        Moving the tube can be achieved by adjusting the supporting clamp at the bottom of the furnace or adjusting the insulation holding it in place a the top.
+        Alignment usually requires looking straight down the tube from above the microbalance.
+        A light can be placed at the bottom of the tube, replacing the thermocouple, to give illumination as to the location of the sample pan in the tube.
+        Alternatively, the furnace can be heated to \temp{800} so that the tube and pan glow, giving a better light, but adjustments must wait for the furnace to cool.
+        Usually, both methods are used, the flashlight for a first alignment and the hot furnace to check afterwards.
+
+        With everything aligned, the counterbalance needs to be properly adjusted.
+        Place on the sample pan any appropriate crucible which will be used and open the microbalance cover and remove the cover from the counterbalance by gently pulling.
+        At this point, the microbalance is turned off using the switch on the back of the microbalance controller unit.
+        Counterbalance weights are added or removed to have the empty sample pan and crucible balance with the counter.
+        A light tough to the arm of the balance may be needed to off-set static and friction, but ensure this is done with clean tweezers.
+        Once the system balances, or does so as closely as possible, the covers may be replaced and the balance turned back on.
+        Static, especially in the winter time, commonly causes the counterbalance to swing wildly as the cover is placed back over it.
+        Using an un-gloved hand or wiping the inside down with deionized water help reduce the static.
+
+        The thermocouple in the bottom of the furnace should be placed as close to the sample as possible.
+        To achieve this, the thermocouple is incrementally raised while observing the mass readout from the microbalance.
+        Once the balance becomes unstable or jumps, the thermocouple should be backed out \SI{0.5} to \SI{1}{\centi\meter} and tightened in place.
+        Covering the thermocouple is a quartz sheath to act as a thermowell and protect the thermocouple.
+        If changing between materials systems or significant degradation has occurred to the thermowell it should be replaced.
+
+        At this point the system should be burned out to remove any contamination on the sample pan or hang-down wire and time is needed for it to stabilize.
+        The furnace should be heated to \temp{1000} for 4 hours in an oxygenated environment.
+        This also provides time for the system to stabilize, as monitored by creating a run with the MicroScan Acquisition software.
+        It can take up to 24 hours for it to stabilize.
+        If random jumps occur in the mass, recheck the alignment and thermocouple placement.
+
+        After stabilization, a sample can be loaded in to a crucible and sample pan.
+        While the microbalance is calibrated to measure the mass of the sample added, it is good practice to measure and record the mass using a separate balance beforehand.
+        Crucibles may be reused where appropriate.
+        After the sample is placed the furnace is raised, slowly to ensure not altering the alignment, and connected to the fittings above.
+        The furnace should be at the maximum height position when finished.
+        Time should then be given to allow the mass reading to stabilize before starting a test.
+
+        The program MicroScan Acquisition controls the TGA and records data.
+        After opening, select ``Balance \textgreater{} Establish Connection'' to connect to the D200.
+        If an error occurs, power cycle the balance, restart the program, and check the serial cable leading to the balance.
+        Upon successful connection, the current read out of the balance will be displayed.
+        The balance maybe tared before adding a sample, by selection ``Balance \textgreater{} Tare.''
+        Starting a new run is achieved by selecting ``File \textgreater{} Open Method.''
+        Figure \ref{fig:tgamicroaq} shows the ``Open Method'' screen with the current balance read out from MicroScan Acquisition.
+
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=0.8\textwidth,keepaspectratio]{tgamicroacq.png}
+            \end{center}
+            \caption{MicroScan Acquisition with Open Method open and the current read out of the balance displayed}
+            \label{fig:tgamicroaq}
+        \end{figure}
+
+        From here the total length of the run is defined along with the sample rate.
+        The sample rate will need to match the rate given in the other programs.
+        Additionally, the run title can be defined and the loop can be changed if needed.
+        Once the run length and sample rate are entered, selecting ``Ok'' brings up the menu where the run can be started.
+        By clicking ``Start Run'' the MicroScan Acquisition asks for the location to save the data in a proprietary format, and once the file path is given, it then starts collecting data.
+        During the run, collected data is plotted and can be viewed using the controls at the top of the plot.
+        After a run is complete, the saved file is converted to a csv by opening it with MicroScan Analysis and selecting ``File \textgreater{} Export... \textgreater{} Comma/Tab Separated...''
+
+\section{Heating}
+    Heating is done by a furnace surrounding the \gls{ysz} tube and sample.
+    It is controlled by a Eurotherm controller and reading are taken from a thermocouple placed inside the \gls{ysz} tube.
+    As a result, there is a lag in the system between the furnace elements heating and the thermocouple sensing the heat.
+    The controller can be programmed with up to 8 segments in the temperature profile and programming can be performed from the front panel of the unit or by the Eurotherm iTools software.
+    The iTools software must be closed before attempting to use the LabVIEW program which reads the temperature from the controller.
 
 \section{Gas Delivery}
-MKS Controllers are used.
+    Gas flows are controlled by the MKS Type 647C Multi-channel Flow Ratio/Pressure Controller and the individual MKS Type M100B \glspl{mfc}.
+    Each \glspl{mfc} controls one gas by measuring the flow with a thermal mass sensor and adjusting it using a valve to meet the desired set point.
+    Each \gls{mfc} has a rated size and must have the zero and \gls{gfc} properly set.
+    The zero can be set physically using a screw on the \gls{mfc} if a large adjustment is needed or electronically using the controller.
+    The zero should be set with both sides of the \gls{mfc} open to the atmosphere to ensure no leak from a left over pressure differential.
+    The \gls{gfc} can be theoretically calculated based on the heat capacity of the gas compared to a standard.
+    This assumes that the \gls{mfc} is properly calibrated, which may not be a safe assumption.
+    As such it is best to calibrate the \gls{mfc} by adjusting the \gls{gfc} so that it measures correct flow rates as given by a bubble meter.
+
+    If an \gls{mfc} leaks despite being set to off, the tension spring for the valve located inside the \gls{mfc} may need adjustment.
+    The manual for the \gls{mfc} outlines the procedure.
+    If the tension is correct and the valve still leaks, service is advised.
+    An alternative is to add an external shut off valve, which can be closed either manually or automatically.
+    This has been implemented for one of the current \glspl{mfc}.
+
+    Different gases can be supplied to the \glspl{mfc} as needed for the experimental setup.
+    If the gas to an \gls{mfc} is changed, a new \gls{gfc} will need to be obtained.
+    Gases can humidifed after the \gls{mfc} with the use of a bubbler, but they should not be humidified beforehand for risk of damaging the \gls{mfc}.
+    Care should also be taken when mixing or changing gas compositions to avoid potentially dangerous combinations, such as mixing fuels and oxidizers.
+    When changing between a reducing and oxidizing enviornment, it is good practice to allow sufficient time for a sweep gas (such as N\textsubscript{2}) to reduce the risk of the different atmospheres mixing.
+
+    The \glspl{mfc} can be controlled by a computer with LabVIEW.
+    They can either be manually set or given a scheduled program to follow.
+    Typically a constant total flow rate will be used among all tests.
+    \SI{50}{sccm} is a good starting point for the total flow rate.
+    After turning on the MKS controller, the master flow control must be turned on by pushing ``ON'' followed by ``0/All.''
 
 \section{pO\textsubscript{2} Measurement}
-Home built YSZ sensor.
+    \po2{} of the gas flow is measured by a home-built \gls{ysz} sensor located after the \glspl{mfc} combine into one flow.
+    Gas flows down a two bore alumina tube along with a platinum wire to the end of a \gls{ysz} tube.
+    The wire is lightly connected to the inside of the \gls{ysz} tube using platinum paste.
+    The gas then flows in the reverse direction, between the alumina and \gls{ysz} tubes to the outlet.
+    Outside the \gls{ysz} tube at the end, a separate piece of platinum wire is connected to the end of the tube.
+    This setup is then placed in a furnace and heated to \temp{800} where the difference of partial pressure can be measured according to the Nernst equation.
+    Voltage potentials from the two wires are measured by a Keithley 2000 digital multimeter.
+
+    Once the system is setup, very little needs to be done to maintain the sensor.
+    If it must be cooled for a power outage or to be worked on, a ramp rate of \SI{1}{\celsius\per\minute} is to be used to avoid damaging the \gls{ysz} tube.
+    For accurate \po2{} measurements, after any modification a calibration curve needs to be created using a reference meter.
+    Voltage measurements and \po2{} calculations are recorded by the computer using a LabVIEW program.
 
 \section{Controls}
-Lab view on the computer.
+    Almost all of the components of the \gls{tga} system are computer controllable.
+    As previously mentioned and explained, the microbalance is controlled by the MicroScan Acquisition program.
+    LabVIEW programs interface with the Keithley, MKS controller, and Eurotherm temperature controller.
+
+    \subsection{Gas Controls}
+        Gas flows can be controlled with either the Gas Controller or Gas Scheduler programs.
+        Gas Controller allows for the immediate control of any gas flow channel while Gas Scheduler changes the gas flows at predetermined times allowing for the automated changing of composition.
+        Figure \ref{fig:gascontrolfront} shows the front panel of Gas Controller, Figure \ref{fig:gasschedfront} is the front panel of Gas Scheduler, and the code for both programs is explained in Appendix \ref{app:gasvi}
+
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=0.75\textwidth,keepaspectratio]{Gas_Controllerp.png}
+            \end{center}
+            \caption{Front panel display of Gas Controller program}
+            \label{fig:gascontrolfront}
+        \end{figure}
+
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=0.6\textwidth,keepaspectratio]{Gas_Schedulerp.png}
+            \end{center}
+            \caption{Front panel display of Gas Scheduler program}
+            \label{fig:gasschedfront}
+        \end{figure}
+
+        To start using Gas Controller ensure proper channels are set for the MKS Controller Port, Arduino Port, and Servo Channel.
+        On and Off position adjust the position of the external shutoff valve controlled by the Arduino.
+        These values should only change if changing USB to serial adapters or with new hardware.
+        Starting the LabVIEW program immediately begins the control to gasses to the specified values.
+        The radio buttons on the left turn channels on or off and set them to the set point.
+        To end the program push the STOP button.
+        The program displays the current reading for the flow to ensure flow is occurring as specified.
+
+        The Gas Scheduler requires the input of a tab delimited text file, referred to as a schedule.
+        An example schedule comes with the program.
+        In this schedule the time for the desired gas flow is given in seconds, followed by the set point of each channel.
+        The program ends on the row with a negative time value, retaining those set points.
+
+        Before starting the program, the file path to the schedule must be given by clicking the folder icon next to the Path to Program File field.
+        Again, ensure that the com ports and channels are correct.
+        The program records the measured flows at a set interval, as defined by the Recording Period (in seconds) and records them to a \gls{csv}.
+        Additionally, comments can be added to the \gls{csv} in the optional comments field.
+        After starting the program, the start button needs to be pressed.
+
+    \subsection{Temperature and \po2{} Measurements}
+        The program Temp \& pO2 Measurements reads the values from the Eurotherm controller and the Keithley multimeter, plots them, and records the results to a \gls{csv}.
+        Figure \ref{fig:temppo2measure} shows the front panel of the program with the user controls.
+
+        Before running the program ensure that the com ports and channels are correct.
+        The Measurement Period should match that given to MicroScan Acquisition.
+        By enabling the timer, the program will stop after the designated time.
+        Comments can be added to the \gls{csv} file by filling in the File Comments field.
+        When the program starts running, it will ask for the location to save the \gls{csv}.
+        As a note, the timer for the program starts as soon as the program does, before defining the \gls{csv} location, but the first measurement does not occur until afterwards.
+
+        \begin{figure}
+            \begin{center}
+            \includegraphics[width=0.9\textwidth,keepaspectratio]{Temp_&_pO2_Measurementsp.png}
+            \end{center}
+            \caption{Front panel display of Temp \& pO2 Measurements program}
+            \label{fig:temppo2measure}
+        \end{figure}
+
+    \subsection{Starting a Run}
+        Multiple programs needs to be started simultaneously for a run of the \gls{tga}.
+        Because each program starts differently, the following is a recommendation for the order to start the programs. on how to minimize differences in timers between the program.
+        Time values from MicroScan should then be used in subsequent analysis.
+        This procedure minimizes the amount of time difference between measurements on the \gls{tga}, temperature and \po2{}.
+
+        To begin, enter all values in to the various programs.
+        In MicroScan Acquisition, follow the full setup, including clicking Start Run, but stop immediately afterwards with the file browser up.
+        In Temp \& pO2 Measurements, follow the full setup including designating where to save the data.
+        As soon as the file path to save data is given, switch to MicroScan Acquisition and complete the setup giving it the file path also.
+        If using Gas Scheduler, start that program as normal followed by the temperature program on the Eurotherm.
 
 \section{Interfacing with other devices}
-Can be plumbed up to mass spec.
+    The effluent of the \gls{tga} can be fed to other devices for advances analysis, such as a \gls{ms}.
+    When doing this, one thing to note is physical distance between the \gls{tga} and the other instrument.
+    The longer the gas line connecting the two the instruments, the longer it will take gas to travel from one instrument to another.
+    During this time period, diffusion will occur up and down the line, broadening any signal to the second instrument.
+    This delay and broadening effect will need to be investigated for each experimental setup.
+
+\section{Troubleshooting}
+    \begin{itemize}
+      \item \textbf{Unsteady mass:} check alignment and thermocouple placement
+      \item \textbf{No gas flow on any channel:} check master flow control
+      \item \textbf{No gas flow on one channel:} check the channel is on and manual valves are open
+      \item \textbf{MFC leaks when off:} Check zero, adjust spring tension as described in MFC manual, add external shutoff valve or return for repairs
+      \item \textbf{No or noisy voltage from \po2{} sensor:} Check wire connections from sensor, rebuild sensor with new platinum paste
+    \end{itemize}
