@@ -144,11 +144,11 @@
     The Gas Scheduler program uses the Gas Controller to automate automate the switching of gasses based on the instructions provided in a text file.
     The text file, referred to as the gas schedule, is nine column tab delimited file where the first column is the amount in seconds for which that gas flow is to be run, followed by the flows for each channel.
     The program sequentially goes though the rows until it encounters a negative time, at which point it ends leaving that row's gas flows running.
-    The program also additionally records the measured flows to a csv file for manual inspection later.
+    The program also additionally records the measured flows to a \gls{csv} file for manual inspection later.
 
     Figure \ref{fig:gasschedvi} gives the block diagram of the program.
     Before the start of the program the path to the gas schedule must be specified.
-    At the start of the program, the location to record measured gas flows is requested and setup as a csv file type with a header, variables to count the row of the program and time elapsed are initialized and communications variables are passed to sub-VIs.
+    At the start of the program, the location to record measured gas flows is requested and setup as a \gls{csv} file type with a header, variables to count the row of the program and time elapsed are initialized and communications variables are passed to sub-VIs.
     After this, the program enters a while loop.
     This while loop is ended if an error occurs, if the stop button is pressed, or if the amount of time in the stage (given by the first column in the gas schedule) is less than zero.
 
@@ -185,7 +185,7 @@
     \subsection{Program Overview}
     A copy of the block diagram is given in Figure \ref{fig:tempvi}.
     When started, the program asks for the location to save the measurements.
-    The program then creates the csv file time in seconds, the voltage read, the calculated log \po2{}, and the temperature from the controller.
+    The program then creates the \gls{csv} file time in seconds, the voltage read, the calculated log \po2{}, and the temperature from the controller.
     Communications variables, such as baud rate and channels, are sent the appropriate sub-VIs to begin communications to the device and a timer is started.
     The program backs up the Keithely's current settings, resets the device and prepares it to measure voltage on one channel, while displaying ``Running'' on the front panel display.
     After the program is complete, the Keithely is reset once again and its original setting are restored before communications are closed to it and the Eurotherm.
@@ -196,7 +196,7 @@
     During each loop, the process value (temperature) of the Eurotherm is measured and any alarms or flags are checked for.
     If any occur, they are passed to the error handler and the program stops.
     The voltage of the specified channel of the Keithley is measured and the log(\po2{}) is calculated from it.
-    These values are then displayed, plotted, saved to the csv file.
+    These values are then displayed, plotted, saved to the \gls{csv} file.
 
     \begin{landscape}%Temp and o2 measure program images
         \begin{figure}

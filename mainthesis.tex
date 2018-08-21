@@ -150,6 +150,7 @@
 %Pages from this point start at Arabic numeral 1
 \setcounter{page}{1}
 \pagenumbering{arabic}
+\glsresetall %restarts glossaries first use from abstract
 \include{Chapters/Intro}
 \include{Chapters/Experimental}
 \include{Chapters/NiGDCMech}
@@ -160,9 +161,9 @@
 \appendix
 \titleformat{\chapter}
       {\normalfont\large}{Appendix \thechapter:}{1em}{}
-\include{Appendices/Stats}
-\include{Appendices/TGA}
-\include{Appendices/Code}
+%\include{Appendices/Stats}
+%\include{Appendices/TGA}
+%\include{Appendices/Code}
 
 \renewcommand{\baselinestretch}{1}
 \small\normalsize

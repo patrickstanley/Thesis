@@ -8,5 +8,23 @@
 \chapter{Statistics}
 
 \section{Student's t-test}
+The Student's t-test, or a two sample t-test, is a statistical test commonly used to determine if to sets of data are different from each other.
+A t-test creates a confidence interval around a mean for in which the true mean is thought to exist.
+By applying this to two sample sets and using the null hypothesis test on the difference of the means, it can be determined if the two means are distinct, with a particular confidence.
+In the case of randomly dividing samples to receive separate treatments, this constitutes an unpaired test.
+
+Like all statistical tests, this relies on a few base assumptions about the population.
+First, it is assumed that the population has a normal distribution, which reasonably fits for the samples which were studied.
+Second, the two populations should have the same variance, meaning that the spread of the data compared to the mean should be equivalent, as determined by the F test.
+In the event where the variances are not equal, a variation of the t-test may be used.
+Finally, the two populations should be sampled independently from each other.
+
+\begin{equation}
+    \label{eq:studentt}
+    t=\frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}}
+\end{equation}
+
+
+
 \section{Weibull Statistics}
 \label{app:weibull}.
