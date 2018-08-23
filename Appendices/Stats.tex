@@ -7,24 +7,109 @@
 
 \chapter{Statistics}
 
-\section{Student's t-test}
-The Student's t-test, or a two sample t-test, is a statistical test commonly used to determine if to sets of data are different from each other.
-A t-test creates a confidence interval around a mean for in which the true mean is thought to exist.
-By applying this to two sample sets and using the null hypothesis test on the difference of the means, it can be determined if the two means are distinct, with a particular confidence.
-In the case of randomly dividing samples to receive separate treatments, this constitutes an unpaired test.
+\section{t-test}
+    \label{app:ttest}
+    The Student's t-test, or particularly the two sample t-test, is a statistical test commonly used to determine if to sets of data are significantly different from each other.
+    A standard t-test creates a confidence interval around a mean for in which the true mean is thought to exist.
+    By comparing the differences of two means and using the null hypothesis test to determine if the difference is zero, it can be determined if the two means are distinct, with a particular confidence.
+    In the case of randomly dividing samples to receive separate treatments, this constitutes an unpaired test, as compared to a before-after sample set in which measurements are paired.
+    The t-test thus gives a way to evaluating two sets of data, say flexural strength before and after reduction, and to calculate if the reduction had any significant effect.
 
-Like all statistical tests, this relies on a few base assumptions about the population.
-First, it is assumed that the population has a normal distribution, which reasonably fits for the samples which were studied.
-Second, the two populations should have the same variance, meaning that the spread of the data compared to the mean should be equivalent, as determined by the F test.
-In the event where the variances are not equal, a variation of the t-test may be used.
-Finally, the two populations should be sampled independently from each other.
+    Like all statistical tests, this relies on a few base assumptions about the population.
+    First, it is assumed that the population has a normal distribution, which reasonably fits for the samples which were studied.
+    This assumption can be tested by other statistical tests, such as the Shapiro–Wilk test or Pearson's chi-squared test, or can be confirmed visually by comparing a histogram of the data to a normal distribution plot.
+    The Student's t-test is not overly sensitive to the fit a normal distribution, but cases such as bimodal distributions will give inaccurate results.
+    Second, for the t-test as described by Student, the two populations should have the same variance, meaning that the spread of the data compared to the mean should be equivalent, as determined by the F test.
+    In the event where the variances are not equal, a variation of the t-test may be used known as the t-test for inequal variances or the Welch's t-test.
+    Finally, the two populations should be sampled independently from each other.
 
-\begin{equation}
-    \label{eq:studentt}
-    t=\frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma_2^2}{n_2}}}
-\end{equation}
+    The t-test begins by calculating the t-score or t-value for a data set.
+    The broadest and most applicable means of doing this is given by the Welch's t-test, Equation \ref{eq:studentt}, which is for sample sets with unequal variances and unequal sample sizes.
+    $\overline{X}$ is the mean of the sample set, $s^2$ is the variance, and $n$ is the number of samples in the sample set.
+    Because the true variance of the population is not known, the variance of the sample set is used which is the square of the standard deviation.
+    \begin{equation}
+        \label{eq:studentt}
+        t=\frac{\overline{X}_1 - \overline{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s_2^2}{n_2}}}
+    \end{equation}
 
+    Once the t-score is calculated it is compared to the critical t-score based on the confidence level desired and degrees of freedom in the measurements.
+    Typically a confidence level of 95\% is used, but 99\% is also frequently found.
+    This can also be referred to the level of significance, which is 1 minus the confidence level, so 0.05 or 0.01.
+    In the simple case of a single set of data, the degrees of freedom is $n-1$.
+    This is because for a sample set to have a given mean, all but one of the values could be any number (and thus are free), but the last value, must have a value which causes the mean to be what is expected.
+    For two sample t-tests where the sets have the same number of samples the degrees of freedom become $2n-2$.
+    But, for the case where the variances are unequal and measurement number may be unequal like Equation \ref{eq:studentt}, the pooled degrees of freedom must be calculated from Equation \ref{eq:dof}, known as the Welch–Satterthwaite equation.
+    The degrees of freedom calculated by Equation \ref{eq:dof} is then rounded down to the next integer.
+    \begin{equation}
+        \label{eq:dof}
+        dof=\frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}{\frac{\left(\frac{s_1^2}{n_1}\right)^2}{n_1-1}+\frac{\left(\frac{s_2^2}{n_2}\right)^2}{n_2-1}}
+    \end{equation}
 
+    With the desired confidence level and degrees of freedom calculated, the critical t-value is then looked up in a table.
+    This table gives the pre-calculated t-values between which 95\% or 99\% of all values fall for the degrees of freedom in the distribution.
+    If the calculated t-value is closer to zero than the critical t-value, it is determined that the two sample sets do not have a significant difference between them.
+    This is because the difference between the sets falls within the range where 95\% of any random selection of two data sets from the same distribution would fall.
+    Conversely, if the calculated t-value is further from zero than the critical t-value, it can be said there is a significant difference between the two and the true population means of the two sets is different.
+
+    Many software packages will automatically calculate these values given an input dataset.
+    The work in this thesis used JMP by SAS Institute to perform the calculations, but Minitab, SPSS, R, Python, Matlab, or Excel are all capable of performing the calculations with built-in functions.
 
 \section{Weibull Statistics}
-\label{app:weibull}.
+    \label{app:weibull}
+    Many things in life do not have one true value, but are randomly distributed across a range of possible values, creating a distribution.
+    This distribution can be modeled and analyzed to determine the likelihood of a particular outcome given the total possible number of outcomes.
+    Just as there are many things which can fit a distribution, there are many different types of distributions which can represent the real world case.
+    The most commonly known distribution is the normal distribution but others are frequently used and are variations on each other, such as Student's t, Lorentz, exponential, Chi-squared.
+    In fracture mechanics, the Weibull distribution is used to represent the distribution of the strength of individual samples.
+    The \gls{cdf} of a Weibull distribution is given in Equation \ref{eq:weibullcdf}, where $P$ is the probability of failure having occurred, $\sigma$ is the applied stress which is greater than zero, $\sigma_{min}$ is the minimum stress needed for failure, $\sigma_\theta$ is a scaling factor known as the characteristic strength, and $m$ is the Weibull modulus, or the distribution shape factor.
+    Commonly there is considered no minimum stress for failure to occur, resulting in $\sigma_{min} = 0$.
+    \begin{equation}
+        \label{eq:weibullcdf}
+        P=1-e^{-\left(\frac{\sigma - \sigma_{min}}{\sigma_\theta}\right)^m}
+    \end{equation}
+
+    The Weibull distribution was first proposed by Waloddi Weibull as an empirical fit to the observations he had been making.
+    In a curious case, years later, his Weibull distribution was backed up by theory as extreme value distributions and weakest link theory was developed in the study of fracture mechanics.
+    In weakest link theory, it is the result of only the largest flaw which causes failure.
+    If a material has a normal, symmetric distribution of flaw sizes, then the cases of the largest flaw will be naturally skewed to the right, above the mean size and following the tail of the normal distribution.
+    Of the functions which were developed for extreme values, Weibull's offered the most versatility in terms of bounds, fit and confidence intervals.
+
+    The Weibull distribution given in Equation \ref{eq:weibullcdf} has two parameters, the characteristic strength and the Weibull modulus.
+    The characteristic strength is very similar in concept to the mean of a distribution, but will always be slightly higher.
+    The mean of a distribution is defined as the point where the total probability has reached 50\%.
+    In contrast, the characteristic strength is defined as the point where the total probability has reached 63.2\%, or otherwise the strength which makes the exponential term of Equation \ref{eq:weibullcdf} go to $-1$.
+    The Weibull modulus is a measure of the width of the distribution and thus the variability of flaw sizes and strength of the material.
+    The value of the Weibull modulus depends highly on the material and the processing which occurred, but typically ranges in the 1 to 20 range.
+    From an engineering perspective, a high Weibull modulus is desired because it makes the failure point more predictable.
+    If multiple flaw types exist, each with their own distribution, the application of the Weibull distribution become complicated.
+    Failure of each sample must be assigned the different types via fractography, and the contribution of each distribution attributed to that of the whole.
+
+    The \gls{cdf} can be plotted linearly by rearranging Equation \ref{eq:weibullcdf} to take the form of Equation \ref{eq:weibullline}, where the slope of the line is $m$ and the intercept is $-m\ln(\sigma_\theta)$.
+    This allow for fitting of the Weibull parameters and a visual estimation of if the data fits a Weibull distribution.
+    The preferred fitting method is the maximum likelihood method, rather than the linear regression method, as it results in smaller confience intervals for the estimated parameters.
+    \begin{equation}
+        \label{eq:weibullline}
+        \ln(-\ln(1-P))=m \ln(\sigma) - m\ln(\sigma_\theta)
+    \end{equation}
+
+    To achieve meaningful results with small confidence intervals, a large number of samples must be tested.
+    It is best practice that for Weibull parameters to be estimated, in excess of 30 samples should be tested.
+    While sometimes it is not practical to test such numbers of samples, values reported with smaller sample sets should have the confidence intervals examined.
+
+    One unique advantage of the Weibull distribution is the ability to scale the stress applied to a sample to a different size.
+    When applying stress to a relatively small sample, due to the low volume of the stressed sample, there is a low probability that a large critical flaw will be found which causes failure.
+    If, one was to repeat the test on a larger sample, the added volume means a greater chance of having a critical flaw cause failure at a lower strength.
+    As a result, the larger volume which is placed under stress, the weaker it will be.
+    Equation \ref{eq:weibullvol} shows this relationship where $V_{E}$ is the effective volume which was placed under stress.
+    For a pure tensile test, $V_E$ is the entire volume of the sample, but for flexural tests $V_E$ is much less.
+    In addition to being able to scale the overall size of the sample up or down, this size scaling allows for the comparison between test methods, such as 3-point and 4-point bending.
+    Using the known effective volumes from 3 and 4-point bending with similar sample dimensions and bottom spans, Equation \ref{eq:bendconvert} allows the results of the two tests to be related to each other, as long as $m$ is constant between the two test methods.
+    As a result, the 3-point bend testing will always result in a greater strength compared to 4-point (as long as $m > 1$), due to the smaller volume which it engages when testing.
+    \begin{equation}
+        \label{eq:weibullvol}
+        \frac{\sigma_1}{\sigma_2} = \left(\frac{V_{E2}}{V_{E1}}\right)^\frac{1}{m}
+    \end{equation}
+    \begin{equation}
+        \label{eq:bendconvert}
+        \sigma_{3pt} = \sigma_{4pt}\left(\frac{m+2}{2}\right)^\frac{1}{m}
+    \end{equation}
