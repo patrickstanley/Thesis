@@ -18,9 +18,9 @@
     Combustion generators convert chemical energy to thermal energy, then to mechanical energy, and finally into electrical energy.
     Each energy conversion step has intrinsic losses which limit efficiency.
     \Glspl{sofc} have the ability to solve this for applications where electrical power is desired.
-    \glspl{sofc} allow for side stepping of these losses by allowing for the direct conversion of chemical energy to electrical energy.
+    \Glspl{sofc} allow for side stepping of these losses by allowing for the direct conversion of chemical energy to electrical energy.
     Power generation plants have efficiencies around 30\%, while a stand-alone \gls{sofc} generator can convert fuel to electricity at 45 to 65\% efficiency.\cite{Wachsman2011a,Lasseter2004}
-    \glspl{sofc} are able to run on a variety of fuel sources, such as hydrogen, methane or even biogas.\cite{Park2000}
+    \Glspl{sofc} are able to run on a variety of fuel sources, such as hydrogen, methane or even biogas.\cite{Park2000}
     This fuel flexibility and higher efficiency positions \glspl{sofc} to bridge the gap in the energy economy as it transitions from fossil fuels to renewable sources.
     However, many technical hurdles still remain which currently limit \glspl{sofc}' viability and must be addressed.
 
@@ -37,9 +37,9 @@
     A limiting factor in this movement is the ability of oxygen to transport into, through, and out of the cell.
     As the rate of oxygen transport is increased, the ability for electrons to perform work also increases.
 
-    \begin{figure}
+    \begin{figure}[p]
       \centering
-      \includegraphics[width=0.5\textwidth]{sofc.png}
+      \includegraphics[width=0.75\textwidth]{sofc.png}
       \caption[Diagram showing flow of materials in the operation of an \gls{sofc}.]{Diagram showing flow of materials in the operation of an \gls{sofc}.\cite{Sakurambo}}\label{fig:sofc}
     \end{figure}
 
@@ -68,9 +68,9 @@
     While the electric potential is established by the partial pressure gradient, the electric current is limited by the ionic conduction of oxygen ions from the cathode to the anode.
     In ionic conduction, oxygen ions hop from site to site via oxygen vacancies, locations where an oxygen atom is missing from the site it usually occupies in the crystal lattice.
     Because conduction depends on vacancies, the more vacancies that are present in the lattice, the more available sites for oxygen to move between, the greater the conductance, and the greater power output of an cell.
-    The relationship between oxygen vacancy concentration and oxygen conductance is given by Equation \ref{eq:conductivity}, where \(\sigma\subscript{i}\) is the ionic conductivity, \(\lbrack\ch{V_O^{**}}\rbrack \) is the concentration of oxygen vacancies in the lattice, \(\mu_O \) is the ionic mobility of the oxygen, and \(Z_e\) is the charge of the conducting species.\cite{Mogensen2000}
+    The relationship between oxygen vacancy concentration and oxygen conductance is given by Equation \ref{eq:conductivity}, where \(\sigma\subscript{i}\) is the ionic conductivity, \(\lbrack\ch{V_O^{**}}\rbrack \) is the concentration of oxygen vacancies in the lattice, \(\mu_O \) is the ionic mobility of the oxygen, and \(Ze\) is the total charge of the conducting species.\cite{Mogensen2000}
     Thus, by adding more oxygen vacancies the ionic conductivity increases.
-    While additional oxygen vacancies are a benefit to the electrical performance of the cell, it can have detrimental effects to the mechanical properties.
+    While additional oxygen vacancies are a benefit to the electrical performance of the cell, the resulting changes to the interatomic bonding can weaken bond strengths.
     \begin{equation} \label{eq:conductivity}
       \sigma\subscript{i} = \lbrack\ch{V_O^{**}}\rbrack Ze\mu_O
     \end{equation}
@@ -92,16 +92,16 @@
     To assist gas diffusion to the \gls{tpb} and to maximize the length of \glspl{tpb}, pores are added, greatly increasing the available surface area of the electrodes.
     The more \glspl{tpb} that are present, the more exchange can occur between the gas and the cell at any given time and the current output of the cell is increased.
     This added porosity does not come without the disadvantage of decreasing the mechanical strength of the cell.\cite{Pihlatie2009,Laurencin2010}
-    \begin{figure}
+    \begin{figure}[p]
       \centering
-      \includegraphics[width=0.5\textwidth]{tpb.png}
+      \includegraphics[width=0.75\textwidth]{tpb.png}
       \caption[Diagram showing the triple phase boundary and the importance as being the site where incorporation and reactions occur.]{Diagram showing the triple phase boundary and the importance as being the site where incorporation and reactions occur.\cite{Wachsman2011a}}\label{fig:tpb}
     \end{figure}
 
     An operating \gls{sofc} would consist of a series of individual cells stacked together for combined power output.
     The cells would be sealed between current collectors and interconnects and heated to operating temperature.
-    The elevated temperature enables oxygen conduction though the electrolyte by increasing vacancy concentration and mobility, but decreases the theoretical voltage.
-    Historically, \glspl{sofc} operated near \temp{1000}, but advances in materials now allow cells to operate at \temp{650} and development continues to decrease the operating temperature.
+    The elevated temperature enables oxygen conduction though the electrolyte by increasing vacancy concentration and mobility, but decreases the theoretical voltage due to the equilibrium constant of the H\textsubscript{2}/H\textsubscript{2}O reaction.
+    Historically, \glspl{sofc} operated near \temp{1000}, but advances in materials have allowed cells to decrease to the intermediate temperature range (\temp{650} to \temp{800}) and now the low temperature range below \temp{650}.\cite{Wachsman2011a}
     At lower operating temperatures it becomes easier to create better seals and the stack can be built from more readily available materials.%addcite
     Additionally, the cells are subjected to less thermal expansion, reducing the stresses on the cell.
 
@@ -110,36 +110,43 @@
     For example, a cell can be comprised of a nickel metal-\gls{gdc} anode, a \gls{gdc} electrolyte, and then a \gls{lsm} cathode.\cite{Liu2002,Haile2003}
     The individual parts are cast into thin flexible sheets (tapes) from bulk powders, with additives such as pore formers where appropriate, and then laminated together and co-fired to create a single cell.
     As a result, a completed cell has distinct layers in it where the material and properties abruptly change.
-    This composite structure can then have inter-diffusion between layers, smoothing out the abrupt changes, but creating new structures and compositions that were not present upon lamination.\cite{Yokokawa2008}
+    This composite structure can then have interdiffusion between layers, smoothing out the abrupt changes, but creating new structures and compositions that were not present upon lamination.\cite{Yokokawa2008}
 
     The traditional material used for electrolytes in \glspl{sofc} has been \gls{ysz}.
-    \Gls{ysz} is very stable, has a ratio of ionic conductivity to total conductivity (transference number) of approximately 1, and good conductivity at temperatures in excess of \temp{800} and up to very low \po2{}s.
+    \Gls{ysz} is very stable, has a high strength, has a ratio of ionic conductivity to total conductivity (transference number) of approximately 1, and good conductivity at temperatures in excess of \temp{800} even in very low \po2{}s.
     A high transference number minimizes leakage current due to electronic conduction in the electrolyte, maintaining cell performance.
     As mentioned previously, \gls{gdc} is another choice for an electrolyte.
-    Other rare-earth doped cerias have been used as electrolytes, but \gls{gdc} tends to outperform them under a variety of conditions.
-    At \temp{600}, \gls{gdc} exhibits an order of magnitude higher conductivity than \gls{ysz}, but has a smaller electrolytic domain where the transference number is near 1.\cite{Inaba1996}
-    Under conditions of high temperature or very low \po2{}, \gls{gdc} will start to leak electrons through the electrolyte, reducing cell performance.
+    Other rare-earth doped cerias have been used as electrolytes, but \gls{gdc} tends to outperform them under a variety of conditions.%addcite
+    At \temp{600}, \gls{gdc} exhibits an order of magnitude higher conductivity than \gls{ysz}, but has a smaller electrolytic domain, where the transference number is near 1.\cite{Inaba1996}
+    Under conditions of high temperature or very low \po2{}, \gls{gdc} will become electrically conductive and start to leak electrons through the electrolyte, reducing cell performance.
     As \gls{sofc} operating temperatures are reduced for improved efficiency, \gls{gdc} is favored for the electrolyte material.
 
     The anode usually consists of a mixture of the electrolyte material, which provides good ionic conductivity, with an electronic conductor that can facilitate fuel oxidation reactions on the surface.
-    In combination with an ionic conductor it creates a cermet which functions as the anode.
     Nickel has commonly been used in the anode due to its high conductivity and catalytic properties.%citation would be good
+    In combination with an ionic conductor, the nickel creates a cermet which functions as the anode.
     A challenge with nickel is that at ambient conditions it oxidizes into nickel oxide, but at operating conditions it reduces to the desired nickel metal.
     There is a large lattice parameter change between nickel and nickel oxide, such that, upon reduction it decreases volume by over 15\%.
     As a result, the overall porosity of the anode layer increases as the \gls{sofc} is put into service and the anode is exposed to reducing conditions.\cite{Gutierrez-Mora2002,Yu2007}
     This increased porosity can greatly decrease the flexural strength and modulus of the anode and of the overall cell.\cite{Callister2014,Barsoum2003}
-    Additionally, nickel is prone to poisoning from sulfur contaminants in the fuel, so alternative anodes are of interest for use in \glspl{sofc}.
+    Redox cycling presents an additional challenge because cycling of oxidation and reduction phases causes crack growth and failure after a few cycles.\cite{Radovic2004, Radovic2004b, Laurencin2010, Pihlatie2009, Laurencin2009, Yu2007, Sarantaridis2007}
+    Additionally, nickel is prone to poisoning from sulfur contaminants in the fuel, so alternative anodes are of interest for use in \glspl{sofc}.%addcite
 
-    As an alternative, other metal-ceramic systems have been researched to serve the function of the anode.
-    These have included copper, cobalt, and platinum systems, but each suffer from a significant drawback such as coking, long-term performance degradation or cost.
-    A different approach is to use an all-ceramic anode, made of a \gls{miec}.
-    Perovskite materials have easily been developed into \glspl{miec} with the use of a transition metal occupying the octahedral B-site.
-    \gls{sfcm} is a recently developed double perovskite \gls{miec} with multiple dopants on the B-site with a high conductivity of \SI{30}{S\per\centi\meter}.\cite{Pan,Hussaina,Hussain}
-    Due to the all-ceramic nature of these anodes, their thermal expansion coefficients better match that of the other ceramic components of the cell, reducing sintering stresses and improving redox cycling durability.
-    Conversely, all-ceramic anodes tend to have lower conductivity and catalytic performance.
+    Alternative metal-ceramic systems have been researched to serve the function of the anode.
+    These have included copper, cobalt, and platinum systems, but each suffer from a significant drawback such as coking, long-term performance degradation or cost.%addcite
+    A different approach is to use an all-ceramic anode, made of a \gls{miec} where both ionic and electronic conductions occur simultaneously, such as such as \ce{La_{\hbox{1--x}}Sr_{x}Cr_{\hbox{1--y}}Mn_{y}O_{3}}, \ce{Sr_{0.94}Ti_{0.9}Nb_{0.1}O_{3-\delta}}, \ce{Ba_{0.98}La_{0.02}SnO_3}, or \ce{Sr_{2}MgMoO_{6}}.\cite{Goodenough2007,Zha2005,Primdahl2001,Hussain2013,MohammedHussain2012,Hussain2016,Huang2006}
 
+    Perovskite structures have yielded number of MIECs with potential uses as electrode materials. \cite{Yamamoto1987,Anderson1992,Ishihara2009}
+    \ce{Sr_2MgMoO_6} (SMM) and its related family of materials (\ce{Sr_2MMoO_6}, where M is a transition metal dopant) yield good conductivities and catalytic actives.\cite{Huang2009}
+    The mixed valence state of Mo(VI)/Mo(V) provides high electronic conduction while supporting oxygen vacancy formation.\cite{Huang2006a}
+    If a dopant is used which has an overlapping redox couple band, such as Fe, electronic conduction can be further improved.
+    Mo(VI) and Mo(V) are stable in both octahedral and tetrahedral coordination, further adding stability to oxygen vacancy formation.\cite{Bernuy-Lopez2007}
+    \gls{sfcm} is a recently developed double perovskite \gls{miec} with multiple dopants on the B-site with a high conductivity of \SI{30}{S\per\centi\meter} at \temp{650}.\cite{Pan,Hussaina,Hussain}
+    Due to the all-ceramic nature of these anodes, their thermal expansion coefficients better match that of the other ceramic components of the cell, reducing sintering stresses and improving redox cycling durability.\cite{Goodenough2007}
+    Conversely, all-ceramic anodes tend to have lower conductivity and catalytic performance.\cite{Zhang2012}
+
+    %Maybe move or remove
     This work focuses on the structures in the cell which give mechanical support, the anode and electrolyte.
-    Specifically, Ni-\gls{gdc} and \gls{sfcm}-\gls{gdc} anodes with \gls{gdc} electrolytes will be investigated..
+    Specifically, Ni-\gls{gdc} and \gls{sfcm}-\gls{gdc} with \gls{gdc} electrolytes were investigated.
     While \gls{ysz} systems have been studied extensively, the mechanical properties of \gls{gdc} systems have not been throughly explored.
     As \glspl{sofc} are developed which operate at lower temperatures, \gls{gdc} is the preferred choice for an electrolyte material due to its high conductivity.
     Ni-\gls{gdc} serves as a reliable starting place to characterize the mechanical properties of the anode, focusing on the changes which occur during reduction as NiO reduces to Ni metal.
@@ -152,25 +159,24 @@
     The cathode does not tend to play a structural role in the fabrication of a cell, and thus is not investigated or developed in this work.
 
     Outside the of the cell itself, several materials are needed to create a functioning stack.
-    Metal interconnects support individual cells, holding them together, creating connections for the current to flow though current collectors and gas to flow though channels to the the cell.
-    In intermediate and high temperature stacks, expensive metal alloys such as Inconel must be used to survive the extreme heat.
+    Metal interconnects support individual cells, holding them together, creating connections for the current to flow though current collectors and gas to flow though channels to the the cell.\cite{Ki2010}
+    In intermediate and high temperature stacks, expensive metal alloys such as Inconel must be used to survive the extreme heat.%addcite
     As temperatures are lowered to below \temp{600} more common metals can be used for interconnects, such as steel.
     Sealing materials are another critical component to assembly of an \gls{sofc} stack.
     Glasses with transition temperatures near the operating range are used at high temperatures as they can soften and flow into place creating gas tight seals.
-    At lower temperatures new options are available, such as \gls{ysz}, vermiculite or mica gaskets.%addcite
+    At lower temperatures new options are available, such as \gls{ysz} felt, vermiculite or mica gaskets.%addcite
 
 \section{Mechanical Properties}
     Ideally, an \gls{sofc} is as thin as possible to minimize diffusion path lengths and ionic resistances in the cell.\cite{Chan2001}
     Realistically, the cell must be able to withstand the stresses of being manufactured, sealed, heating, and use.
-    This means that a compromise must be made as to how the cell is supported and which components do the supporting.
+    This means that a compromise must be made as to how much the cell is supported and which components do the supporting.
     Traditionally, electrolyte supported cells were used with \gls{ysz} electrolytes where the thick dense electrolyte provides the structural support for the cell.
-    Recently anode supported cells made from \gls{gdc} have been able to provide lower resistances due to the thinner electrolyte while adequately supporting the cell with a thicker anode which fuel can diffuse further into.\cite{Fleischhauer2014a,Laurencin2008}
+    Recently cells with an \gls{asl} made from \gls{gdc} have been able to provide lower resistances due to the thinner electrolyte while adequately supporting the cell with a thicker anode which fuel can diffuse further into.\cite{Fleischhauer2014a,Laurencin2008}
     Now the anode layer with its porosity, must support the majority of the stresses the cell is subjected to.
 
     Ceramic materials used in \glspl{sofc} mechanically fail when stresses concentrate at a pre-existing microstructural flaw, overcoming the strength of the material, propagating a crack though the cell.
     Stresses can be intrinsic to the cell, left from lamination, sinter or cooling, or they can be applied externally during the sealing or operation of the cell.
     Microstructural flaws could be intentional with the added porosity or unintended flaws such as inclusions, contamination or grain agglomeration.
-    These microstructural flaws are locations where stresses are concentrated and lead to the ultimate failure of the material.
 
     Stresses are concentrated most by large, sharp featured flaws.
     As a result, in a uniform stress field, the largest flaw will usually cause failure.
@@ -180,6 +186,7 @@
     The analysis of the distribution of flaws from a batch of samples is knows as Weibull analysis and is explained in detail in Appendix \ref{app:weibull}.
     To perform Weibull analysis a large number of samples must be tested, but as a result the overall size/shape distribution of flaws can be obtained.
     This allows for the observation of the flaw distribution and if it changes at different points or if another phenomenon is occurring.
+    One unique benefit of Weibull analysis, is that the strength of a sample can be scaled up to a larger piece, as long as the distributions of flaws, or the Weibull modulus, is known.
 
     Most of the materials used in \glspl{sofc} have crystal structures which promote the generation of oxygen vacancies.
     As oxygen vacancies are produced, the inter-atomic bonding of the structure changes, which can decrease the elastic modulus and fracture toughness of the crystal.\cite{Bishop2014,Duncan2006}
@@ -187,6 +194,16 @@
     This relationship has been shown to fit for single grains of \gls{gdc} using nanoindentation, but this does not necessarily hold true for an actual cell.\cite{Wang2007}
     Grain boundaries can play a large role in the mechanical properties of a bulk sample as they can impede or enhance the propagation of a crack.
     For this reason microstructure combined with environmental conditions can play a large role on the overall mechanical properties of a fuel cell.
+
+    Another parameter which can change based on environment is the fracture toughness of the material.
+    The fracture toughness is how much stress it takes for a crack to grow and propagate once initiated, or in other words the material's ability to resist crack growth.
+    Just as modulus changes upon heating or reduction, so too can fracture toughness change.
+    Equation \ref{eq:strength} demonstrates how fracture toughness and flaw geometry impact the strength of a sample, where $\sigma$ is the strength, $K_{Ic}$ is the fracture toughness, \textit{Y} is the shape factor for the flaw which caused failure and \textit{a} is the size of the flaw.\cite{Green1998}
+    The fracture toughness and flaw distributions play a direct role in the overall strength of the cell.
+    \begin{equation}
+        \sigma = \frac{K_{Ic}}{Y\sqrt{a}}
+        \label{eq:strength}
+    \end{equation}
 
     The first external stress applied to the cell, and the one most likely to result in failure, is the  sealing of an individual cell into a stack, creating a gas tight seal between the anode and cathode sides.
     In this process, multiple cells are sandwiched with gasket seals and interconnects between them and compressed until a gas tight seal is achieved.
@@ -201,16 +218,27 @@
       \caption{Optical profilometer measurements of a \SI{10}{\centi\meter} by \SI{10}{\centi\meter} Ni-GDC/GDC half-cell where the z-axis has been magnified 6X to highlight curvature}\label{fig:flatness}
     \end{figure}
 
-    %Kic
-    %Cracking?
-    %Fractography?
-    %Testing at conditions
+\section{Summary of Contributions}%needs a better name
+    Much of the study of fracture in ceramic materials has been done on technical ceramics for medical applications and for coating metal components.\cite{Deng2004,Ambrozic2007,Yonezu2014,Meille2012,Nie2010,Olagnon1999,Sorensen2001,Barinov1997}
+    These materials are optimized for fracture toughness and durability and very rarely experience temperatures above a few hundred degrees Celsius.
+    The fracture surface analysis and correlations between microstructure and strength described for these materials are a valuable starting point for investigating fuel cell materials.
+    However, there is a lack of extensive investigation into the properties of low temperature \gls{sofc} materials at their expected operating temperatures and environments.
 
-    %Literature review
+    Most of the previous research into the mechanical properties of \glspl{sofc} has focused on \gls{ysz} based devices.\cite{Roa2011,Yu2007,Nakajo2012}
+    This material has been the standard for the field and has desirable mechanical properties but requires high temperatures to function well.
+    Nakajo et al. conducted a wide ranging study of materials used in anode supported \glspl{sofc} which included some attention to temperature and atmosphere effects but did not go beyond \gls{ysz}.\cite{Nakajo2012}
+    As efforts are made to lower \gls{sofc} operating temperatures, a shift to ceria-based electrolytes has occurred.
+    Less attention has been given to the mechanical behavior of doped ceria materials across \gls{sofc} operating conditions.
+    Flexural strength and Young's modulus measurements for \gls{gdc} have been carried out in ambient conditions by Yasuda et al.\cite{Yasuda2012}
+    They characterized the effects of sintering temperature on density and the resulting mechanical properties.
+    Further testing of this material system at elevated temperatures and anode gas reducing environments must be done to fully understand the mechanical behavior of \gls{gdc}.
+
+    Additionally, most research has focused on measuring and comparing the Young's moduli of different materials as it changes with temperature or after reduction treatments at room temperature.\cite{Gutierrez-Mora2002,Giraud2008,Kushi2011,Amezawa2011}
+    While the modulus can be correlated to the fracture strength of the cell, direct measurement of flexural strength remains the best means to characterize the strength of the cell.
 
     To help develop \glspl{sofc} into a viable technology which can stretch the gap in the energy economy, research is needed to improve the reliability of the cells during manufacturing and operation.
     This work aims to develop the understanding of fracture mechanics of real-world structures, by understanding how temperature and partial pressure of oxygen affect the strength, fracture toughness, and flaw distributions of \gls{sofc} components.
-    This is done by analyzing the flexural properties of bulk bars and half-cell coupons at ambient conditions and at conditions similar to those found in an \gls{sofc}.
+    This was done by analyzing the flexural properties of bulk bars and half-cell coupons at ambient conditions and at conditions similar to those found in an \gls{sofc}.
     Microscopy was used to look for changes in microstructure after various treatments in addition to Weibull analysis.
     Additionally, thermogravimetry, conductivity, and temperature programed desorption were used to understand the atomic defect structure of a new material to relate it to the mechanical properties.
 

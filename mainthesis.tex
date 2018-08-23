@@ -129,17 +129,18 @@
 
 \newpage
 \phantomsection
-\addcontentsline{toc}{chapter}{List of Abbreviations and Symbols} %Manually put in ToC
+\addcontentsline{toc}{chapter}{List of Abbreviations} %Manually put in ToC
 \renewcommand{\baselinestretch}{1}
 \small\normalsize
 \hbox{\ }
 \vspace{2cm}
 \begin{center}
-\large{List of Abbreviations and Symbols} %Manually create centered title
+\large{List of Abbreviations} %Manually create centered title
 \end{center}
 
 \vspace{2cm}
-
+\renewcommand{\glossarypreamble}{\glsfindwidesttoplevelname[\currentglossary]}
+\setglossarystyle{alttree}
 \printglossary
 
 \newpage
@@ -154,16 +155,16 @@
 \include{Chapters/Intro}
 \include{Chapters/Experimental}
 \include{Chapters/NiGDCMech}
-%\include{Chapters/SFCMDefect}
-%\include{Chapters/SFCMMech}
-%\include{Chapters/Conclusions}
+\include{Chapters/SFCMDefect}
+\include{Chapters/SFCMMech}
+\include{Chapters/Conclusions}
 
 \appendix
 \titleformat{\chapter}
       {\normalfont\large}{Appendix \thechapter:}{1em}{}
-%\include{Appendices/Stats}
-%\include{Appendices/TGA}
-%\include{Appendices/Code}
+\include{Appendices/Stats}
+\include{Appendices/TGA}
+\include{Appendices/Code}
 
 \renewcommand{\baselinestretch}{1}
 \small\normalsize
