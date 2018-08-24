@@ -9,7 +9,7 @@
 
 \section{t-test}
     \label{app:ttest}
-    The Student's t-test, or particularly the two sample t-test, is a statistical test commonly used to determine if to sets of data are significantly different from each other.
+    The Student's t-test, or particularly the two sample t-test, is a statistical test commonly used to determine if two sets of data are significantly different from each other.
     A standard t-test creates a confidence interval around a mean for in which the true mean is thought to exist.
     By comparing the differences of two means and using the null hypothesis test to determine if the difference is zero, it can be determined if the two means are distinct, with a particular confidence.
     In the case of randomly dividing samples to receive separate treatments, this constitutes an unpaired test, as compared to a before-after sample set in which measurements are paired.
@@ -20,7 +20,7 @@
     This assumption can be tested by other statistical tests, such as the Shapiro–Wilk test or Pearson's chi-squared test, or can be confirmed visually by comparing a histogram of the data to a normal distribution plot.
     The Student's t-test is not overly sensitive to the fit a normal distribution, but cases such as bimodal distributions will give inaccurate results.
     Second, for the t-test as described by Student, the two populations should have the same variance, meaning that the spread of the data compared to the mean should be equivalent, as determined by the F test.
-    In the event where the variances are not equal, a variation of the t-test may be used known as the t-test for inequal variances or the Welch's t-test.
+    In the event where the variances are not equal, a variation of the t-test may be used known as the t-test for unequal variances or the Welch's t-test.
     Finally, the two populations should be sampled independently from each other.
 
     The t-test begins by calculating the t-score or t-value for a data set.
@@ -33,7 +33,7 @@
     \end{equation}
 
     Once the t-score is calculated it is compared to the critical t-score based on the confidence level desired and degrees of freedom in the measurements.
-    Typically a confidence level of 95\% is used, but 99\% is also frequently found.
+    Typically, a confidence level of 95\% is used, but 99\% is also frequently found.
     This can also be referred to the level of significance, which is 1 minus the confidence level, so 0.05 or 0.01.
     In the simple case of a single set of data, the degrees of freedom is $n-1$.
     This is because for a sample set to have a given mean, all but one of the values could be any number (and thus are free), but the last value, must have a value which causes the mean to be what is expected.
@@ -56,7 +56,7 @@
 
 \section{Weibull Statistics}
     \label{app:weibull}
-    Many things in life do not have one true value, but are randomly distributed across a range of possible values, creating a distribution.
+    Many things in life do not have one true value but are randomly distributed across a range of possible values, creating a distribution.
     This distribution can be modeled and analyzed to determine the likelihood of a particular outcome given the total possible number of outcomes.
     Just as there are many things which can fit a distribution, there are many different types of distributions which can represent the real world case.
     The most commonly known distribution is the normal distribution but others are frequently used and are variations on each other, such as Student's t, Lorentz, exponential, Chi-squared.
@@ -75,7 +75,7 @@
     Of the functions which were developed for extreme values, Weibull's offered the most versatility in terms of bounds, fit and confidence intervals.
 
     The Weibull distribution given in Equation \ref{eq:weibullcdf} has two parameters, the characteristic strength and the Weibull modulus.
-    The characteristic strength is very similar in concept to the mean of a distribution, but will always be slightly higher.
+    The characteristic strength is very similar in concept to the mean of a distribution but will always be slightly higher.
     The mean of a distribution is defined as the point where the total probability has reached 50\%.
     In contrast, the characteristic strength is defined as the point where the total probability has reached 63.2\%, or otherwise the strength which makes the exponential term of Equation \ref{eq:weibullcdf} go to $-1$.
     The Weibull modulus is a measure of the width of the distribution and thus the variability of flaw sizes and strength of the material.
@@ -86,7 +86,7 @@
 
     The \gls{cdf} can be plotted linearly by rearranging Equation \ref{eq:weibullcdf} to take the form of Equation \ref{eq:weibullline}, where the slope of the line is $m$ and the intercept is $-m\ln(\sigma_\theta)$.
     This allow for fitting of the Weibull parameters and a visual estimation of if the data fits a Weibull distribution.
-    The preferred fitting method is the maximum likelihood method, rather than the linear regression method, as it results in smaller confience intervals for the estimated parameters.
+    The preferred fitting method is the maximum likelihood method, rather than the linear regression method, as it results in smaller confidence intervals for the estimated parameters.
     \begin{equation}
         \label{eq:weibullline}
         \ln(-\ln(1-P))=m \ln(\sigma) - m\ln(\sigma_\theta)
