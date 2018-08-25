@@ -1,10 +1,5 @@
 % !TEX root = ../mainthesis.tex
 
-%Appendix -- January 2015
-%\appendix
-%\renewcommand{\thechapter}{A}
-%\renewcommand{\chaptername}{Appendix}
-
 \chapter{Statistics}
 
 \section{t-Test}
@@ -13,15 +8,16 @@
     A standard t-test creates a confidence interval around a mean for in which the true mean is thought to exist.
     By comparing the differences of two means and using the null hypothesis test to determine if the difference is zero, it can be determined if the two means are distinct, with a particular confidence.
     In the case of randomly dividing samples to receive separate treatments, this constitutes an unpaired test, as compared to a before-after sample set in which measurements are paired.
-    The t-test thus gives a way to evaluating two sets of data, say flexural strength before and after reduction, and to calculate if the reduction had any significant effect.
+    The t-test thus gives a way to evaluating two sets of data, say flexural strength of reduced and unreduced samples, and to calculate if the reduction had any significant effect.
 
     Like all statistical tests, this relies on a few base assumptions about the population.
     First, it is assumed that the population has a normal distribution, which reasonably fits for the samples which were studied.
     This assumption can be tested by other statistical tests, such as the Shapiro–Wilk test or Pearson's chi-squared test, or can be confirmed visually by comparing a histogram of the data to a normal distribution plot.
-    The Student's t-test is not overly sensitive to the fit a normal distribution, but cases such as bimodal distributions will give inaccurate results.
+    The Student's t-test is not overly sensitive to the fit a normal distribution, but cases such as bimodal distributions will give inaccurate results.\cite{Markowski1990}
     Second, for the t-test as described by Student, the two populations should have the same variance, meaning that the spread of the data compared to the mean should be equivalent, as determined by the F test.
-    In the event where the variances are not equal, a variation of the t-test may be used known as the t-test for unequal variances or the Welch's t-test.
+    In the event where the variances are not equal, a variation of the t-test may be used known as the t-test for unequal variances or the Welch's t-test.\cite{Welch1947}
     Finally, the two populations should be sampled independently from each other.
+    The t-test works reasonably well with small sample sets, allowing analysis of set with 5 or more samples each.\cite{Moore2009}
 
     The t-test begins by calculating the t-score or t-value for a data set.
     The broadest and most applicable means of doing this is given by the Welch's t-test, Equation \ref{eq:studentt}, which is for sample sets with unequal variances and unequal sample sizes.
@@ -36,10 +32,10 @@
     Typically, a confidence level of 95\% is used, but 99\% is also frequently found.
     This can also be referred to the level of significance, which is 1 minus the confidence level, so 0.05 or 0.01.
     In the simple case of a single set of data, the degrees of freedom is $n-1$.
-    This is because for a sample set to have a given mean, all but one of the values could be any number (and thus are free), but the last value, must have a value which causes the mean to be what is expected.
+    This is because for a sample set to have a given mean, all but one of the values could be any number (and thus are free), but the last value, must have a value which causes the mean to be what is expected.\cite{Tanner2013}
     For two sample t-tests where the sets have the same number of samples the degrees of freedom become $2n-2$.
     But, for the case where the variances are unequal and measurement number may be unequal like Equation \ref{eq:studentt}, the pooled degrees of freedom must be calculated from Equation \ref{eq:dof}, known as the Welch–Satterthwaite equation.
-    The degrees of freedom calculated by Equation \ref{eq:dof} is then rounded down to the next integer.
+    The degrees of freedom calculated by Equation \ref{eq:dof} is then rounded down to the next integer.\cite{Anderson1987}
     \begin{equation}
         \label{eq:dof}
         dof=\frac{\left(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2}\right)^2}{\frac{\left(\frac{s_1^2}{n_1}\right)^2}{n_1-1}+\frac{\left(\frac{s_2^2}{n_2}\right)^2}{n_2-1}}
@@ -49,7 +45,7 @@
     This table gives the pre-calculated t-values between which 95\% or 99\% of all values fall for the degrees of freedom in the distribution.
     If the calculated t-value is closer to zero than the critical t-value, it is determined that the two sample sets do not have a significant difference between them.
     This is because the difference between the sets falls within the range where 95\% of any random selection of two data sets from the same distribution would fall.
-    Conversely, if the calculated t-value is further from zero than the critical t-value, it can be said there is a significant difference between the two and the true population means of the two sets is different.
+    Conversely, if the calculated t-value is further from zero than the critical t-value, it can be said there is a significant difference between the two and the true population means of the two sets are different.
 
     Many software packages will automatically calculate these values given an input dataset.
     The work in this thesis used JMP by SAS Institute to perform the calculations, but Minitab, SPSS, R, Python, Matlab, or Excel are all capable of performing the calculations with built-in functions.
@@ -61,7 +57,7 @@
     Just as there are many things which can fit a distribution, there are many different types of distributions which can represent the real world case.
     The most commonly known distribution is the normal distribution but others are frequently used and are variations on each other, such as Student's t, Lorentz, exponential, Chi-squared.
     In fracture mechanics, the Weibull distribution is used to represent the distribution of the strength of individual samples.
-    The \gls{cdf} of a Weibull distribution is given in Equation \ref{eq:weibullcdf}, where $P$ is the probability of failure having occurred, $\sigma$ is the applied stress which is greater than zero, $\sigma_{min}$ is the minimum stress needed for failure, $\sigma_\theta$ is a scaling factor known as the characteristic strength, and $m$ is the Weibull modulus, or the distribution shape factor.
+    The \gls{cdf} of a Weibull distribution is given in Equation \ref{eq:weibullcdf}, where $P$ is the probability of failure having occurred, $\sigma$ is the applied stress which is greater than zero, $\sigma_{min}$ is the minimum stress needed for failure, $\sigma_\theta$ is a scaling factor known as the characteristic strength, and $m$ is the Weibull modulus, or the distribution shape factor.\cite{Weibull1951}
     Commonly there is considered no minimum stress for failure to occur, resulting in $\sigma_{min} = 0$.
     \begin{equation}
         \label{eq:weibullcdf}
@@ -69,7 +65,7 @@
     \end{equation}
 
     The Weibull distribution was first proposed by Waloddi Weibull as an empirical fit to the observations he had been making.
-    In a curious case, years later, his Weibull distribution was backed up by theory as extreme value distributions and weakest link theory was developed in the study of fracture mechanics.
+    In a curious case, years later, his Weibull distribution was backed up by theory as extreme value distributions and weakest link theory was developed in the study of fracture mechanics.\cite{Quinn2010}
     In weakest link theory, it is the result of only the largest flaw which causes failure.
     If a material has a normal, symmetric distribution of flaw sizes, then the cases of the largest flaw will be naturally skewed to the right, above the mean size and following the tail of the normal distribution.
     Of the functions which were developed for extreme values, Weibull's offered the most versatility in terms of bounds, fit and confidence intervals.
@@ -93,10 +89,10 @@
     \end{equation}
 
     To achieve meaningful results with small confidence intervals, a large number of samples must be tested.
-    It is best practice that for Weibull parameters to be estimated, in excess of 30 samples should be tested.
+    It is best practice that for Weibull parameters to be estimated, in excess of 30 samples should be tested.\cite{ASTMStandardC11612018}
     While sometimes it is not practical to test such numbers of samples, values reported with smaller sample sets should have the confidence intervals examined.
 
-    One unique advantage of the Weibull distribution is the ability to scale the stress applied to a sample to a different size.
+    One unique advantage of the Weibull distribution is the ability to scale the stress applied to a sample to a different size.\cite{Quinn2016}
     When applying stress to a relatively small sample, due to the low volume of the stressed sample, there is a low probability that a large critical flaw will be found which causes failure.
     If, one was to repeat the test on a larger sample, the added volume means a greater chance of having a critical flaw cause failure at a lower strength.
     As a result, the larger volume which is placed under stress, the weaker it will be.
