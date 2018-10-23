@@ -83,17 +83,15 @@
     The mass of the sample would be noted only after steady state had been reached for a condition.
     After testing a sample, a bar of alumina was cut to the same dimensions as the sample and the process was repeated to obtain a blank which could be subtracted from the measurements to remove buoyancy effects.
 
-    Oxygen non-stoichiometry was calculated using Equation \ref{eq:TGA}, where $\Delta\delta$ is the change in oxygen stoichiometry, $MW_{SFCM}$ is the molecular weight of SFCM (\SI{208.74}{\gram\per\mol}), $MW_O$ is the molecular weight of oxygen (\SI{16.0}{\gram\per\mol}), $w_{sample}$ is the weight of the sample, and $\Delta{}w$ is the weight change as recorded by the TGA.
-    The oxygen vacancy concentration ($\lbrack\ch{V_O^{**}}\rbrack$) is calculated using Equation \ref{eq:TGAtoV}, where $\rho$ is the density of SFCM and $N_A$ is Avogadro's number.
-    To calculate the oxygen vacancy concentration, the non-stoichiometry of SFCM at a point needs to be established.
-    For this work, based on the plateau present in the data at oxidizing conditions, it is assumed that in a pure oxygen environment ($log(\po2{})=0$) all oxygen vacancies are filled with no oxygen interstitial or surface species, thus $\delta=0$.
-    This practice is commonly found in other non-stoichiometry measurements by \gls{tga}.\cite{Oishi2008,Boroomand2000a,Poulsen2000}
+    Oxygen non-stoichiometry was calculated from thermogravimetry data using Equation \ref{eq:TGA}, where $\delta$ is the degree of non-stoichiometry, $MW_{SFCM}$ is the molecular weight of SFCM (\SI{208.74}{\gram\per\mol}), $MW_O$ is the atomic weight of oxygen (\SI{16.0}{\gram\per\mol}), $w_{sample}$ is the weight of the sample, and $\Delta{}w$ is the weight change as recorded by the TGA.
+    The oxygen vacancy concentration ($\lbrack\ch{V_O^{**}}\rbrack$) is calculated using Equation \ref{eq:TGAtoV}, where $\rho$ is the density of SFCM, and $N_A$ is Avogadro's number.
+    For this work, based on the plateau present in the data at oxidizing conditions, it is assumed that in a pure oxygen environment all oxygen vacancies are filled with no oxygen interstitial or surface species ($\delta=0$ at $log(\po2{})=0$).\cite{Oishi2008,Mizusaki2000,Poulsen2000}
     \begin{equation}
-        \Delta\delta = \frac{MW_{SFCM}}{MW_O\ w_{sample}}\Delta{}w
+        \delta = \frac{MW_{SFCM}}{MW_O\ w_{sample}}\Delta{}w
         \label{eq:TGA}
     \end{equation}
     \begin{equation}
-        \lbrack\ch{V_O^{**}}\rbrack =\frac{\delta\rho N_A}{MW_{SFCM}}
+        \lbrack\ch{V_O^{**}}\rbrack =\frac{\delta\rho{}N_A}{MW_{SFCM}}
         \label{eq:TGAtoV}
     \end{equation}
 

@@ -9,7 +9,7 @@
 
     This work expands upon the fundamental knowledge of SFCM and aims to understand the defect chemistry which leads to its high conductivity as an \gls{miec}.
     \Gls{xrd} and Rietveld refinement show the phase stability and lattice parameter changes of SFCM across \glspl{po2}.
-    Electrical conductivity is measured as a function of \po2{} to determine changes electrical conductivity types.
+    \Gls{dc} conductivity is measured as a function of \po2{} to determine changes electrical conductivity types.
     \Gls{tpd} spectroscopy was used to characterize the oxygen desorption as it occurs from the lattice.
     The non-stoichiometry of \gls{sfcm} was measured under oxidizing and reducing environments at various temperatures via thermogravimetric analysis and a defect equilibrium model and diagram is proposed from the data with results compared to \gls{smm} and other perovskite materials.
 
@@ -20,10 +20,10 @@
     Results from the Rietveld refinement calculations are given in Table \ref{tab:xrdrefine}.
     The refined unit cell is presented in Figure \ref{fig:structure}b and was used to create the theoretical \gls{xrd} pattern for comparison.
 
-    \begin{figure}
+    \begin{figure}[p]
       \includegraphics[width=0.6\textwidth]{XRD.jpg}
       \includegraphics[width=0.6\textwidth]{Structure.png}
-      \caption{a) Powder \gls{xrd} patterns of SFCM samples taken after synthesis, reduction, and oxidation compared to pure phase SFCM diffraction pattern. b) Crystal structure of unordered double perovskite SFCM. }
+      \caption{a) Powder \gls{xrd} patterns of SFCM samples taken after synthesis, reduction, and oxidation compared to pure phase SFCM diffraction pattern b) Crystal structure of unordered double perovskite SFCM}
       \label{fig:structure}
     \end{figure}
 
@@ -56,7 +56,7 @@
 
     Changes in SFCM's lattice parameters are attributed to the oxidation states of the B-site cations and the concentration of vacancies in the sample after exposure to different \po2{}s.
     Reduction of SFCM from an as synthesized state causes a 0.025\% decrease in $a$ and the volume of the unit cell and a 0.025\% increase in $c$.
-    These are the result of the bond lengths between strontium and oxygen in site 2 (Sr-O2) and the distance between metal site 2 and oxygen site 1 (M2-O1) decreasing. %don't like the way I did this
+    These are a result of the bond lengths between strontium and oxygen in site 2 (Sr-O2) and the distance between metal site 2 and oxygen site 1 (M2-O1) decreasing. %don't like the way I did this
     %These are result of the bond lengths between Sr-O2 and M2-O1 decreasing, where is the species at a unique site. %don't like the way I did this
     Oxidizing the SFCM results in a 0.14\% increase in $a$ and a 0.16\% increase in $c$ resulting an 0.44\% increase in cell volume.
     This is the result of all bond lengths increasing by \SI{0.002} to \SI{0.004}{\angstrom}.
@@ -65,41 +65,40 @@
     In summary, SFCM shows very little change to lattice parameters as a result of changing metal oxidation states or vacancy creation as it under goes reduction or oxidation.
 
     \subsection{Conductivity}
-    SFCM has a conductivity dependence typical of \gls{miec} conductors, as shown in Figure \ref{fig:conductivity}.
+    SFCM has a conductivity dependence typical of MIEC conductors, as shown in Figure \ref{fig:conductivity}.
     At high \po2{} ranges (\SI{e-1.5}{atm} to \SI{1}{atm}) it shows p-type conductivity, where conductivity increases with \po2{}.
-    Down to \SI{e-1}{atm}, the change in conductivity is linear with a slope of \SI{0.089} (log-log scale).
-    Below \SI{e-1}{atm} the slope changes away from the previous trend, suggesting a change in the predominant charge carrier.
+    Down to \SI{e-1}{atm}, the change in conductivity appears to be linear with a slope of \SI{0.089} (log-log scale).
+    Below \SI{e-1}{atm} the slope changes away from the previous trend, suggesting a change in the predominant charge carrier or phase of the system.
     At low \po2{} ranges (\SI{e-24}{atm} to \SI{e-19}{atm}) the conductivity behaves linearly with n-type conductivity, increasing at lower \po2{}, with a slope of \SI{-0.11} (log-log scale).
-    The sample measured in this work exhibited a lower conductivity than that reported in previous work (\SI{2}{S\per\centi\meter} compared to \SI{30}{S\per\centi\meter} at \temp{600}).\cite{Pan}
-    This difference is likely due to sample preparation creating additional porosity, reducing the absolute conductivity, but the trend with \po2{} remains consistent.
+    The conductivity measured in this work is comparable to the \SI{30}{S\per\centi\meter} at \temp{600} as reported by Pan et. al.\cite{Pan}
     %Due to the inability to measure the intermediate \po2{} we were unable to determine in this work at what point the \po2{} dependence changes from n-type to p-type and if there is an ionic regime in between.
 
-    \begin{figure}
+    \begin{figure}[p]
       \includegraphics[width=0.6\textwidth]{conductivity.jpg}
-      \caption{Total conductivity as \po2{} changes under a) reducing and b)oxidizing conditions at \SI{600}{\celsius}.}
+      \caption{Total conductivity as \po2{} changes under a) reducing and b)oxidizing conditions at \SI{600}{\celsius}}
       \label{fig:conductivity}
     \end{figure}
 
     Based on the slopes in the high \po2{} region, at least two defect regimes exist in that area transitioning near \SI{e-1}{atm}.
     Both high and low \po2{} regions have slopes much lower than +1/4 or -1/4 respectively, which indicates that the relationship between electronic charge carriers and oxygen is dependent of the other defect species in the material.
-    In fact, the lower than 1/4 slope suggests that the electronic charge carries are taken up by the other species, decreasing the expected number based on \po2{} change.
+    In fact, the lower than 1/4 slope suggest that the electronic charge carries are taken up by the other species, decreasing the expected number based on \po2{} change.
     At low \po2{}, n-type conductivity is promoted by the generation of oxygen vacancies, freeing electrons as negative electronic charge carriers to maintain charge balance.
     Some of these electrons are consumed by the reduction of B-site metals to lower oxidation states.
-    At high \po2{}, oxygen vacancies are filled and B-site metals oxidize, consuming electrons and allowing for the creation of holes, promoting p-type conductivity.
+    At high \po2{}, oxygen vacancies are filled, consuming electrons and allowing for the creation of holes, promoting p-type conductivity.
     The different slopes between high and low \po2{} are the result of different defect species interacting with the electronic carriers at different points in the reduction.
 
     \subsection{Temperature Programmed Desorption}
     \Gls{tpd} was performed in conjunction with \gls{tga} to determine the extent of oxygen desorption from \gls{sfcm}.
-    Figure \ref{fig:TPD} presents the data from the \gls{tga} on top with the mass and rate of mass change, while the \SI{32}{m\per z} signal from oxygen in the mass spectrometer is on bottom.
-    The cyclic noise present in both mass and \gls{ms} signals is due to temperature fluctuations as a result of an improperly tuned PID controller on the \gls{tga} furnace, but the noise remained much lower than the measured signal.
+    Figure \ref{fig:TPD} presents the data from the \gls{tga} on top with the mass and rate of mass change, while the \SI{32}{m\per z} signal from oxygen \gls{tpd} in the mass spectrometer is on bottom.
+    The cyclic noise present in both mass and \gls{ms} signals is due to transients of the PID controller on the TGA furnace, but the noise remained much lower than the measured signal.
     The rate of mass loss matches the oxygen signal from the \gls{ms}, confirming that oxygen is generated from \gls{sfcm} when heated under N\textsubscript{2} and is the cause for mass loss in the sample.
     \gls{sfcm} shows two maxima for the rate of oxygen loss during heating.
     The first, \textalpha, occurs at \temp{405} with the second peak, \textbeta, occurring near \temp{800}.
-    The \gls{ms} monitored for other species, such as carbon and water, but no significant amounts were observed.
+    The \gls{ms} monitored for other species, such as carbon (\ce{CO}, \ce{CO_2}) and water, but no significant amounts were observed.
 
-    \begin{figure}
+    \begin{figure}[p]
       \includegraphics[width=\textwidth]{TPD.jpg}
-      \caption{Temperature programmed desorption of oxygen in SFCM with mass loss from TGA (top) and oxygen desorption from \gls{ms} (bottom) as it is heated to \SI{800}{\celsius} in N\textsubscript{2}}
+      \caption{Temperature programmed desorption of oxygen in SFCM with mass loss from TGA(top) and oxygen desorption from MS (bottom) as it is heated to \SI{800}{\celsius} in N\textsubscript{2}}
       \label{fig:TPD}
     \end{figure}
 
@@ -117,102 +116,124 @@
     At high \po2{}, SFCM has two linear regions, changing between them near \SI{e-0.75}{atm}.
     The transition between regions in oxygen stoichiometry occurs at a similar \po2{} to where the conductivity changes in Figure \ref{fig:conductivity}.
     This change is the result of a change in defect regime regions.
-    In the low \po2{} region, a linear trend occurs down until \SI{e-21}{atm} where the non-stoichiometry rate increases.
-    Due to the pure phase \gls{xrd} under reducing conditions, it is not likely that the increase in non-stoichiometry is due to phase decomposition and instead is a change in regimes where more oxygen vacancies are present.
+    In the low \po2{} region, a linear trend occurs down to \SI{e-21}{atm} where the non-stoichiometry rate increases.
+    Due to the pure phase XRD under reducing conditions, it is not likely that the increase in non-stoichiometry is due to phase decomposition and instead is a change in regimes where more oxygen vacancies are present.
 
-    \begin{figure}
-      \includegraphics[width=\textwidth]{TGA600.jpg}
-      \caption{Non-stoichiometry (top) and corresponding oxygen vacancy concentration (bottom) of SFCM under oxidizing conditions (right) and reducing conditions (left) at \SI{600}{\celsius}}
+    \begin{figure}[p]
+      \includegraphics[width=3.25in]{TGA600-2.jpg}
+      \caption{Non-stoichiometry (circles, left axis) and corresponding oxygen vacancy concentration (diamonds, right axis) of SFCM under a) reducing conditions and b) oxidizing conditions at \SI{600}{\celsius}. Error bars are smaller than points for non-stoichiometry and for vacancy concentration below \SI{e-0.5}{atm}.}
       \label{fig:TGA600}
     \end{figure}
 
     SFCM shows similar trends in non-stoichiometry to \gls{smm} and \gls{sfm}, but with the added complexity expected from the additional B-site species.
     \gls{smm} approaches a plateau in oxygen content as it reached \SI{1}{atm} of oxygen the same as SFCM but possesses a constant slope of -1/6 when plotted on a log-log scale.\cite{Marrero-lopez2010}
-    In comparison, SFCM has multiple slopes associated with the degree of vacancy formation, as shown in Figures \ref{fig:TGA600}c and \ref{fig:TGA600}d.
+    In comparison, SFCM has multiple slopes associated with the degree of vacancy formation, as shown in Figure \ref{fig:TGA600}b.
     These different slopes can be attributed to the reduction of the three different B-site cations at different \po2{}.
     As an oxygen vacancy forms, the electrons required to maintain charge balance can be accommodated by the reduction of Fe, Co, or Mo, each with an independent equilibrium constant, whereas \gls{smm} only has Mo reduction to accommodate electrons from oxygen vacancy generation.
-    The high slopes of Figure \ref{fig:TGA600}d show how SFCM can generate more oxygen vacancies at lower \po2{} because of the Fe and Co cations.
-    \gls{sfm} and \gls{smm} show similar amounts of non-stoichiometry at the same \po2{} but at \temp{1000}.\cite{Kircheisen2012}
+    The high slopes of Figure \ref{fig:TGA600}b show how SFCM can generate more oxygen vacancies at lower \po2{} because of the Fe and Co cations.
+    SFM and SMM show similar amounts of non-stoichiometry at the same \po2{} but at \temp{1000}.\cite{Kircheisen2012}
     SFCM shows almost twice the non-stoichiometry at a much lower temperature of \temp{600}.
     SFCM's ability to create vacancies at higher \po2{} results in a larger accumulated vacancy concentration at low \po2{}.
 
-    TGA non-stoichiometry measurements were performed on the same sample at \temp{400},  \temp{500}, and \temp{600} which are in the low temperature-SOFC range.
+    TGA non-stoichiometry measurements were performed on the same sample at \temp{400},  \temp{500}, and \temp{600} which are temperatures in the low temperature-SOFC range.
     Figure \ref{fig:TGAtemps} shows the non-stoichiometry measurements for the sample  tested at three temperatures in the low \po2{} (a) and high \po2{} (b) regions.
     As expected, lowering the temperature reduces the non-stoichiometry at a given \po2{} and decreases the \po2{} at which transitions between regimes occur.
-    At \temp{400}, oxygen vacancy formation decreases considerably compared to \temp{500} and \temp{600}
-    This aligns with the results of the TPD (Figure \ref{fig:TPD}) where SFCM does not start desorbing oxygen until \temp{350} to \temp{400}, and then only from the surface.
+    At \temp{400} oxygen vacancy formation decreases considerably compared to \temp{500} and \temp{600}
+    This aligns with the results of the TPD (Figure \ref{fig:TPD}) where SFCM does not start desorbing oxygen until \temp{350} to \temp{400}.
 
-    \begin{figure}
+    \begin{figure}[p]
       \includegraphics[width=0.6\textwidth]{TGAtemps.jpg}
-      \caption{Non-stoichiometry of SFCM as \po2{} changes at \SI{400}{\celsius}, \SI{500}{\celsius}, and \SI{600}{\celsius}}
+      \caption{Non-stoichiometry of SFCM as \po2{} changes at \SI{400}{\celsius}, \SI{500}{\celsius}, and \SI{600}{\celsius}. Error bars are smaller than data points.}
       \label{fig:TGAtemps}
     \end{figure}
 
     \subsection{Defect Equilibrium Model and Diagram}
-    To best understand what is occurring in SFCM, a defect equilibrium diagram and model need to be created to relate the changes in conductivity and non-stoichiometry to the concentration of the various defects present in the material.
+    To best understand what is occurring in SFCM a defect equilibrium diagram and model need to be created to relate the changes in conductivity and non-stoichiometry to the concentration of the various defects present in the material.
     Defect reactions with their corresponding equilibrium equations are given in Equations \ref{rxn:intrinsic}{--}\ref{rxn:metalred}, which use Kr\"oger–Vink notation, where a species is denoted by the site it sits on (subscript) and the relative charge to the site's expected valency (superscript).
     For example, $\ch{V_O^{**}}$ is a vacancy in an oxygen site with a 2+ charge and $\ch{B_B^'}$ is a B-site metal in a B-site with a 1$-$ charge.
     K represents the equilibrium, or mass-action, constant for the reaction.
     To simplify the set of equations, Equation \ref{rxn:metalred} represents the combined reduction of any B-site cation (Fe, Co, or Mo).
-    \textbeta{} is the ratio of Sr vacancies to combined B-site vacancies from Schottky defects.
+    \textbeta{} is the ratio of A-site vacancies to B-site vacancies from Schottky defects.
     \begin{align}
         \label{rxn:intrinsic}
         \emptyset& \ch{<-> e' + h^{*}}&   K_i&  = np\\
         \label{rxn:schottky}
-        \emptyset& \ch{<->  3 V_O^{**} + V_{Sr}^{''} + V_B^{''''}}& K_s& = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_{Sr}^{''}}\rbrack \lbrack\ch{V_B^{''''}}\rbrack = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_B^{''''}}\rbrack ^{\beta + 1}\\
+        \emptyset& \ch{<->  3 V_O^{**} + V_Sr^{''} + V_B^{''''}}& K_s& = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_Sr^{''}}\rbrack \lbrack\ch{V_B^{''''}}\rbrack = \lbrack\ch{V_O^{**}}\rbrack^3 \lbrack\ch{V_B^{''''}}\rbrack ^{\beta + 1}\\
         \label{rxn:external}
-        \ch{O_O^x}& \ch{<-> 1/2 O2 + V_O^{**} + 2 e'}& K_r& = p_{O_2}^{1/2} \lbrack\ch{V_O^{**}}\rbrack n^2\\
+        \ch{O_O^x}& \ch{<-> 1/2 O2 + V_O^{**} + 2 e'}& K_r& = p_{O_2}^{1/2} \lbrack\ch{V_O^{**}}\rbrack \lbrack\ch{O_O^{x}}\rbrack^{-1} n^2\\
         \label{rxn:metalred}
         \ch{B_B^x + e^'}& \ch{<-> B_B^'}& K_{B}& = \lbrack\ch{B_B^{'}}\rbrack n^{-1}
     \end{align}
 
-    The Duncan-Wachsman approach allows for the accurate solution of defect equations across \po2{} regions using dominant defect triads, compared to the dominant defect pairs of the Brouwer approach which lead to inaccurate results near transition regions.\cite{Duncan2007}
-    The Duncan-Wachsman approach is needed in this work to model the defect equilibria because the measured \po2{} range crosses various Brouwer regions, as indicated by the non-linearity of Figure \ref{fig:TGA600}c.
-    Using this method, Equations \ref{rxn:intrinsic}{--}\ref{rxn:metalred} can be solved to give models of the defect concentrations across \po2s.
-    Due to the fact that impurity phases form under oxidizing conditions, only the pure phase, reducing \po2s were solved for.
-    Table \ref{tab:defectequ} gives the resulting equations from the Duncan-Wachsman approach for the defect concentrations at these \po2{}.
-    To allow for the solution of the equations, it was assumed that all B-site metals will have already reduced to their maximum potential, that is $\lbrack\ch{B_B^'}\rbrack$ is constant, in the \po2{} range of interest.
+    The Duncan-Wachsman approach allows for the solution of defect equations across \po2{} regions using dominant defect triads, compared to the dominant defect pairs of the Brouwer approach which lead to an inaccurate results near transition regions.\cite{Duncan2007}
+    This approach is needed in this work to model the defect equilibria because the measured \po2{} range crosses various Brouwer regions, as indicated by the non-linearity of Figure \ref{fig:TGA600}.
+    Using this method, the defect equations can be solved to give models of the concentration across \po2s.
+    The equations used are taken directly from Duncan et. al paper.
+    To apply this approach to SFCM, the interactions of electronic defects with B-site cations as given by Equation \ref{rxn:metalred} were ignored for the time being.
+    It was assumed that all electrons generated from vacancy formation remained in the conduction band.
+    It was also assumed that a portion of B-site cations were reduced at all conditions, acting as a constant dopant to the structure, where regardless of \po2{}.
+    The degree of constant B-site reduction could then be fit from the model.
 
-    \begin{table}
-    \centering
-    \caption{Equations for defect equilibrium under reducing conditions}
-    \label{tab:defectequ}
-    \begin{tabular}{c|c}
-    Defect & Equation\\
-    \hline
-    n  & $K_r^{\frac{1}{2}} p_{O_2}^{-\frac{1}{4}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{1}{3}}$  \\[10pt]
+    % \begin{table}
+    % \centering
+    % \caption{Equations for defect equilibrium under reducing conditions}
+    % \label{tab:defectequ}
+    % \begin{tabular}{c|c}
+    % Defect & Equation\\
+    % \hline
+    % n  & $K_r^{\frac{1}{2}} p_{O_2}^{-\frac{1}{4}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{1}{3}}$  \\[10pt]
+    %
+    % p  & $K_iK_r^{-\frac{1}{2}} p_{O_2}^{\frac{1}{4}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{\frac{1}{3}}$  \\[10pt]
+    %
+    % $\lbrack\ch{V_O^{**}}\rbrack$   & $\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{\frac{2}{3}}$\\[10pt]
+    %
+    % $\lbrack\ch{V_A^{''}}\rbrack$   & $\beta{}K_s^{\frac{1}{\beta+1}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{2}{\beta+1}}$ \\[10pt]
+    %
+    % $\lbrack\ch{V_B^{''''}}\rbrack$ & $K_s^{\frac{1}{\beta+1}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{2}{\beta+1}}$ \\[10pt]
+    %
+    % $\lbrack\ch{B_B^'}\rbrack$ & Constant \\
+    %
+    % \end{tabular}
+    % \end{table}
 
-    p  & $K_iK_r^{-\frac{1}{2}} p_{O_2}^{\frac{1}{4}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{\frac{1}{3}}$  \\[10pt]
+    Using the TGA and conductivity data, the reaction equilibrium constants can be fitted for the defect model.
+    The results of the fit are shown in Figure \ref{fig:fitting}.
+    Starting with the oxygen vacancies least squares fitting approach, the parameters are fitted in the low \po2{} region first, adding terms and parameters from the Duncan-Wachsman method until the entire equation had been fit.
+    A similar process was followed to fit the conductivity data to the model.
+    Separate equations were used to fit n-type and p-type conductivities, based on their respective predominant defects.
 
-    $\lbrack\ch{V_O^{**}}\rbrack$   & $\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{\frac{2}{3}}$\\[10pt]
-
-    $\lbrack\ch{V_A^{''}}\rbrack$   & $\beta{}K_s^{\frac{1}{\beta+1}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{2}{\beta+1}}$ \\[10pt]
-
-    $\lbrack\ch{V_B^{''''}}\rbrack$ & $K_s^{\frac{1}{\beta+1}}\left(\frac{3}{4} K_r^{\frac{1}{2}}p_{O_2}^{-\frac{1}{4}}+\left(\frac{1}{2}\lbrack\ch{B_B^'}\rbrack\right)^{\frac{3}{2}}\right)^{-\frac{2}{\beta+1}}$ \\[10pt]
-
-    $\lbrack\ch{B_B^'}\rbrack$ & Constant \\
-
-    \end{tabular}
-    \end{table}
-
-    Using the TGA and conductivity data with the equations given in Table \ref{tab:defectequ}, the reaction equilibrium constants can be fitted to obtain a general defect equilibrium diagram for reducing \po2s as shown in Figure \ref{fig:defects}a.
-    The electron mobility was calculated from the fitted data at \temp{600} to be \SI{0.0408}{\centi\meter\squared\per\volt\per\second}, which is within the range for small polaron defects for \gls{smm}.\cite{Marrero-lopez2010}
-    By fitting and plotting the values of K\textsubscript{r} from various temperatures (Figure \ref{fig:defects}b), the enthalpy of formation for oxygen vacancies was found to be \SI{39.1}{\kilo\joule\per\mol} in SFCM under reducing conditions.
-
-    \begin{figure}
-      \includegraphics[width=0.6\textwidth]{defect.jpg}
-      \caption{Oxygen vacancy and electronic defects in SFCM based on conductivity and TGA non-stoichiometry}
-      \label{fig:defects}
+    \begin{figure}[p]
+      \includegraphics[width=3in]{Fitting.jpg}
+      \caption[a) Fitting results of oxygen vacancies concentration to the measured non-stoichiometry b) Fitting results of n-type and p-type conductivity to measurements]{a) Fitting results of oxygen vacancies to the measured non-stoichiometry with the parameters $K_{r}=\SI{1.1e-15}{atm^{0.5}\per{F.U.}^2}$, $K_{i}=\SI{5.43e-7}{\per{F.U.}^2}$, $K_{s}=\SI{1e-25}{\per{F.U.}^5}$, $\lbrack\ch{B_B^'}\rbrack = \SI{0.108}{\per{F.U.}}$, $\beta = 100$. b) Fitting results of n-type and p-type conductivity to measurements based on previous parameters, $\mu_e=\SI{1.43}{\centi\meter\per\volt\per\second}$, $\mu_{\ch{V_O}}=\SI{0.4887}{\centi\meter\per\volt\per\second}$, and $\mu_h=\SI{0.0806}{\centi\meter\per\volt\per\second}$.}
+      \label{fig:fitting}
     \end{figure}
 
-    While the fit for the oxygen vacancy concentration in Figure \ref{fig:defects}a fits well, the model predicts a steeper slope for the concentration of electrons.
-    The cause of this is from the assumption that $\lbrack\ch{B_B^'}\rbrack$ is a constant, made while solving the defect reaction equations.
-    In reality, while most B-site metals will have reduced, a portion will still be reducing at the low \po2{}, decreasing the overall number of conduction electrons, and reducing the \po2{} dependence of n.
-    At low \po2{} both the concentrations of electrons and oxygen vacancies are on the same order of magnitude promoting mixed conduction.
-    SFCM has an enthalpy of formation lower than that of comparable materials.
-    \gls{sfm} and \gls{smm} have much higher enthalpies of \SI{253}{\kilo\joule\per\mol} and \SI{110}{\kilo\joule\per\mol} respectively.\cite{Kircheisen2012,Marrero-lopez2010}
+    The defect equilibria values were fitted and calculated from thermogravimetry and found to be to be \SI{1.1e-15}{atm^{0.5}\per{F.U.}^2} for $K_{r}$, \SI{5.43e-7}{\per{F.U.}^2} for  $K_{i}$, and \SI{1e-25}{\per{F.U.}^5} for $K_{s}$, where F.U. is the formula unit of SFCM.
+    The minimum concentration of \ch{B_B^'} defects (\ch{M_B^'}) was determined to be \SI{0.108}{\per{F.U.}} and \textbeta{} was 100.
+    A deviation from the model is observed at oxidizing conditions and can be attributed to the phase impurity which forms at those conditions.
+    The parameters relating to the Schottky defects (\textbeta{} and K\textsubscript{s}) did not have a significant impact on the fit of either the oxygen vacancies conductivity, and thus are not considered to be well fit.
+    This is because Schottky defects are not expected in high concentration except at high temperatures and very high \po2s, neither of which were tested in this work.
+    The defect mobilities were calculated from the fitted data at \temp{600} to be \SI{1.432}{\centi\meter\squared\per\volt\per\second} for electrons \SI{0.4887}{\centi\meter\per\volt\per\second} for oxygen vacancies and \SI{0.0806}{\centi\meter\per\volt\per\second} for holes.
+    A deviation in slope is again visible from the model for the conductivity data at oxidizing conditions, which can be attributed to the impurity phase.
+    This difference in slope adds uncertainty for the value of the hole mobility.
+    The electron mobility is significantly greater than the value reported for small polaron defect mobility in SMM.\cite{Marrero-lopez2010}
+
+    The complete defect equilibrium diagram for electronic defects and vacancies based on the fitted values is shown in Figure \ref{fig:ded}a.
+    The model predicts an electrolytic domain in the mid-\po2{} region.
+    In comparison to the traditional Brouwer regions, the measured \po2s only cover the boundary between Region I and IIa up to the lower portion of Region IIb.
+
+    \begin{figure}[p]
+      \includegraphics[width=3in]{DEDresults.jpg}
+      \caption{a)Defect equilibrium diagram of SFCM based on fitted parameters. b)Plot of natural log of external defect equilibrium versus inverse temperature, to calculate enthalpy of formation oxygen vacancies.}
+      \label{fig:ded}
+    \end{figure}
+
+    To determine the enthalpy of oxygen formation, the natural log of the equlibrium constant for the external reaction (Equation \ref{rxn:external}) was plotted against the reciprocal temperature.
+    The enthalpy was found to be \SI{44.3}{\kilo\joule\per\mol} in SFCM under reducing conditions.
+    SFCM has an enthalpy of \ch{V_O^{**}} formation lower than that of comparable materials.
+    SFM and SMM have much higher enthalpies of \SI{253}{\kilo\joule\per\mol} and \SI{110}{\kilo\joule\per\mol} respectively.\cite{Kircheisen2012,Marrero-lopez2010}
     \ce{SrFeO_{$3-\delta$}} has a more comparable, but still greater, enthalpy of \SI{80}{\kilo\joule\per\mol}.\cite{Holt1999}
-    This low enthalpy of formation of oxygen vacancies in SFCM allows for a greater range of non-stoichiometry and thus SFCM's high performance.
+    This low enthalpy of formation of oxygen vacancies in SFCM allows for a greater range of non-stoichiometry and thus SFCM's higher performance.
 
 
 \section{Conclusions}
@@ -220,8 +241,8 @@
     Specifically, it has a potential to replace nickel-based anodes in SOFCs due to its high conductivity and redox stability, creating an all-ceramic anode.
     SFCM forms impurity phases when heated at \temp{600} under oxidizing environments but becomes pure phase with reduction.
     It also exhibits very small chemical expansion with changing \po2{}, in line with its perovskite structure.
-    SFCM is an improvement over previous double perovskite materials because of high conductivity at temperatures below \temp{600}.
-    This is in part because SFCM supports the formation of oxygen vacancies at both surface and lattice positions shown by overlapping \textalpha{} and \textbeta{} oxygen desorption, starting as low at \temp{350} and continuing up until above \temp{800}.
-    Oxygen vacancies form more rapidly than other \gls{miec} materials with decreasing \po2{} as combination of B-site cations enables reduction though a large range of \po2{} resulting in a low enthalpy of formation for oxygen vacancies at \SI{39.1}{\kilo\joule\per\mol}.
-    Proposed defect equilibrium equations were given for the low \po2{} range and are supported by thermogravimetric and conductivity measurements for the complex system.
-    Thermogravimetry at lower temperatures demonstrated SFCM's activity until \temp{400} at which the amount of oxygen vacancy formation slows dramatically.
+    SFCM is an improvement over previous double perovskite materials because conductivities above \SI{40}{S\per\centi\meter} in reducing conditions below \temp{600}.
+    This is in part because SFCM supports the desorption of oxygen from both surface and lattice positions shown by overlapping \textalpha{} and \textbeta{} oxygen desorption, starting as low at \temp{350} and continuing up until above \temp{800}.
+    Thermogravimetry at lower temperatures demonstrated SFCM's activity down to \temp{400} at which the amount of oxygen vacancy formation slows dramatically.
+    Oxygen vacancies form more rapidly than other MIEC materials with decreasing \po2{} as combination of B-site cations enables reduction though a large range of \po2{} resulting in a low enthalpy of formation for oxygen vacancies at  \SI{44.3}{\kilo\joule\per\mol}.
+    Defect equilibrium and mobility values were calculated from the themogravimetric and conductivity measurements and a defect equilibrium diagram for SFCM at \temp{600} was created.
